@@ -22,20 +22,6 @@
     justify-content: space-between;
   }
 
-  &.is-animated {
-    background-size: 100% 100%, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 100%,
-      0.75rem 0.75rem, 100% 100%, 100% 100%, 0.75rem 0.75rem;
-  }
-
-  &.has-linesHidden {
-    background-size: 0.75rem 0.75rem;
-    transition: background-size $fade-simple;
-  }
-
-  &.is-column {
-    padding: 0;
-  }
-
   &.is-negative {
     background: linear-gradient(to right, $white 1px, transparent 1px) 0 0,
       linear-gradient(to right, $white 1px, transparent 1px) 0 100%,
@@ -45,11 +31,27 @@
       linear-gradient(to bottom, $white 1px, transparent 1px) 100% 0,
       linear-gradient(to top, $white 1px, transparent 1px) 0 100%,
       linear-gradient(to top, $white 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0.75rem 0.75rem;
 
     .coursesList-link,
     .menu {
       color: $white;
     }
+  }
+
+  &.is-animated {
+    background-size: 100% 100%, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 100%,
+      0.75rem 0.75rem, 100% 100%, 100% 100%, 0.75rem 0.75rem;
+  }
+
+  &.has-linesHidden {
+    background-size: 0.75rem 0.75rem;
+    transition: background-size $fade-simple 0.6s;
+  }
+
+  &.is-column {
+    padding: 0;
   }
 
   @include mq(md) {

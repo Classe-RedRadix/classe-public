@@ -1,7 +1,7 @@
 .row {
   display: block;
   position: relative;
-  padding: 1px;
+  margin: -1px;
   box-sizing: border-box;
 
   & + .row {
@@ -15,10 +15,6 @@
     .cell {
       width: 100%;
     }
-
-    .cell + .cell {
-      margin-top: 1px;
-    }
   }
 
   .cell.is-column {
@@ -27,8 +23,14 @@
     }
 
     .cell + .cell {
-      margin-top: 1px;
-      margin-left: 0;
+      // margin-right: 0;
+      margin-top: -1px;
+    }
+  }
+
+  @include mq($until: sm) {
+    .cell + .cell {
+      margin-top: -1px;
     }
   }
 
@@ -40,6 +42,7 @@
 
     &.is-full {
       flex-wrap: wrap;
+      padding-right: 1px;
     }
 
     &.is-half,
@@ -49,9 +52,9 @@
         width: 50%;
       }
 
-      .cell + .cell {
-        margin-top: 0;
-        margin-left: 1px;
+      > .cell + .cell {
+        // margin-top: 0;
+        margin-left: -1px;
       }
     }
   }

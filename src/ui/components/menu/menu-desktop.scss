@@ -2,7 +2,7 @@
   display: block;
   position: sticky;
   top: 0;
-  margin: 0 1px;
+  margin: 0 0 0 -1px;
   padding: $distance-big $distance-big 0 $distance-big;
   color: $black;
   filter: blur(0px);
@@ -11,7 +11,7 @@
   z-index: $index-menu;
 
   & + .blurableWrapper {
-    margin-top: 32px;
+    margin-top: 2rem;
   }
 
   &.is-black {
@@ -36,8 +36,8 @@
 
   @include mq(lg) {
     .cell {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 1.875rem;
+      padding-bottom: 1.875rem;
     }
   }
 }
