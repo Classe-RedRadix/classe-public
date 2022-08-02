@@ -80,7 +80,7 @@ const LegalTermsView = () => {
         title={formatMessage('info-head-cookies-policy:title')}
         description={formatMessage('info-head-cookies-policy:description')}
         url={formatMessage('url:root')}
-        noindexNofollow
+        noindex
       >
         <script
           type="application/ld+json"

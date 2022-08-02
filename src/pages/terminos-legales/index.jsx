@@ -81,7 +81,7 @@ const LegalTermsView = () => {
         title={formatMessage('info-head-legal-terms:title')}
         description={formatMessage('info-head-legal-terms:description')}
         url={formatMessage('url:root')}
-        noindexNofollow
+        noindex
       >
         <script
           type="application/ld+json"

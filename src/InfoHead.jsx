@@ -2,13 +2,13 @@ import Head from 'next/head'
 import PropTypes from 'prop-types'
 import { useTranslations } from './hooks'
 
-const InfoHead = ({ title, description, url, children, noindexNofollow }) => {
+const InfoHead = ({ title, description, url, children, noindex }) => {
   const formatMessage = useTranslations()
 
   return (
     <Head>
-      {noindexNofollow ? (
-        <meta name="robots" content="noindex, nofollow" />
+      {noindex ? (
+        <meta name="robots" content="noindex" />
       ) : (
         <meta name="robots" content="index, follow" />
       )}
@@ -73,7 +73,7 @@ InfoHead.propTypes = {
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   children: PropTypes.node,
-  noindexNofollow: PropTypes.bool,
+  noindex: PropTypes.bool,
 }
 
 export default InfoHead
