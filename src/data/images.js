@@ -6,6 +6,14 @@ import contactImage1080 from '/public/images/contacto-classe-1080.jpg'
 import contactImage828 from '/public/images/contacto-classe-828.jpg'
 import contactImage750 from '/public/images/contacto-classe-750.jpg'
 import contactImage640 from '/public/images/contacto-classe-640.jpg'
+import contactMainImageWebp from '/public/images/contacto-classe.webp'
+import contactImageWebp2048 from '/public/images/contacto-classe-2048.webp'
+import contactImageWebp1920 from '/public/images/contacto-classe-1920.webp'
+import contactImageWebp1200 from '/public/images/contacto-classe-1200.webp'
+import contactImageWebp1080 from '/public/images/contacto-classe-1080.webp'
+import contactImageWebp828 from '/public/images/contacto-classe-828.webp'
+import contactImageWebp750 from '/public/images/contacto-classe-750.webp'
+import contactImageWebp640 from '/public/images/contacto-classe-640.webp'
 const CONTACT_IMAGE = {
   mainImage: contactMainImage,
   alt: 'alt-image:office-desks-computer-equipment',
@@ -39,6 +47,40 @@ const CONTACT_IMAGE = {
     },
     {
       src: contactImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: contactMainImageWebp,
+      width: 3480,
+    },
+    {
+      src: contactImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: contactImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: contactImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: contactImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: contactImageWebp828,
+      width: 828,
+    },
+    {
+      src: contactImageWebp750,
+      width: 750,
+    },
+    {
+      src: contactImageWebp640,
       width: 640,
     },
   ],
