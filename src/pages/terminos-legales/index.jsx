@@ -10,7 +10,6 @@ import {
   useScrambleText,
   useContactForm,
   useTranslations,
-  useSchema,
   useBreadcrumbListSchema,
 } from '../../hooks'
 const LegalTermsView = () => {
