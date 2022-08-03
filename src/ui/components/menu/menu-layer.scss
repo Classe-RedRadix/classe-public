@@ -13,6 +13,9 @@
   transition: opacity $fade-simple;
   pointer-events: none;
   z-index: $index-menu-layer;
+  .row + .row {
+    margin-top: 0;
+  }
   .image {
     @include mq(xl) {
       max-height: calc(100vh - 290px);
