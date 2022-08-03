@@ -43,6 +43,7 @@
   &.is-animated {
     background-size: 100% 100%, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 100%,
       0.75rem 0.75rem, 100% 100%, 100% 100%, 0.75rem 0.75rem;
+    will-change: background-size;
   }
 
   &.has-linesHidden {
