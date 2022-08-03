@@ -1,12 +1,12 @@
 .row {
   display: block;
   position: relative;
-  padding: 1px;
+  margin: -1px;
   box-sizing: border-box;
 
-  & + .row {
-    margin-top: -1px;
-  }
+  // & + .row {
+  //   margin-top: -1px;
+  // }
 
   &.is-full,
   &.is-half,
@@ -14,10 +14,6 @@
   &.is-quarter {
     .cell {
       width: 100%;
-    }
-
-    .cell + .cell {
-      margin-top: 1px;
     }
   }
 
@@ -27,8 +23,13 @@
     }
 
     .cell + .cell {
-      margin-top: 1px;
-      margin-left: 0;
+      margin-top: -1px;
+    }
+  }
+
+  @include mq($until: sm) {
+    .cell + .cell {
+      margin-top: -1px;
     }
   }
 
@@ -40,6 +41,7 @@
 
     &.is-full {
       flex-wrap: wrap;
+      padding-right: 1px;
     }
 
     &.is-half,
@@ -49,9 +51,8 @@
         width: 50%;
       }
 
-      .cell + .cell {
-        margin-top: 0;
-        margin-left: 1px;
+      > .cell + .cell {
+        margin-left: -1px;
       }
     }
   }

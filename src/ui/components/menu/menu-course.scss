@@ -23,6 +23,11 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
+  @include mq(md) {
+    .sectionWrapper + .sectionWrapper {
+      margin-left: -2px;
+    }
+  }
 }
 .courseTitle-header {
   position: fixed;

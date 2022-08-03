@@ -6,13 +6,14 @@
   padding: 0;
   @include mq(md) {
     min-width: calc(100vw - (#{$distance-big} * 2));
+    padding-left: 1px;
   }
   &-name {
     order: -1;
     @include mq(md) {
       order: 1;
       height: 20%;
-      margin-top: -1px;
+      margin-top: 0;
     }
   }
   &-name-wrapper {
@@ -119,6 +120,7 @@
   @include mq(md) {
     width: rem(342px);
     min-width: rem(342px);
+    margin: 1px 0 0 -2px;
 
     #{$self}-cell {
       display: flex;
@@ -140,6 +142,9 @@
   @include mq(md) {
     width: rem(342px);
     min-width: rem(342px);
+    .row {
+      margin-top: 0;
+    }
   }
   &-number {
     height: 60%;
@@ -265,6 +270,7 @@
   @include mq(md) {
     width: rem(342px);
     min-width: rem(342px);
+    margin-top: 1px;
   }
   .cell {
     display: flex;
