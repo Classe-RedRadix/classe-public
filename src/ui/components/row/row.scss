@@ -23,7 +23,6 @@
     }
 
     .cell + .cell {
-      // margin-right: 0;
       margin-top: -1px;
     }
   }
@@ -53,7 +52,6 @@
       }
 
       > .cell + .cell {
-        // margin-top: 0;
         margin-left: -1px;
       }
     }
