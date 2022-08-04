@@ -98,7 +98,7 @@
   }
 
   .menuDesktop-link {
-    @include typo-rwd(h2);
+    @extend %h2-typo;
     text-transform: uppercase;
   }
 
@@ -140,8 +140,8 @@
       }
 
       #{$self}-contactAddressText {
+        @extend %h4-typo;
         margin-top: 24px;
-        @include typo-rwd(h4);
       }
     }
 
@@ -288,8 +288,9 @@
         height: auto;
 
         #{$self}-contactAddressText {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
           margin-top: 24px;
-          @include typo-rwd(h5);
         }
       }
 
@@ -322,7 +323,8 @@
     }
 
     .menuDesktop-link {
-      @include typo-rwd(menu);
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
   }
 }
