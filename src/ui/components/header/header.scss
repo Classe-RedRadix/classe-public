@@ -9,14 +9,14 @@
   transition: color $fade-simple;
 
   & + .sectionWrapper {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   @include mq(md) {
     padding: 0 $distance-big;
 
     & + .sectionWrapper {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
   }
 }

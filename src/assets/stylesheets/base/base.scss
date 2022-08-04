@@ -135,7 +135,7 @@ button {
   text-align: center;
 
   &:hover {
-    letter-spacing: 0.8px;
+    letter-spacing: 0.05rem;
   }
   &.menuDesktop-claim {
     width: 12.5rem;
@@ -164,7 +164,7 @@ button {
   box-sizing: border-box;
 
   &.has-tab {
-    padding-left: 24px;
+    padding-left: 1.5rem;
   }
 }
 
@@ -221,13 +221,13 @@ button {
   }
 
   .line.has-tab {
-    padding-left: 32px;
+    padding-left: 2rem;
   }
 }
 
 @include mq(xl) {
   .line.has-tab {
-    padding-left: 48px;
+    padding-left: 3rem;
   }
 }
 

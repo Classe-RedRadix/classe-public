@@ -2,10 +2,10 @@
   object-fit: cover;
   height: 100%;
   @include mq($until: md) {
-    max-height: 300px;
+    max-height: 18.75rem;
   }
   @include mq(xl) {
-    max-height: 800px;
+    max-height: 50rem;
   }
 }
 
@@ -18,16 +18,16 @@
 
 .sectionWrapper.courses {
   .p {
-    margin-top: 16px;
-    max-width: 380px;
+    margin-top: 1rem;
+    max-width: 23.75rem;
   }
 
   .mainButton {
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 
   .coursesList-list {
-    margin-top: 120px;
+    margin-top: 7.5rem;
   }
 }
 
@@ -42,7 +42,7 @@
     position: relative;
     left: 100%;
     width: auto;
-    height: 32px;
+    height: 2rem;
     transform: translateX(-100%);
 
     path {
@@ -52,22 +52,22 @@
   }
 
   .notes {
-    margin-top: 104px;
+    margin-top: 6.5rem;
     cursor: pointer;
   }
 
   .mainButton {
-    margin-top: 104px;
+    margin-top: 6.5rem;
   }
 }
 
 .sectionWrapper.featured .mainButton {
-  margin-top: 232px;
+  margin-top: 14.5rem;
 }
 
 .sectionWrapper.companies {
   .mainButton {
-    margin-top: 232px;
+    margin-top: 14.5rem;
   }
 
   .cell:last-child {
@@ -76,16 +76,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 56px 10px;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    gap: 3.5rem 0.625rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 
 .companies-logoWrapper {
   display: block;
   position: relative;
-  flex: 0 0 calc(50% - 10px);
+  flex: 0 0 calc(50% - 0.625rem);
   height: auto;
   text-align: center;
 
@@ -93,8 +93,8 @@
     display: flex;
     position: relative;
     margin: 0 auto;
-    width: 120px;
-    height: 24px;
+    width: 7.5rem;
+    height: 1.5rem;
   }
 
   .icon {
@@ -151,7 +151,7 @@
     position: relative;
 
     & + .footer-formBlock {
-      margin-top: 24px;
+      margin-top: 1.5rem;
     }
     .mainButton {
       position: absolute;
@@ -164,7 +164,7 @@
   }
 
   .radio {
-    margin-left: 24px;
+    margin-left: 1.5rem;
   }
 
   .footer-list {
@@ -172,12 +172,12 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   .footer-list li {
     & + li {
-      margin-top: 6px;
+      margin-top: 0.375rem;
     }
 
     .h4 {
@@ -198,14 +198,14 @@
   }
 
   .button {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   .logo {
     display: block;
     position: relative;
-    margin-top: 56px;
-    font-size: calc(59px + (560 - 59) * ((100vw - 320px) / (2560 - 320)));
+    margin-top: 3.5rem;
+    font-size: calc(3.6875rem + (560 - 59) * ((100vw - 20rem) / (2560 - 320)));
     line-height: 1;
     text-transform: uppercase;
   }
@@ -214,11 +214,11 @@
 @include mq(sm) {
   .sectionWrapper.companies {
     .cell:last-child {
-      column-gap: 32px;
+      column-gap: 2rem;
     }
 
     .companies-logoWrapper {
-      flex-basis: calc(33.33% - 32px);
+      flex-basis: calc(33.33% - 2rem);
     }
   }
 }
@@ -230,11 +230,11 @@
 
   .sectionWrapper.courses {
     .p {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
 
     .mainButton {
-      margin-top: 88px;
+      margin-top: 5.5rem;
     }
 
     .coursesList-list {
@@ -251,18 +251,18 @@
   .sectionWrapper.custom,
   .sectionWrapper.find {
     .icon {
-      height: 48px;
+      height: 3rem;
     }
 
     .mainButton {
-      margin-top: 208px;
+      margin-top: 13rem;
     }
   }
 
   .sectionWrapper.companies {
     .cell:last-child {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
 
@@ -282,11 +282,11 @@
     }
 
     .footer-formBlock + .footer-formBlock {
-      margin-top: 40px;
+      margin-top: 2.5rem;
     }
 
     .logo {
-      margin-top: 72px;
+      margin-top: 4.5rem;
     }
   }
 }
@@ -307,7 +307,7 @@
     }
 
     .logo {
-      margin-top: 148px;
+      margin-top: 9.25rem;
     }
   }
 }
@@ -315,28 +315,28 @@
 @include mq(xl) {
   .sectionWrapper.custom .icon,
   .sectionWrapper.find .icon {
-    height: 80px;
+    height: 5rem;
   }
 
   .sectionWrapper.find .notes {
-    margin-top: 220px;
+    margin-top: 13.75rem;
   }
 
   .sectionWrapper.companies {
     .cell:last-child {
-      padding-top: 56px;
-      padding-bottom: 56px;
-      column-gap: 64px;
-      row-gap: 156px;
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+      column-gap: 4rem;
+      row-gap: 9.75rem;
 
       .companies-logoWrapper {
-        flex: 0 0 calc(33.33% - 64px);
+        flex: 0 0 calc(33.33% - 4rem);
       }
     }
   }
 
   .companies-logoWrapper-container {
-    width: 156px;
-    height: 48px;
+    width: 9.75rem;
+    height: 3rem;
   }
 }

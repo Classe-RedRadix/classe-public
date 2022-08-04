@@ -14,7 +14,7 @@
   }
 
   & + .faqButton {
-    margin-top: 24px;
+    margin-top: 1.5rem;
   }
 
   &-button {
@@ -24,7 +24,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     width: 100%;
   }
 
@@ -37,9 +37,9 @@
   &-buttonIcon {
     display: block;
     position: relative;
-    margin-left: 32px;
-    min-width: 32px;
-    height: 32px;
+    margin-left: 2rem;
+    min-width: 2rem;
+    height: 2rem;
     border: 1px solid $black;
     border-radius: 100%;
 
@@ -50,15 +50,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 20px;
-      height: 1px;
+      width: 1.25rem;
+      height: 0.0625rem;
       background-color: $black;
       transform: translateX(-50%) translateY(-50%);
     }
 
     &::after {
       width: 1px;
-      height: 20px;
+      height: 1.25rem;
       opacity: 0;
       transform: translateX(-50%) translateY(-50%) rotate(-90deg);
       transition: opacity $fade-short, transform $transform-short;
@@ -68,7 +68,7 @@
   &-content {
     display: block;
     position: relative;
-    height: 1px;
+    height: 0.0625rem;
     border-bottom: 1px dashed $black;
     overflow: hidden;
     transition: height $transform-short;
@@ -77,30 +77,30 @@
   &-description {
     display: block;
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   @include mq(md) {
     & + .faqButton {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
 
     &-button,
     &-content {
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
     }
 
     &-buttonIcon {
-      margin-left: 40px;
-      min-width: 40px;
-      height: 40px;
+      margin-left: 2.5rem;
+      min-width: 2.5rem;
+      height: 2.5rem;
 
       &::before {
-        width: 24px;
+        width: 1.5rem;
       }
 
       &::after {
-        height: 24px;
+        height: 1.5rem;
       }
     }
   }

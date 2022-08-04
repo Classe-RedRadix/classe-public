@@ -19,11 +19,11 @@
     flex-wrap: nowrap;
     justify-content: center;
     position: relative;
-    padding: 0 rem(48px);
+    padding: 0 3rem;
     width: 100%;
     box-sizing: border-box;
     pointer-events: none;
-    margin-bottom: rem(32px);
+    margin-bottom: 2rem;
   }
 
   &-dateText {
@@ -31,7 +31,7 @@
     position: relative;
 
     & + .datePicker-dateText {
-      margin-left: 8px;
+      margin-left: 0.5rem;
     }
   }
 
@@ -48,7 +48,7 @@
     pointer-events: all;
 
     .icon {
-      width: 24px;
+      width: 1.5rem;
       height: auto;
 
       &:first-child {
@@ -74,7 +74,7 @@
     position: relative;
 
     & + .datePicker-courseWrapper {
-      margin-top: rem(32px);
+      margin-top: 2rem;
     }
   }
 
@@ -90,11 +90,11 @@
   &-courseTitle {
     display: block;
     position: relative;
-    margin-left: 8px;
+    margin-left: 0.5rem;
 
     #{$self}--course & {
-      max-width: 100px;
-      font-size: 12px;
+      max-width: 6.25rem;
+      font-size: 0.75rem;
       line-height: 1;
     }
   }
@@ -103,7 +103,7 @@
     flex: 1;
     display: block;
     position: relative;
-    margin-right: 8px;
+    margin-right: 0.5rem;
     text-align: right;
 
     .notes {
@@ -113,7 +113,7 @@
   }
 
   .mainButton {
-    margin-top: 16px;
+    margin-top: 1rem;
     width: 100%;
   }
 
@@ -126,8 +126,8 @@
   @include mq(lg) {
     &-courseTitle {
       #{$self}--course & {
-        max-width: 200px;
-        font-size: 20px;
+        max-width: 12.5rem;
+        font-size: 1.25rem;
         line-height: 1.3;
       }
     }
@@ -137,8 +137,8 @@
     &-date {
       display: block;
       padding: 0;
-      padding-right: 40px;
-      min-height: 88px;
+      padding-right: 2.5rem;
+      min-height: 5.5rem;
     }
 
     &-dateText + .datePicker-dateText {
@@ -156,10 +156,10 @@
     &-arrows .icon {
       display: block;
       position: relative;
-      width: 40px;
+      width: 2.5rem;
 
       &:last-child {
-        margin-top: 8px;
+        margin-top: 0.5rem;
       }
     }
 
@@ -168,7 +168,7 @@
       align-items: center;
 
       & + .datePicker-courseWrapper {
-        margin-top: 24px;
+        margin-top: 1.5rem;
       }
     }
 
@@ -178,16 +178,16 @@
 
     &-courseTitle {
       #{$self}--course & {
-        max-width: 200px;
-        font-size: 20px;
+        max-width: 12.5rem;
+        font-size: 1.25rem;
         line-height: 1.3;
       }
     }
 
     .mainButton {
       margin-top: 0;
-      margin-left: 24px;
-      min-width: 120px;
+      margin-left: 1.5rem;
+      min-width: 7.5rem;
       width: auto;
     }
   }
@@ -195,8 +195,8 @@
   @include mq(xxl) {
     .mainButton {
       margin-top: 0;
-      margin-left: 24px;
-      min-width: 240px;
+      margin-left: 1.5rem;
+      min-width: 15rem;
       width: auto;
     }
   }
