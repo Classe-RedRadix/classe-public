@@ -18,7 +18,7 @@
   }
   &-name-wrapper {
     display: flex;
-    gap: 60px;
+    gap: 3.75rem;
     overflow: hidden;
   }
   &-nameText {
@@ -58,7 +58,7 @@
     .p + .p {
       margin-top: 1rem;
       @include mq(md) {
-        margin-top: rem(24px);
+        margin-top: 1.5rem;
       }
     }
   }
@@ -67,8 +67,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: rem(82px);
+    gap: 0.625rem;
+    margin-top: 5.125rem;
     @include mq(md) {
       margin-top: 3vh;
     }
@@ -118,8 +118,8 @@
   }
 
   @include mq(md) {
-    width: rem(342px);
-    min-width: rem(342px);
+    width: 21.375rem;
+    min-width: 21.375rem;
     margin: 1px 0 0 -2px;
 
     #{$self}-cell {
@@ -140,8 +140,8 @@
   height: 100%;
   padding: 0;
   @include mq(md) {
-    width: rem(342px);
-    min-width: rem(342px);
+    width: 21.375rem;
+    min-width: 21.375rem;
     .row {
       margin-top: 0;
     }
@@ -161,7 +161,7 @@
 
   &-text {
     .sectionWrapper & {
-      margin-top: rem(100px);
+      margin-top: 6.25rem;
       margin-top: auto;
     }
   }
@@ -173,7 +173,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 24px;
+      padding: 1.5rem;
     }
     .h3 {
       @include mq(md) {
@@ -193,14 +193,14 @@
 
   &-glypBottom {
     position: absolute;
-    bottom: rem(24px);
-    right: rem(48px);
+    bottom: 1.5rem;
+    right: 3rem;
   }
 
   &-glypTop {
     position: absolute;
-    top: rem(48px);
-    right: rem(48px);
+    top: 3rem;
+    right: 3rem;
   }
 
   &--empty {
@@ -208,7 +208,7 @@
       display: none;
     }
     @include mq(md) {
-      width: 150px;
+      width: 9.375rem;
       min-width: inherit;
     }
   }
@@ -220,15 +220,15 @@
 
   &--objectives {
     @include mq(md) {
-      width: rem(476px);
-      min-width: rem(476px);
+      width: 29.75rem;
+      min-width: 29.75rem;
     }
   }
 
   &--info {
     @include mq(md) {
-      width: rem(696px);
-      min-width: rem(696px);
+      width: 43.5rem;
+      min-width: 43.5rem;
 
       .line--inline {
         display: inline;
@@ -247,8 +247,8 @@
 
   &--contact {
     @include mq(md) {
-      width: calc(100vw - 342px);
-      min-width: calc(100vw - 342px);
+      width: calc(100vw - 21.375rem);
+      min-width: calc(100vw - 21.375rem);
     }
     .courseSection-number {
       .cell {
@@ -268,15 +268,15 @@
   height: 100%;
   padding: 0;
   @include mq(md) {
-    width: rem(342px);
-    min-width: rem(342px);
+    width: 21.375rem;
+    min-width: 21.375rem;
     margin-top: 1px;
   }
   .cell {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 80px;
+    gap: 5rem;
   }
   h3 {
     word-wrap: break-word;
@@ -290,12 +290,12 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
-    width: rem(150px);
+    gap: 0.625rem;
+    width: 9.375rem;
   }
   &-icon {
-    width: 20px;
-    height: 0px;
+    width: 1.25rem;
+    height: 0;
     border: 1px solid $white;
     position: relative;
     animation: arrow 1.5s infinite;
@@ -303,8 +303,8 @@
     &::before {
       content: '';
       display: block;
-      width: rem(15px);
-      height: rem(15px);
+      width: 0.9375rem;
+      height: 0.9375rem;
       top: 50%;
       right: -23%;
       border-style: solid;
@@ -320,13 +320,13 @@
 
 @keyframes arrow {
   0% {
-    width: rem(20px);
+    width: 1.25rem;
   }
 
   50% {
-    width: rem(25px);
+    width: 1.5625rem;
   }
   100% {
-    width: rem(20px);
+    width: 1.25rem;
   }
 }

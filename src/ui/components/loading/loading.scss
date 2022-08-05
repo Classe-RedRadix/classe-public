@@ -6,10 +6,10 @@
   position: absolute;
   left: 0;
   width: 100%;
-  bottom: rem(10px);
+  bottom: 0.625rem;
   @include mq(md) {
     padding: 0 $distance-big;
-    bottom: rem(32px);
+    bottom: 2rem;
   }
 
   &-numberWrap {

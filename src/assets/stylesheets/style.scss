@@ -1,11 +1,12 @@
 // GLOBALS
 @import 'globals/settings';
-@import 'globals/texts';
 @import 'globals/mixins';
 
 // BASE
 @import 'base/normalize';
 @import 'base/base';
+
+@import 'globals/typography';
 
 // COMPONENTS
 @import '../../ui/components/button/button';

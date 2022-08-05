@@ -6,21 +6,21 @@
   height: auto;
 
   &.has-submit .input-field {
-    padding: 16px 64px 16px 32px;
-    @include typo-rwd(notes);
+    @extend %notes-typo;
+    padding: 1rem 4rem 1rem 2rem;
     text-transform: uppercase;
     border: 1px solid $black;
-    border-radius: 60px;
+    border-radius: 3.75rem;
     outline: none;
   }
 
   &-field {
+    @extend %p-typo;
     display: block;
     position: relative;
     margin: 0;
-    padding: 16px 0;
+    padding: 1rem 0;
     width: 100%;
-    @include typo-rwd(p);
     color: $black;
     background-color: transparent;
     border: 0;
@@ -37,9 +37,9 @@
   &-submit {
     display: block;
     position: absolute;
-    top: 17px;
-    right: 24px;
-    width: 16px;
+    top: 1.0625rem;
+    right: 1.5rem;
+    width: 1rem;
     height: auto;
     transform: rotate(45deg);
 
@@ -63,11 +63,11 @@
 
   @include mq(md) {
     &.has-submit .input-field {
-      padding: 16px 72px 16px 32px;
+      padding: 1rem 4.5rem 1rem 2rem;
     }
 
     &-submit {
-      width: 24px;
+      width: 1.5rem;
     }
   }
 }

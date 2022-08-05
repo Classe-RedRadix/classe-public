@@ -7,8 +7,7 @@
     position: relative;
 
     & + .coursesList-list {
-      margin-top: 24px;
-      // padding-left: 72px;
+      margin-top: 1.5rem;
     }
   }
 
@@ -32,12 +31,12 @@
       }
 
       .coursesList-linkText {
-        transform: translateX(52px);
+        transform: translateX(3.25rem);
       }
     }
 
     & + li {
-      margin-top: 8px;
+      margin-top: 0.5rem;
     }
   }
 
@@ -50,21 +49,21 @@
   &-linkNumber {
     display: block;
     position: relative;
-    width: 42px;
+    width: 2.625rem;
   }
 
   &-linkTextWrapper {
     display: block;
     position: relative;
-    margin-left: 16px;
-    padding-right: 52px;
+    margin-left: 1rem;
+    padding-right: 3.25rem;
     overflow: hidden;
     .icon {
       position: absolute;
       top: 0;
       left: 0;
       width: auto;
-      height: 34px;
+      height: 2.125rem;
       opacity: 0;
       transform: translateX(-100%);
       transition: opacity $fade-short, transform $transform-short;
@@ -97,20 +96,20 @@
 
     &-list li {
       html:not(.is-mobile) &:hover .coursesList-linkText {
-        transform: translateX(64px);
+        transform: translateX(4rem);
       }
     }
 
     &-linkNumber {
-      width: 58px;
+      width: 3.625rem;
     }
 
     &-linkTextWrapper {
-      padding-right: 64px;
-      margin-left: 0px;
+      padding-right: 4rem;
+      margin-left: 0;
 
       .icon {
-        height: 44px;
+        height: 2.75rem;
       }
     }
   }
@@ -118,18 +117,18 @@
   @include mq(xl) {
     &-list li {
       html:not(.is-mobile) &:hover .coursesList-linkText {
-        transform: translateX(130px);
+        transform: translateX(8.125rem);
       }
     }
 
     &-linkNumber {
-      width: 106px;
+      width: 6.625rem;
     }
 
     &-linkTextWrapper {
-      padding-right: 130px;
+      padding-right: 8.125rem;
       .icon {
-        height: 84px;
+        height: 5.25rem;
       }
     }
   }

@@ -15,7 +15,7 @@ $index-menu-mobile: 20;
 $index-loader: 25;
 
 // Fonts
-$font-base: 16;
+$font-base: 16px;
 $light: 300;
 $regular: 400;
 $medium: 500;
@@ -24,9 +24,8 @@ $bold: 700;
 $heavy: 900;
 
 // Layout
-$layout-maxWidth: 975px;
-$distance-small: 16px;
-$distance-big: 24px;
+$distance-small: 1rem;
+$distance-big: 1.5rem;
 
 // Breakpoints
 $grid-breakpoints: (
@@ -45,3 +44,32 @@ $fade-short-delay: 0.15s;
 $fade-simple: 0.6s;
 $transform-short: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 $transform-long: 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+// font-face
+// @include font-face('Gotham', 'GothaHTFLig', 200);
+
+@mixin font-face-modern(
+  $font-family,
+  $font-filename,
+  $font-weight: normal,
+  $font-style: normal,
+  $font-stretch: normal
+) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('../../fonts/#{$font-filename}.woff') format('woff'),
+      url('../../fonts/#{$font-filename}.woff2') format('woff2');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+  }
+}
+@include font-face-modern('Monument Grotesk', 'MonumentGrotesk-Regular', 400);
+@include font-face-modern(
+  'Monument Grotesk Mono',
+  'MonumentGrotesk-Semi-Mono',
+  400
+);
+
+$monument-grotesk: 'Monument Grotesk', sans-serif;
+$monument-grotesk-mono: 'Monument Grotesk Mono', sans-serif;

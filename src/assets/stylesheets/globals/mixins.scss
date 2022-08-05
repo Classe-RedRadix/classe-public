@@ -99,84 +99,84 @@
 }
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-@function -get-text-style-format($text-type) {
-  $text-style: map-deep-get($typography, $text-type, format);
-  @if not $text-style {
-    @warn "Requested typography format not found for text style (#{$text-type}).";
-    @return false;
-  }
-  @return $text-style;
-}
-@mixin typo($text-type, $breakpoint, $text-config: false) {
-  @if (not $text-config) {
-    $style-format: -get-text-style-format($text-type);
-    $text-config: map-get($style-format, $breakpoint);
-    @if not $text-config {
-      @warn "Format for requested #{$breakpoint} breakpoint is not defined on #{$text-type}, default format for xs is provided.";
-      $text-config: map-get($style-format, xs);
-    }
-  }
-  $line-height: map-get($text-config, lh);
-  $font-family: map-get($font-families, map-get($text-config, ff));
-  $font-size: map-get($text-config, fz);
-  $line-height: if($line-height, $line-height, null);
-  $font-size: if(
-    $font-size,
-    -get-modular-font-size($font-size, $line-height),
-    null
-  );
-  $font-weight: map-get($text-config, fw);
+// @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+//   $min: breakpoint-min($name, $breakpoints);
+//   @if $min {
+//     @media (min-width: $min) {
+//       @content;
+//     }
+//   } @else {
+//     @content;
+//   }
+// }
+// @function -get-text-style-format($text-type) {
+//   $text-style: map-deep-get($typography, $text-type, format);
+//   @if not $text-style {
+//     @warn "Requested typography format not found for text style (#{$text-type}).";
+//     @return false;
+//   }
+//   @return $text-style;
+// }
+// @mixin typo($text-type, $breakpoint, $text-config: false) {
+//   @if (not $text-config) {
+//     $style-format: -get-text-style-format($text-type);
+//     $text-config: map-get($style-format, $breakpoint);
+//     @if not $text-config {
+//       @warn "Format for requested #{$breakpoint} breakpoint is not defined on #{$text-type}, default format for xs is provided.";
+//       $text-config: map-get($style-format, xs);
+//     }
+//   }
+//   $line-height: map-get($text-config, lh);
+//   $font-family: map-get($font-families, map-get($text-config, ff));
+//   $font-size: map-get($text-config, fz);
+//   $line-height: if($line-height, $line-height, null);
+//   $font-size: if(
+//     $font-size,
+//     -get-modular-font-size($font-size, $line-height),
+//     null
+//   );
+//   $font-weight: map-get($text-config, fw);
 
-  // Generate content from mixin
-  @if $font-size {
-    font-size: $font-size;
-  }
-  @if $font-family {
-    font-family: $font-family;
-  }
-  @if $font-weight {
-    font-weight: $font-weight;
-  }
-  @if $line-height {
-    line-height: $line-height;
-  }
-}
-@mixin typo-rwd($text-type) {
-  $font-level: -get-text-style-format($text-type);
-  @each $breakpoint, $text-config in $font-level {
-    @include media-breakpoint-up($breakpoint) {
-      @include typo($text-type, $breakpoint, $text-config);
-    }
-  }
-}
-@mixin generate-typography-system() {
-  @each $typo, $config in $typography {
-    $tag-list: map-get($config, tags);
-    // Default tags related to typography systems
-    @if $tag-list {
-      @each $tag in $tag-list {
-        #{$tag} {
-          @include typo-rwd($typo);
-        }
-      }
-    }
-    // Utility classes for each text style defined in the system
-    .#{$typo} {
-      @include typo-rwd($typo);
-    }
-  }
-}
-@include generate-typography-system;
+//   // Generate content from mixin
+//   @if $font-size {
+//     font-size: $font-size;
+//   }
+//   @if $font-family {
+//     font-family: $font-family;
+//   }
+//   @if $font-weight {
+//     font-weight: $font-weight;
+//   }
+//   @if $line-height {
+//     line-height: $line-height;
+//   }
+// }
+// @mixin typo-rwd($text-type) {
+//   $font-level: -get-text-style-format($text-type);
+//   @each $breakpoint, $text-config in $font-level {
+//     @include media-breakpoint-up($breakpoint) {
+//       @include typo($text-type, $breakpoint, $text-config);
+//     }
+//   }
+// }
+// @mixin generate-typography-system() {
+//   @each $typo, $config in $typography {
+//     $tag-list: map-get($config, tags);
+//     // Default tags related to typography systems
+//     @if $tag-list {
+//       @each $tag in $tag-list {
+//         #{$tag} {
+//           @include typo-rwd($typo);
+//         }
+//       }
+//     }
+//     // Utility classes for each text style defined in the system
+//     .#{$typo} {
+//       @include typo-rwd($typo);
+//     }
+//   }
+// }
+// @include generate-typography-system;
 
 // @charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
 // See https://github.com/sass-mq/sass-mq/pull/10

@@ -17,14 +17,14 @@
   }
 
   & + .header {
-    margin-top: 24px;
+    margin-top: 1.5rem;
   }
 
   @include mq(md) {
     padding: 0 $distance-big;
 
     & + .header {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
   }
 }

@@ -1,13 +1,13 @@
 .mainButton {
   display: inline-block;
   position: relative;
-  padding: 14px 16px;
+  padding: 0.875rem 1rem;
   width: auto;
-  min-height: 40px;
+  min-height: 2.5rem;
   color: $black;
   background-color: $white;
   border: 1px solid $black;
-  border-radius: 60px;
+  border-radius: 3.75rem;
   box-sizing: border-box;
   transition: color $fade-short, background-color $fade-short,
     border $fade-short;
@@ -25,8 +25,8 @@
   }
 
   &.is-full {
-    padding: 20px 16px;
-    min-height: 52px;
+    padding: 1.25rem 1rem;
+    min-height: 3.25rem;
     min-width: 100%;
   }
 
@@ -44,12 +44,12 @@
 
   &-text {
     text-align: center;
-    transform: translateY(2px);
+    transform: translateY(0.125rem);
   }
 
   @include mq(sm) {
     &.is-full {
-      padding: 20px 24px;
+      padding: 1.25rem 1.5rem;
     }
   }
 }

@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  @include typo-rwd(body);
+  @extend %body-typo;
   display: block;
   position: fixed;
   top: 0;
@@ -101,29 +101,29 @@ button {
 }
 
 .h1 {
-  @include typo-rwd(h1);
+  @extend %h1-typo;
 }
 
 .h2 {
-  @include typo-rwd(h2);
+  @extend %h2-typo;
 }
 
 .h3 {
-  @include typo-rwd(h3);
+  @extend %h3-typo;
 }
 
 .h4 {
-  @include typo-rwd(h4);
+  @extend %h4-typo;
 }
 
 .h5 {
-  @include typo-rwd(h5);
+  @extend %h5-typo;
 }
 
 .p {
   display: block;
   position: relative;
-  @include typo-rwd(p);
+  @extend %p-typo;
 }
 
 .menu {
@@ -135,7 +135,7 @@ button {
   text-align: center;
 
   &:hover {
-    letter-spacing: 0.8px;
+    letter-spacing: 0.05rem;
   }
   &.menuDesktop-claim {
     width: 12.5rem;
@@ -143,19 +143,19 @@ button {
 }
 
 .notes {
-  @include typo-rwd(notes);
+  @extend %notes-typo;
 }
 
 .button {
-  @include typo-rwd(button);
+  @extend %button-typo;
 }
 
 .tiny {
-  @include typo-rwd(tiny);
+  @extend %tiny-typo;
 }
 
 .fact-text {
-  @include typo-rwd(fact);
+  @extend %fact-typo;
 }
 
 .line {
@@ -164,7 +164,7 @@ button {
   box-sizing: border-box;
 
   &.has-tab {
-    padding-left: 24px;
+    padding-left: 1.5rem;
   }
 }
 
@@ -221,13 +221,13 @@ button {
   }
 
   .line.has-tab {
-    padding-left: 32px;
+    padding-left: 2rem;
   }
 }
 
 @include mq(xl) {
   .line.has-tab {
-    padding-left: 48px;
+    padding-left: 3rem;
   }
 }
 
