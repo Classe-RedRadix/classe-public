@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import useTranslations from '../../../hooks/useTranslations'
 import TabIcon from './../../../assets/icons/TabIcon'
 import { CoursePropType } from '../../sharedProptypes'
+import ConditionalWrapper from '../wrappers/ConditionalWrapper'
 
 const CoursesList = ({ courses, openCourse, isPlacedAtHome }) => {
   const t = useTranslations()
@@ -11,8 +12,6 @@ const CoursesList = ({ courses, openCourse, isPlacedAtHome }) => {
     openCourse(course)
   }
 
-  const CoursesListlinkWrapper = isPlacedAtHome ? 'div' : 'h2'
-
   return (
     <div className="coursesList">
       {isPlacedAtHome ? null : (
@@ -21,7 +20,10 @@ const CoursesList = ({ courses, openCourse, isPlacedAtHome }) => {
       <ol className="coursesList-list">
         {courses.map((course, index) => (
           <li key={t(course.information.title)}>
-            <CoursesListlinkWrapper>
+            <ConditionalWrapper
+            condition={!isPlacedAtHome}
+            wrapper={children => <h2>{children}</h2>}
+            >
               <a
                 className="coursesList-link h1"
                 href={course.href}
@@ -34,7 +36,7 @@ const CoursesList = ({ courses, openCourse, isPlacedAtHome }) => {
                   </span>
                 </span>
               </a>
-            </CoursesListlinkWrapper>
+            </ConditionalWrapper>
           </li>
         ))}
       </ol>
