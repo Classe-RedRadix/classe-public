@@ -182,6 +182,14 @@ import tailorMadeCoursesImage1080 from '/public/images/nuestros-cursos-a-tu-medi
 import tailorMadeCoursesImage828 from '/public/images/nuestros-cursos-a-tu-medida-828.jpg'
 import tailorMadeCoursesImage750 from '/public/images/nuestros-cursos-a-tu-medida-750.jpg'
 import tailorMadeCoursesImage640 from '/public/images/nuestros-cursos-a-tu-medida-640.jpg'
+import tailorMadeCoursesMainImageWebp from '/public/images/nuestros-cursos-a-tu-medida.webp'
+import tailorMadeCoursesImageWebp2048 from '/public/images/nuestros-cursos-a-tu-medida-2048.webp'
+import tailorMadeCoursesImageWebp1920 from '/public/images/nuestros-cursos-a-tu-medida-1920.webp'
+import tailorMadeCoursesImageWebp1200 from '/public/images/nuestros-cursos-a-tu-medida-1200.webp'
+import tailorMadeCoursesImageWebp1080 from '/public/images/nuestros-cursos-a-tu-medida-1080.webp'
+import tailorMadeCoursesImageWebp828 from '/public/images/nuestros-cursos-a-tu-medida-828.webp'
+import tailorMadeCoursesImageWebp750 from '/public/images/nuestros-cursos-a-tu-medida-750.webp'
+import tailorMadeCoursesImageWebp640 from '/public/images/nuestros-cursos-a-tu-medida-640.webp'
 const TAILOR_MADE_COURSES_IMAGE = {
   mainImage: tailorMadeCoursesMainImage,
   alt: 'alt-image:developers-working',
@@ -215,6 +223,40 @@ const TAILOR_MADE_COURSES_IMAGE = {
     },
     {
       src: tailorMadeCoursesImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: tailorMadeCoursesMainImageWebp,
+      width: 3480,
+    },
+    {
+      src: tailorMadeCoursesImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: tailorMadeCoursesImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: tailorMadeCoursesImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: tailorMadeCoursesImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: tailorMadeCoursesImageWebp828,
+      width: 828,
+    },
+    {
+      src: tailorMadeCoursesImageWebp750,
+      width: 750,
+    },
+    {
+      src: tailorMadeCoursesImageWebp640,
       width: 640,
     },
   ],
