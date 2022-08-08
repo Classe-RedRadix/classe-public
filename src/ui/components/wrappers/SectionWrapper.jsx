@@ -8,6 +8,7 @@ const SectionWrapper = ({
   isFluorChanger,
   children,
   extraClass,
+  container,
 }) => {
   const classes = cx('sectionWrapper', `${extraClass ? extraClass : ''}`, {
     'is-black': isBlack,
@@ -15,7 +16,10 @@ const SectionWrapper = ({
     'is-fluor': isFluor,
     'is-fluorChanger': isFluorChanger,
   })
-  return <section className={classes}>{children}</section>
+
+  const Wrapper = container ? container : 'section'
+
+  return <Wrapper className={classes}>{children}</Wrapper>
 }
 
 SectionWrapper.propTypes = {
@@ -25,6 +29,7 @@ SectionWrapper.propTypes = {
   isFluorChanger: PropTypes.bool,
   children: PropTypes.node.isRequired,
   extraClass: PropTypes.string,
+  container: PropTypes.string,
 }
 
 export default SectionWrapper

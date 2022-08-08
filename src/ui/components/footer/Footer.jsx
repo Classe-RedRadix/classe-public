@@ -30,6 +30,7 @@ const Footer = ({
       isBlack={isBlack}
       isFluor={isFluor}
       extraClass="footer"
+      container="footer"
     >
       <Row type="quarter">
         <Cell isNegative={isBlack}>
