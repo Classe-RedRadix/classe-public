@@ -8,7 +8,6 @@ import Paragraphs from '../../paragraphs/Paragraphs'
 import TabIcon from './../../../../assets/icons/TabIcon'
 import DatePicker from '../../date-picker/DatePicker'
 import { useTranslations, useGenerateImageCandidates } from '../../../../hooks'
-import useFitText from 'use-fit-text'
 import { DatesPropType } from './../../../sharedProptypes'
 
 const Course = React.forwardRef(
@@ -17,28 +16,30 @@ const Course = React.forwardRef(
     refCourseIntro,
   ) => {
     const formatMessage = useTranslations()
+    const refTitle = useRef(null)
 
     const marquee = (selector, speed) => {
       const clone = selector.innerHTML
-      const firstElement = selector.children[0]
+
+      for (let index = 0; index < 3; index++) {
+        selector.insertAdjacentHTML(
+          'afterend',
+          `<p class="courseIntro-nameText" aria-hidden="true">${clone}</p>`,
+        )
+      }
       let i = 0
-      selector.insertAdjacentHTML('beforeend', clone)
-      selector.insertAdjacentHTML('beforeend', clone)
-      selector.insertAdjacentHTML('beforeend', clone)
       const interval = setInterval(() => {
-        firstElement.style.marginLeft = `-${i}px`
+        selector.style.marginLeft = `-${i}px`
         i = i + speed
-        if (i > firstElement.clientWidth + 60) {
+        if (i > selector.clientWidth + 60) {
           i = 0
         }
       }, 0)
       return interval
     }
-    const refTitle = useRef(null)
-    const refTitleWrapper = useRef(null)
 
     useEffect(() => {
-      const interval = marquee(refTitleWrapper.current, 0.3)
+      const interval = marquee(refTitle.current, 0.3)
       return () => clearInterval(interval)
     }, [])
 
@@ -47,7 +48,7 @@ const Course = React.forwardRef(
         <SectionWrapper isBlack extraClass="courseIntro">
           <Row type="full" extraClass="courseIntro-name">
             <Cell isNegative>
-              <div className="courseIntro-name-wrapper" ref={refTitleWrapper}>
+              <div className="courseIntro-name-wrapper">
                 <h1 className="courseIntro-nameText" ref={refTitle}>
                   <TabIcon className="courseIntro-tab" aria-hidden="true" />
                   {formatMessage(name)}
