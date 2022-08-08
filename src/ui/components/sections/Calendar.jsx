@@ -27,16 +27,24 @@ const Calendar = ({ dates, isBlack, isFluor, openContact }) => {
           </div>
         </Cell>
         <Cell>
-          <img
-            src={agendaSlotImage.mainImage}
-            alt={formatMessage(agendaSlotImage.alt)}
-            width={agendaSlotImage.width}
-            height={agendaSlotImage.height}
-            sizes={agendaSlotImage.sizes}
-            srcSet={useGenerateImageCandidates(agendaSlotImage.srcSet)}
-            loading="lazy"
-            className="image"
-          />
+          <picture>
+            <source
+              sizes={agendaSlotImage.sizes}
+              srcSet={useGenerateImageCandidates(agendaSlotImage.srcSetWebp)}
+              type="image/webp"
+            />
+
+            <img
+              src={agendaSlotImage.mainImage}
+              alt={formatMessage(agendaSlotImage.alt)}
+              width={agendaSlotImage.width}
+              height={agendaSlotImage.height}
+              sizes={agendaSlotImage.sizes}
+              srcSet={useGenerateImageCandidates(agendaSlotImage.srcSet)}
+              loading="lazy"
+              className="image"
+            />
+          </picture>
         </Cell>
       </Row>
       <Row type="half">

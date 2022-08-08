@@ -270,6 +270,14 @@ import agendaSlotImage1080 from '/public/images/haz-hueco-en-tu-agenda-1080.jpg'
 import agendaSlotImage828 from '/public/images/haz-hueco-en-tu-agenda-828.jpg'
 import agendaSlotImage750 from '/public/images/haz-hueco-en-tu-agenda-750.jpg'
 import agendaSlotImage640 from '/public/images/haz-hueco-en-tu-agenda-640.jpg'
+import agendaSlotMainImageWebp from '/public/images/haz-hueco-en-tu-agenda.webp'
+import agendaSlotImageWebp2048 from '/public/images/haz-hueco-en-tu-agenda-2048.webp'
+import agendaSlotImageWebp1920 from '/public/images/haz-hueco-en-tu-agenda-1920.webp'
+import agendaSlotImageWebp1200 from '/public/images/haz-hueco-en-tu-agenda-1200.webp'
+import agendaSlotImageWebp1080 from '/public/images/haz-hueco-en-tu-agenda-1080.webp'
+import agendaSlotImageWebp828 from '/public/images/haz-hueco-en-tu-agenda-828.webp'
+import agendaSlotImageWebp750 from '/public/images/haz-hueco-en-tu-agenda-750.webp'
+import agendaSlotImageWebp640 from '/public/images/haz-hueco-en-tu-agenda-640.webp'
 const AGENDA_SLOT_IMAGE = {
   mainImage: agendaSlotMainImage,
   alt: 'alt-image:programming-students-attending',
@@ -303,6 +311,40 @@ const AGENDA_SLOT_IMAGE = {
     },
     {
       src: agendaSlotImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: agendaSlotMainImageWebp,
+      width: 3480,
+    },
+    {
+      src: agendaSlotImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: agendaSlotImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: agendaSlotImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: agendaSlotImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: agendaSlotImageWebp828,
+      width: 828,
+    },
+    {
+      src: agendaSlotImageWebp750,
+      width: 750,
+    },
+    {
+      src: agendaSlotImageWebp640,
       width: 640,
     },
   ],
