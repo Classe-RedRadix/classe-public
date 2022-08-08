@@ -358,6 +358,14 @@ import professionalTrainingImage1080 from '/public/images/formacion-para-profesi
 import professionalTrainingImage828 from '/public/images/formacion-para-profesionales-828.jpg'
 import professionalTrainingImage750 from '/public/images/formacion-para-profesionales-750.jpg'
 import professionalTrainingImage640 from '/public/images/formacion-para-profesionales-640.jpg'
+import professionalTrainingMainImageWebp from '/public/images/formacion-para-profesionales.webp'
+import professionalTrainingImageWebp2048 from '/public/images/formacion-para-profesionales-2048.webp'
+import professionalTrainingImageWebp1920 from '/public/images/formacion-para-profesionales-1920.webp'
+import professionalTrainingImageWebp1200 from '/public/images/formacion-para-profesionales-1200.webp'
+import professionalTrainingImageWebp1080 from '/public/images/formacion-para-profesionales-1080.webp'
+import professionalTrainingImageWebp828 from '/public/images/formacion-para-profesionales-828.webp'
+import professionalTrainingImageWebp750 from '/public/images/formacion-para-profesionales-750.webp'
+import professionalTrainingImageWebp640 from '/public/images/formacion-para-profesionales-640.webp'
 const PROFESSIONAL_TRAINING_IMAGE = {
   mainImage: professionalTrainingMainImage,
   alt: 'alt-image:three-web-developers',
@@ -391,6 +399,40 @@ const PROFESSIONAL_TRAINING_IMAGE = {
     },
     {
       src: professionalTrainingImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: professionalTrainingMainImageWebp,
+      width: 3480,
+    },
+    {
+      src: professionalTrainingImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: professionalTrainingImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: professionalTrainingImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: professionalTrainingImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: professionalTrainingImageWebp828,
+      width: 828,
+    },
+    {
+      src: professionalTrainingImageWebp750,
+      width: 750,
+    },
+    {
+      src: professionalTrainingImageWebp640,
       width: 640,
     },
   ],
