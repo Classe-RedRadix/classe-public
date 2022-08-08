@@ -40,6 +40,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+  &:not(.is-visible) {
+    pointer-events: none;
+  }
 
   &-title {
     margin-bottom: 0.5rem;

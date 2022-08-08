@@ -13,27 +13,12 @@ const Cell = ({
   const classes = cx('cell', `${extraClass ? extraClass : ''}`, {
     'has-gap': hasGap,
     'has-linesHidden': hasLinesHidden,
+    'is-animated': isAnimated,
     'is-column': isColumn,
     'is-negative': isNegative,
   })
   return (
     <div className={classes}>
-      {!isColumn ? (
-        <>
-          <div className="cell-corner is-topLeft"></div>
-          <div className="cell-corner is-topRight"></div>
-          <div className="cell-corner is-bottomRight"></div>
-          <div className="cell-corner is-bottomLeft"></div>
-        </>
-      ) : null}
-      {isAnimated ? (
-        <>
-          <div className="cell-line is-top"></div>
-          <div className="cell-line is-right"></div>
-          <div className="cell-line is-bottom"></div>
-          <div className="cell-line is-left"></div>
-        </>
-      ) : null}
       {children}
     </div>
   )

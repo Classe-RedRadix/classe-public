@@ -64,6 +64,14 @@ const InfoHead = ({ title, description, url, children, noindex }) => {
       />
 
       {children}
+
+      <script
+        defer
+        dangerouslySetInnerHTML={{
+          __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
+        c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"8481bb5a130b69114db81bb62224995f"})});`,
+        }}
+      />
     </Head>
   )
 }
