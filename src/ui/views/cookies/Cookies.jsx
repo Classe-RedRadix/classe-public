@@ -82,9 +82,9 @@ const LegalTerms = ({
                 <Cell hasGap isNegative={isBlack}>
                   <p className="p">{formatMessage('cookies-policy:block-1')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-2')}</p>
-                  <p className="h4">
+                  <h2 className="h4">
                     {formatMessage('cookies-policy:subtitle')}
-                  </p>
+                  </h2>
                   <p className="p">{formatMessage('cookies-policy:block-3')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-4')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-5')}</p>
