@@ -44,16 +44,24 @@ const Featured = ({ isBlack, isFluor, course, openCourse }) => {
           />
         </Cell>
         <Cell>
-          <img
-            src={coursesImage.mainImage}
-            alt={t(coursesImage.alt)}
-            width={coursesImage.width}
-            height={coursesImage.height}
-            sizes={coursesImage.sizes}
-            srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
-            loading="lazy"
-            className="image"
-          />
+          <picture>
+            <source
+              sizes={coursesImage.sizes}
+              srcSet={useGenerateImageCandidates(coursesImage.srcSetWebp)}
+              type="image/webp"
+            />
+
+            <img
+              src={coursesImage.mainImage}
+              alt={t(coursesImage.alt)}
+              width={coursesImage.width}
+              height={coursesImage.height}
+              sizes={coursesImage.sizes}
+              srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
+              loading="lazy"
+              className="image"
+            />
+          </picture>
         </Cell>
       </Row>
     </SectionWrapper>

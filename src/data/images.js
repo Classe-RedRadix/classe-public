@@ -94,6 +94,14 @@ import coursesImage1080 from '/public/images/cursos-1080.jpg'
 import coursesImage828 from '/public/images/cursos-828.jpg'
 import coursesImage750 from '/public/images/cursos-750.jpg'
 import coursesImage640 from '/public/images/cursos-640.jpg'
+import coursesMainImageWebp from '/public/images/cursos.webp'
+import coursesImageWebp2048 from '/public/images/cursos-2048.webp'
+import coursesImageWebp1920 from '/public/images/cursos-1920.webp'
+import coursesImageWebp1200 from '/public/images/cursos-1200.webp'
+import coursesImageWebp1080 from '/public/images/cursos-1080.webp'
+import coursesImageWebp828 from '/public/images/cursos-828.webp'
+import coursesImageWebp750 from '/public/images/cursos-750.webp'
+import coursesImageWebp640 from '/public/images/cursos-640.webp'
 const COURSES_IMAGE = {
   mainImage: coursesMainImage,
   alt: 'alt-image:hands-keyboard-mouse',
@@ -127,6 +135,40 @@ const COURSES_IMAGE = {
     },
     {
       src: coursesImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: coursesMainImageWebp,
+      width: 3456,
+    },
+    {
+      src: coursesImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: coursesImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: coursesImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: coursesImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: coursesImageWebp828,
+      width: 828,
+    },
+    {
+      src: coursesImageWebp750,
+      width: 750,
+    },
+    {
+      src: coursesImageWebp640,
       width: 640,
     },
   ],
