@@ -38,6 +38,32 @@ const useContactForm = interestedInCourseId => {
   const [isSaved, setIsSaved] = useState(false)
   const [errors, setErrors] = useState({})
 
+  const removeError = key => {
+    if (key in errors) {
+      setErrors(prev => {
+        const validationErrors = { ...prev }
+        delete validationErrors[key]
+        return validationErrors
+      })
+    }
+  }
+
+  const removeInterestedInOptionError = () => {
+    removeError('optionNoSelected')
+  }
+
+  const removeNameError = () => {
+    removeError('nameNoSelected')
+  }
+
+  const removeEmailError = () => {
+    removeError('emailNoSelected')
+  }
+
+  const removeTermsError = () => {
+    removeError('termsNoSelected')
+  }
+
   const isStringValid = value => value.trimRight() !== ''
 
   const onInterestedInOptionChange = interestedInOption => {
@@ -51,7 +77,27 @@ const useContactForm = interestedInCourseId => {
         }),
       ),
     )
+
+    removeInterestedInOptionError()
   }
+
+  useEffect(() => {
+    if (isStringValid(name)) {
+      removeNameError()
+    }
+  }, [name])
+
+  useEffect(() => {
+    if (isStringValid(email)) {
+      removeEmailError()
+    }
+  }, [email])
+
+  useEffect(() => {
+    if (termsAndConditions) {
+      removeTermsError()
+    }
+  }, [termsAndConditions])
 
   /**
    *
