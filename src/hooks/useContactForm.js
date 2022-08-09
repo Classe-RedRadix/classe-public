@@ -29,7 +29,8 @@ const useContactForm = interestedInCourseId => {
   )
 
   // NOTE: we are not sending this value, it's just a form control
-  const [termsAndConditions, toggleTermsAndConditions] = useCheckbox(false)
+  const [termsAndConditions, toggleTermsAndConditions, setTermsAndConditions] =
+    useCheckbox(false)
 
   // States to know the request status
   const [isLoading, setIsLoading] = useState(false)
