@@ -30,6 +30,7 @@ export const _LegalTerms = () => {
         name: '',
         onNameChange: () => {},
         saveToFirebase: () => {},
+        clearForm: () => {},
       }}
       courses={COURSES}
     ></LegalTerms>

@@ -25,6 +25,7 @@ export const contact = () => {
         name: '',
         onNameChange: () => {},
         saveToFirebase: () => {},
+        clearForm: () => {},
       }}
     />
   )

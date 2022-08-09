@@ -84,6 +84,7 @@ export const home = () => {
         name: '',
         onNameChange: () => {},
         saveToFirebase: () => {},
+        clearForm: () => {},
       }}
       isBlack={isBlack}
       isFluor={isFluor}
