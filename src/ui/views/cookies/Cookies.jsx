@@ -17,7 +17,7 @@ import Footer from '../../components/footer/Footer'
 import Row from '../../components/row/Row'
 import Cell from '../../components/cell/Cell'
 
-const LegalTerms = ({
+const CookiesPolicy = ({
   isBlack,
   isFluor,
   isLock,
@@ -107,7 +107,7 @@ const LegalTerms = ({
   )
 }
 
-LegalTerms.propTypes = {
+CookiesPolicy.propTypes = {
   isBlack: PropTypes.bool,
   isFluor: PropTypes.bool,
   isLock: PropTypes.bool,
@@ -117,4 +117,4 @@ LegalTerms.propTypes = {
   contactFormParams: ContactFormParamsPropType,
 }
 
-export default LegalTerms
+export default CookiesPolicy
