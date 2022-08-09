@@ -246,7 +246,6 @@
   "find:description": "Si quieres venir a nuestras oficinas, estamos en pleno centro de Madrid, en la calle Calatrava, 27, al lado del Metro de La Latina.",
   "find:description2": "INFO<ariaHidden>[at]</ariaHidden><screenReader>@</screenReader>classe.dev",
   "find:claim": "<line>Y detrás</line> <lineTab>de la</lineTab> <lineTab>pantalla</lineTab>",
-  "find:aria": "Copia nuestro email en el portapapeles",
 
   "contact:second-title": "<line>Contacta</line> <line>con Classe</line>",
   "contact:address1": "<line>Madrid, Calatrava, 27</line> <line>[Metro La Latina]</line>",

@@ -157,7 +157,11 @@ const Footer = ({
               <br />
               [Metro La Latina]
             </a>
-            <a className="button" href="mailto:info@classe.dev">
+            <a
+              className="button"
+              href={`mailto:${formatMessage('schema-contact-page:email')}`}
+              target="_blank"
+            >
               info[at]classe.dev
             </a>
           </address>

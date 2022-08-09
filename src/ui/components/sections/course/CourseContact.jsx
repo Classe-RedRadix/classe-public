@@ -35,7 +35,11 @@ const CourseContact = ({ openContact }) => {
                 line: text => <span className="line">{text}</span>,
               })}
             </h3>
-            <h3 className="heading menuLayer-contactAddressText">
+            <a
+              className="heading menuLayer-contactAddressText"
+              href={`mailto:${t('schema-contact-page:email')}`}
+              target="_blank"
+            >
               {t('contact:address2', {
                 lineAriaHidden: text => (
                   <span className="line" aria-hidden="true">
@@ -44,7 +48,7 @@ const CourseContact = ({ openContact }) => {
                 ),
                 screenReadOnly: text => <span className="sr-only">{text}</span>,
               })}
-            </h3>
+            </a>
           </address>
         </Cell>
         <Cell isNegative>

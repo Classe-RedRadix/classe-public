@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import { copyClasseEmailToClipboard } from '../../../business'
 import { useTranslations } from '../../../hooks'
 import cx from 'classnames'
 
@@ -37,11 +36,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               line: text => <span className="line">{text}</span>,
             })}
           </div>
-          {/* TODO: add the cursor pointer in the css (?) */}
-          <div
+          <a
             className="heading menuLayer-contactAddressText"
-            style={{ cursor: 'pointer' }}
-            onClick={copyClasseEmailToClipboard}
+            href={`mailto:${formatMessage('schema-contact-page:email')}`}
+            target="_blank"
           >
             {formatMessage('contact:address2', {
               lineAriaHidden: text => (
@@ -51,7 +49,7 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               ),
               screenReadOnly: text => <span className="sr-only">{text}</span>,
             })}
-          </div>
+          </a>
         </address>
       </Cell>
       <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
