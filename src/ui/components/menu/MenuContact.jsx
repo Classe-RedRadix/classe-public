@@ -31,11 +31,15 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
           </h1>
         </div>
         <address className="menuLayer-contactAddress">
-          <div className="heading menuLayer-contactAddressText">
+          <a
+            className="heading menuLayer-contactAddressText"
+            href={formatMessage('contact:address-link')}
+            target="_blank"
+          >
             {formatMessage('contact:address1', {
               line: text => <span className="line">{text}</span>,
             })}
-          </div>
+          </a>
           <a
             className="heading menuLayer-contactAddressText"
             href={`mailto:${formatMessage('schema-contact-page:email')}`}

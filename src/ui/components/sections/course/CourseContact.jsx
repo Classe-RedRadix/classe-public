@@ -30,11 +30,15 @@ const CourseContact = ({ openContact }) => {
           <Glyph viewBox="0 0 56 73" className="courseSection-glypTop" />
 
           <address>
-            <h3 className="heading menuLayer-contactAddressText">
+            <a
+              className="heading menuLayer-contactAddressText"
+              href={t('contact:address-link')}
+              target="_blank"
+            >
               {t('contact:address1', {
                 line: text => <span className="line">{text}</span>,
               })}
-            </h3>
+            </a>
             <a
               className="heading menuLayer-contactAddressText"
               href={`mailto:${t('schema-contact-page:email')}`}

@@ -150,7 +150,7 @@ const Footer = ({
             <span className="tiny">{formatMessage('footer:contact')}</span>
             <a
               className="button"
-              href="https://www.google.es/maps/place/Redradix/@40.4092458,-3.7143432,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287e4a90167b:0x9bfdc0ed1f91d800!8m2!3d40.4092458!4d-3.7121545?shorturl=1"
+              href={formatMessage('contact:address-link')}
               target="_blank"
             >
               Madrid, Calatrava 27
