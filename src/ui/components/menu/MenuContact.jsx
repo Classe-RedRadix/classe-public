@@ -90,7 +90,6 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               handleChange={contactFormParams.onNameChange}
               value={contactFormParams.name}
               name="name"
-              type="name"
               isNegative
               id="contactName"
             />
