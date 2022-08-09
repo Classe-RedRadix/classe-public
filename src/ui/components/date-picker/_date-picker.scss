@@ -1,0 +1,203 @@
+.datePicker {
+  $self: &;
+  display: block;
+  position: relative;
+  width: 100%;
+
+  &.is-hidden {
+    .datePicker-carousel {
+      filter: $blur-value;
+      opacity: 0;
+      transition: filter $fade-simple, opacity $fade-short $fade-short;
+    }
+  }
+
+  &-date {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    padding: 0 3rem;
+    width: 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+    margin-bottom: 2rem;
+  }
+
+  &-dateText {
+    display: block;
+    position: relative;
+
+    & + .datePicker-dateText {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &-arrows {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: all;
+
+    .icon {
+      width: 1.5rem;
+      height: auto;
+
+      &:first-child {
+        transform: rotate(-135deg);
+      }
+      &:last-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &-carousel {
+    display: block;
+    position: relative;
+    width: 100%;
+    filter: blur(0);
+    opacity: 1;
+    transition: filter $fade-simple, opacity $fade-short;
+  }
+
+  &-courseWrapper {
+    display: block;
+    position: relative;
+
+    & + .datePicker-courseWrapper {
+      margin-top: 2rem;
+    }
+  }
+
+  &-course {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &-courseTitle {
+    display: block;
+    position: relative;
+    margin-left: 0.5rem;
+
+    #{$self}--course & {
+      max-width: 6.25rem;
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+  }
+
+  &-courseDates {
+    flex: 1;
+    display: block;
+    position: relative;
+    margin-right: 0.5rem;
+    text-align: right;
+
+    .notes {
+      line-height: 0.75rem;
+      white-space: nowrap;
+    }
+  }
+
+  .mainButton {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  @include mq(md) {
+    &-courseDates .notes {
+      line-height: 1.25rem;
+    }
+  }
+
+  @include mq(lg) {
+    &-courseTitle {
+      #{$self}--course & {
+        max-width: 12.5rem;
+        font-size: 1.25rem;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  @include mq(xl) {
+    &-date {
+      display: block;
+      padding: 0;
+      padding-right: 2.5rem;
+      min-height: 5.5rem;
+    }
+
+    &-dateText + .datePicker-dateText {
+      margin-left: 0;
+    }
+
+    &-arrows {
+      display: block;
+      top: 0;
+      right: 0;
+      width: auto;
+      transform: none;
+    }
+
+    &-arrows .icon {
+      display: block;
+      position: relative;
+      width: 2.5rem;
+
+      &:last-child {
+        margin-top: 0.5rem;
+      }
+    }
+
+    &-courseWrapper {
+      display: flex;
+      align-items: center;
+
+      & + .datePicker-courseWrapper {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &-course {
+      flex: 1;
+    }
+
+    &-courseTitle {
+      #{$self}--course & {
+        max-width: 12.5rem;
+        font-size: 1.25rem;
+        line-height: 1.3;
+      }
+    }
+
+    .mainButton {
+      margin-top: 0;
+      margin-left: 1.5rem;
+      min-width: 7.5rem;
+      width: auto;
+    }
+  }
+
+  @include mq(xxl) {
+    .mainButton {
+      margin-top: 0;
+      margin-left: 1.5rem;
+      min-width: 15rem;
+      width: auto;
+    }
+  }
+}

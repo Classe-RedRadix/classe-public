@@ -1,0 +1,74 @@
+.cell {
+  display: block;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: linear-gradient(to right, $black 1px, transparent 1px) 0 0,
+    linear-gradient(to right, $black 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, $black 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, $black 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, $black 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, $black 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, $black 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, $black 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0.75rem 0.75rem;
+
+  &.has-gap {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &.is-negative {
+    background: linear-gradient(to right, $white 1px, transparent 1px) 0 0,
+      linear-gradient(to right, $white 1px, transparent 1px) 0 100%,
+      linear-gradient(to left, $white 1px, transparent 1px) 100% 0,
+      linear-gradient(to left, $white 1px, transparent 1px) 100% 100%,
+      linear-gradient(to bottom, $white 1px, transparent 1px) 0 0,
+      linear-gradient(to bottom, $white 1px, transparent 1px) 100% 0,
+      linear-gradient(to top, $white 1px, transparent 1px) 0 100%,
+      linear-gradient(to top, $white 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0.75rem 0.75rem;
+
+    .coursesList-link,
+    .menu {
+      color: $white;
+    }
+  }
+
+  &.is-animated {
+    background-size: 100% 100%, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 100%,
+      0.75rem 0.75rem, 100% 100%, 100% 100%, 0.75rem 0.75rem;
+    will-change: background-size;
+  }
+
+  &.has-linesHidden {
+    background-size: 0.75rem 0.75rem;
+    transition: background-size $fade-simple 0.6s;
+  }
+
+  &.is-column {
+    padding: 0;
+  }
+
+  @include mq(md) {
+    padding: 1.5rem;
+
+    &-cell {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  @include mq(lg) {
+    padding: 2rem;
+  }
+
+  @include mq(xxl) {
+    padding: 2.5rem;
+  }
+}

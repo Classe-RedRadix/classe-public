@@ -1,0 +1,330 @@
+.menuLayer {
+  $self: &;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  color: $white;
+  background-color: $black;
+  opacity: 0;
+  transition: opacity $fade-simple;
+  pointer-events: none;
+  z-index: $index-menu-layer;
+  .row + .row {
+    margin-top: 0;
+  }
+  .image {
+    @include mq(xl) {
+      max-height: calc(100vh - 18.125rem);
+    }
+  }
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &.is-free {
+    bottom: 0;
+    overflow-y: scroll;
+    height: auto;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  &:not(.is-open) .cell-line {
+    transition: transform 0s $fade-simple;
+  }
+
+  &-wrapper {
+    display: block;
+    position: relative;
+    padding: $distance-small;
+    padding-top: 3.75rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-desktopHeader {
+    display: block;
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  &-desktopHeader-button {
+    position: relative;
+    margin-left: auto;
+  }
+
+  &-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+
+    .row {
+      width: 100%;
+    }
+
+    &.is-block {
+      display: block;
+    }
+  }
+
+  &-menu .cell {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .menuDesktop-claim,
+  .menuDesktop-button {
+    display: none;
+  }
+
+  .menuDesktop-link {
+    @extend %h2-typo;
+    text-transform: uppercase;
+  }
+
+  &-courses {
+    .image {
+      max-height: calc(100vh - 15rem);
+    }
+    &.row {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .cell:first-child {
+        display: none;
+
+        & + .cell {
+          margin-top: 0;
+        }
+      }
+
+      .cell:last-child {
+        flex: 1;
+      }
+    }
+  }
+
+  &-contact.row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .cell {
+      display: flex;
+      flex-direction: column;
+      min-height: 65vh;
+
+      #{$self}-contactAddress {
+        margin-top: auto;
+      }
+
+      #{$self}-contactAddressText {
+        @extend %h4-typo;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .cell:last-child {
+      flex: 1;
+    }
+    .mensSuccess {
+      position: absolute;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: $black;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity $fade-simple;
+      &.isVisible {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    .contact-form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-formBlock {
+      position: relative;
+      //TODO: Refactor error message
+      &--legal {
+        &:not(.contact-formBlock--error) {
+          padding-bottom: 1.4375rem;
+        }
+      }
+      &:not(.contact-formBlock--error) {
+        padding-bottom: 1.4375rem;
+      }
+      &.contact-formBlock-title {
+        padding-bottom: 0;
+      }
+      & + .contact-formBlock {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 1.25rem;
+      }
+
+      &--flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
+        &:not(.contact-formBlock--error) {
+          padding-bottom: 1.5625rem;
+        }
+        & + .contact-formBlock {
+          margin-top: 1.5rem;
+        }
+
+        .checkbox,
+        .radio {
+          margin-top: 0.75rem;
+        }
+      }
+      &:last-child {
+        margin-top: 1.5rem;
+        padding: 0;
+      }
+      &--error {
+        .input-field {
+          border-color: $error;
+        }
+        .checkbox-icon {
+          color: $error;
+        }
+        small {
+          color: $error;
+          display: flex;
+          align-items: center;
+          gap: 0.3125rem;
+          margin-top: 0.3125rem;
+        }
+        .icon-error {
+          max-width: 0.9375rem;
+          height: 0.9375rem;
+        }
+      }
+    }
+  }
+
+  @include mq(md) {
+    &.is-open {
+      transition: opacity $fade-simple $fade-short-delay;
+
+      & + .menuDesktop,
+      & ~ .blurableWrapper {
+        filter: $blur-value;
+        transition: filter $fade-short;
+      }
+    }
+
+    &.is-free {
+      overflow-y: unset;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+
+    &-wrapper {
+      padding: $distance-big;
+    }
+
+    &-content {
+      min-height: calc(100% - 1.75rem);
+
+      &.is-block {
+        height: calc(100% - 3.75rem);
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+
+    &-courses.row {
+      flex-direction: row;
+
+      .cell:first-child {
+        display: block;
+      }
+
+      .cell:last-child {
+        flex: none;
+      }
+    }
+
+    &-contact.row {
+      flex-direction: row;
+
+      .cell {
+        height: auto;
+
+        #{$self}-contactAddressText {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          margin-top: 1.5rem;
+        }
+      }
+
+      .cell:last-child {
+        flex: none;
+      }
+
+      .contact-formBlock--flex {
+        flex-direction: row;
+        align-items: center;
+
+        .checkbox {
+          margin-top: 0;
+          &:not(:last-child) {
+            margin-top: 0;
+            margin-right: 1.5rem;
+          }
+        }
+
+        .radio {
+          margin-top: 0;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
+    .menuDesktop-claim,
+    .menuDesktop-button {
+      display: block;
+    }
+
+    .menuDesktop-link {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+}

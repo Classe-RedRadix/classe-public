@@ -1,0 +1,73 @@
+.input {
+  $self: &;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &.has-submit .input-field {
+    @extend %notes-typo;
+    padding: 1rem 4rem 1rem 2rem;
+    text-transform: uppercase;
+    border: 1px solid $black;
+    border-radius: 3.75rem;
+    outline: none;
+  }
+
+  &-field {
+    @extend %p-typo;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+    color: $black;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px dotted $black;
+    transition: color $fade-simple, border $fade-simple;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $black;
+      transition: color $fade-simple;
+    }
+  }
+
+  &-submit {
+    display: block;
+    position: absolute;
+    top: 1.0625rem;
+    right: 1.5rem;
+    width: 1rem;
+    height: auto;
+    transform: rotate(45deg);
+
+    path {
+      fill: $black;
+      transition: fill $fade-simple;
+    }
+  }
+
+  &.is-negative {
+    #{$self}-field {
+      color: $white;
+      border-bottom-color: $white;
+      outline: none;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+
+  @include mq(md) {
+    &.has-submit .input-field {
+      padding: 1rem 4.5rem 1rem 2rem;
+    }
+
+    &-submit {
+      width: 1.5rem;
+    }
+  }
+}

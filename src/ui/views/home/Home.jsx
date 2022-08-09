@@ -89,6 +89,8 @@ const Home = ({
           openCourse={openCourse}
         />
         <div className="blurableWrapper">
+          <main>
+
           <Header title={formatMessage('manifest:header')} number={1} />
           <Manifest isBlack={isBlack} isFluor={isFluor} />
           <Header isClose title={formatMessage('manifest:header')} />
@@ -150,6 +152,8 @@ const Home = ({
           <Header isClose title={formatMessage('find:header')} />
 
           <Header title={formatMessage('footer:header')} number={10} />
+
+          </main>
           <Footer
             courses={courses}
             isBlack={isBlack}

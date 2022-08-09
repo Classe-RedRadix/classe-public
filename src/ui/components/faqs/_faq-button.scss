@@ -1,0 +1,107 @@
+.faqButton {
+  display: block;
+  position: relative;
+
+  &:not(.is-open) {
+    .faqButton-content {
+      height: 0 !important;
+    }
+
+    .faqButton-buttonIcon::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+  }
+
+  & + .faqButton {
+    margin-top: 1.5rem;
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  &-buttonText {
+    display: block;
+    position: relative;
+    text-align: left;
+  }
+
+  &-buttonIcon {
+    display: block;
+    position: relative;
+    margin-left: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    border: 1px solid $black;
+    border-radius: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1.25rem;
+      height: 0.0625rem;
+      background-color: $black;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &::after {
+      width: 1px;
+      height: 1.25rem;
+      opacity: 0;
+      transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+      transition: opacity $fade-short, transform $transform-short;
+    }
+  }
+
+  &-content {
+    display: block;
+    position: relative;
+    height: 0.0625rem;
+    border-bottom: 1px dashed $black;
+    overflow: hidden;
+    transition: height $transform-short;
+  }
+
+  &-description {
+    display: block;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  @include mq(md) {
+    & + .faqButton {
+      margin-top: 2rem;
+    }
+
+    &-button,
+    &-content {
+      margin-bottom: 2rem;
+    }
+
+    &-buttonIcon {
+      margin-left: 2.5rem;
+      min-width: 2.5rem;
+      height: 2.5rem;
+
+      &::before {
+        width: 1.5rem;
+      }
+
+      &::after {
+        height: 1.5rem;
+      }
+    }
+  }
+}

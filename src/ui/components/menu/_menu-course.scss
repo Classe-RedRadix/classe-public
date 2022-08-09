@@ -1,0 +1,42 @@
+.courseSections {
+  padding: 0;
+  height: 70vh;
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: calc(100vh - 1.75rem - (#{$distance-big} * 2));
+    padding-right: $distance-big;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .sectionWrapper {
+    height: calc(100vh - 5rem);
+  }
+  .p {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+  @include mq(md) {
+    .sectionWrapper + .sectionWrapper {
+      margin-left: -0.125rem;
+    }
+  }
+}
+.courseTitle-header {
+  position: fixed;
+  top: 0.625rem;
+  font-size: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-transform: uppercase;
+  &.is-visible {
+    opacity: 1;
+  }
+}

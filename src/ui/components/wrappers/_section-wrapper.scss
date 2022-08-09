@@ -1,0 +1,30 @@
+.sectionWrapper {
+  display: block;
+  position: relative;
+  padding: 0 $distance-small;
+  color: $black;
+  background-color: $white;
+  transition: color $fade-simple, background-color $fade-simple;
+  box-sizing: border-box;
+
+  &.is-black {
+    color: $white;
+    background-color: $black;
+  }
+
+  &.is-fluor {
+    background-color: $fluor;
+  }
+
+  & + .header {
+    margin-top: 1.5rem;
+  }
+
+  @include mq(md) {
+    padding: 0 $distance-big;
+
+    & + .header {
+      margin-top: 2rem;
+    }
+  }
+}

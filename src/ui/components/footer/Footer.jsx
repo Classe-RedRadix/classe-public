@@ -30,6 +30,7 @@ const Footer = ({
       isBlack={isBlack}
       isFluor={isFluor}
       extraClass="footer"
+      container="footer"
     >
       <Row type="quarter">
         <Cell isNegative={isBlack}>
@@ -156,8 +157,8 @@ const Footer = ({
               <br />
               [Metro La Latina]
             </a>
-            <a className="button" href="mailto:info@classe.com">
-              info[at]classe.com
+            <a className="button" href="mailto:info@classe.dev">
+              info[at]classe.dev
             </a>
           </address>
           <div className="footer-legal">

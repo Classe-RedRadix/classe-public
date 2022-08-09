@@ -1,0 +1,51 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &-content {
+    flex: 1;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    span {
+      margin-top: -5%;
+
+      & + span {
+        margin-top: -10%;
+      }
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    color: $white;
+  }
+
+  &-arrow {
+    width: 100%;
+    height: 100%;
+    max-width: 5.25rem;
+    max-height: 5.25rem;
+  }
+
+  &-buttonWrap {
+    grid-area: 2 / 4 / 3 / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  @include mq(md) {
+    min-height: calc(100% - 6.5rem);
+  }
+}

@@ -1,0 +1,55 @@
+.mainButton {
+  display: inline-block;
+  position: relative;
+  padding: 0.875rem 1rem;
+  width: auto;
+  min-height: 2.5rem;
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 3.75rem;
+  box-sizing: border-box;
+  transition: color $fade-short, background-color $fade-short,
+    border $fade-short;
+
+  html:not(.is-mobile) &:hover {
+    color: $black;
+    background-color: $fluor;
+    border: 1px solid $black;
+  }
+
+  html:not(.is-mobile) &.is-fluor:hover {
+    color: $fluor;
+    background-color: $black;
+    border: 1px solid $black;
+  }
+
+  &.is-full {
+    padding: 1.25rem 1rem;
+    min-height: 3.25rem;
+    min-width: 100%;
+  }
+
+  &.is-fluor {
+    color: $black;
+    background-color: $fluor;
+    border: 1px solid $black;
+  }
+
+  &.is-negative {
+    color: $white;
+    background-color: $black;
+    border: 1px solid $white;
+  }
+
+  &-text {
+    text-align: center;
+    transform: translateY(0.125rem);
+  }
+
+  @include mq(sm) {
+    &.is-full {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+}

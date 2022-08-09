@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 $distance-small;
+  color: $black;
+  transition: color $fade-simple;
+
+  & + .sectionWrapper {
+    margin-top: 1rem;
+  }
+
+  @include mq(md) {
+    padding: 0 $distance-big;
+
+    & + .sectionWrapper {
+      margin-top: 2rem;
+    }
+  }
+}
