@@ -38,6 +38,8 @@ const useContactForm = interestedInCourseId => {
   const [isSaved, setIsSaved] = useState(false)
   const [errors, setErrors] = useState({})
 
+  const isStringValid = value => value.trimRight() !== ''
+
   const onInterestedInOptionChange = interestedInOption => {
     setInterestedInOptions(interestedInOptions =>
       interestedInOptions.map(option =>
@@ -79,12 +81,12 @@ const useContactForm = interestedInCourseId => {
           'Selecciona al menos un curso de tu interés'
       }
 
-      if (name.trimRight() === '') {
+      if (!isStringValid(name)) {
         validationErrors.nameNoSelected = 'El nombre no puede estar vacío'
       }
     }
 
-    if (email.trimRight() === '') {
+    if (!isStringValid(email)) {
       validationErrors.emailNoSelected = 'Introduce un email válido'
     }
 
