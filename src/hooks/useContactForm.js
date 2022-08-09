@@ -39,6 +39,25 @@ const useContactForm = interestedInCourseId => {
   const [isSaved, setIsSaved] = useState(false)
   const [errors, setErrors] = useState({})
 
+  const clearForm = () => {
+    setName('')
+    setEmail('')
+    setUserType('company')
+    setInterestedInOptions(
+      COURSES.map(course => ({
+        checked: course.id === interestedInCourseId,
+        id: course.id,
+        label: formatMessage(course.information.title),
+      })),
+    )
+    setTermsAndConditions(false)
+    setIsLoading(false)
+    setIsError(false)
+    setError(null)
+    setIsSaved(false)
+    setErrors({})
+  }
+
   const removeError = key => {
     if (key in errors) {
       setErrors(prev => {
@@ -229,6 +248,7 @@ const useContactForm = interestedInCourseId => {
     onInterestedInOptionChange,
     termsAndConditions,
     toggleTermsAndConditions,
+    clearForm,
   }
 }
 
