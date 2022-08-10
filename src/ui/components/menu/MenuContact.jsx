@@ -164,23 +164,24 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
                 line: text => <span className="line">{text}</span>,
               })}
             </label>
+            <Input
+              placeholder={formatMessage('general:placeholder')}
+              handleBlur={() => {}}
+              handleChange={contactFormParams.onEmailChange}
+              name="email"
+              type="email"
+              value={contactFormParams.email}
+              isNegative
+              id="contactEmail"
+            />
+            {errorEmail !== undefined ? (
+              <small>
+                <ExclamationIcon color={'#f88078'} className="icon-error" />
+                {errorEmail}
+              </small>
+            ) : null}
           </div>
-          <Input
-            placeholder={formatMessage('general:placeholder')}
-            handleBlur={() => {}}
-            handleChange={contactFormParams.onEmailChange}
-            name="email"
-            type="email"
-            value={contactFormParams.email}
-            isNegative
-            id="contactEmail"
-          />
-          {errorEmail !== undefined ? (
-            <small>
-              <ExclamationIcon color={'#f88078'} className="icon-error" />
-              {errorEmail}
-            </small>
-          ) : null}
+
           <div className="contact-formBlock" ref={itemFormLegal}>
             <Checkbox
               hasMessage
