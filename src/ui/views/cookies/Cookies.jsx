@@ -17,7 +17,7 @@ import Footer from '../../components/footer/Footer'
 import Row from '../../components/row/Row'
 import Cell from '../../components/cell/Cell'
 
-const LegalTerms = ({
+const CookiesPolicy = ({
   isBlack,
   isFluor,
   isLock,
@@ -82,9 +82,9 @@ const LegalTerms = ({
                 <Cell hasGap isNegative={isBlack}>
                   <p className="p">{formatMessage('cookies-policy:block-1')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-2')}</p>
-                  <p className="h4">
+                  <h2 className="h4">
                     {formatMessage('cookies-policy:subtitle')}
-                  </p>
+                  </h2>
                   <p className="p">{formatMessage('cookies-policy:block-3')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-4')}</p>
                   <p className="p">{formatMessage('cookies-policy:block-5')}</p>
@@ -107,7 +107,7 @@ const LegalTerms = ({
   )
 }
 
-LegalTerms.propTypes = {
+CookiesPolicy.propTypes = {
   isBlack: PropTypes.bool,
   isFluor: PropTypes.bool,
   isLock: PropTypes.bool,
@@ -117,4 +117,4 @@ LegalTerms.propTypes = {
   contactFormParams: ContactFormParamsPropType,
 }
 
-export default LegalTerms
+export default CookiesPolicy

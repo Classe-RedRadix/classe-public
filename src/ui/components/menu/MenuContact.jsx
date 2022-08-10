@@ -100,11 +100,9 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
 
             <Input
               placeholder={formatMessage('general:name-lastname-placeholder')}
-              handleBlur={() => {}}
               handleChange={contactFormParams.onNameChange}
               value={contactFormParams.name}
               name="name"
-              type="name"
               isNegative
               id="contactName"
             />
