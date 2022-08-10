@@ -534,6 +534,14 @@ import classeManifestImage1080 from '/public/images/manifiesto-classe-1080.jpg'
 import classeManifestImage828 from '/public/images/manifiesto-classe-828.jpg'
 import classeManifestImage750 from '/public/images/manifiesto-classe-750.jpg'
 import classeManifestImage640 from '/public/images/manifiesto-classe-640.jpg'
+import classeManifestMainImageWebp from '/public/images/manifiesto-classe.webp'
+import classeManifestImageWebp2048 from '/public/images/manifiesto-classe-2048.webp'
+import classeManifestImageWebp1920 from '/public/images/manifiesto-classe-1920.webp'
+import classeManifestImageWebp1200 from '/public/images/manifiesto-classe-1200.webp'
+import classeManifestImageWebp1080 from '/public/images/manifiesto-classe-1080.webp'
+import classeManifestImageWebp828 from '/public/images/manifiesto-classe-828.webp'
+import classeManifestImageWebp750 from '/public/images/manifiesto-classe-750.webp'
+import classeManifestImageWebp640 from '/public/images/manifiesto-classe-640.webp'
 const CLASSE_MANIFEST_IMAGE = {
   mainImage: classeManifestMainImage,
   alt: 'alt-image:two-web-programmers',
@@ -567,6 +575,40 @@ const CLASSE_MANIFEST_IMAGE = {
     },
     {
       src: classeManifestImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: classeManifestMainImageWebp,
+      width: 3456,
+    },
+    {
+      src: classeManifestImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: classeManifestImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: classeManifestImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: classeManifestImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: classeManifestImageWebp828,
+      width: 828,
+    },
+    {
+      src: classeManifestImageWebp750,
+      width: 750,
+    },
+    {
+      src: classeManifestImageWebp640,
       width: 640,
     },
   ],

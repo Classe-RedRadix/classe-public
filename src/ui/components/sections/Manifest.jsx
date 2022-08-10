@@ -30,16 +30,26 @@ const Manifest = ({ isBlack, isFluor }) => {
             </h2>
           </Cell>
           <Cell isNegative={isBlack} extraClass={'manifest-imgCel'}>
-            <img
-              src={classeManifestImage.mainImage}
-              alt={t(classeManifestImage.alt)}
-              width={classeManifestImage.width}
-              height={classeManifestImage.height}
-              sizes={classeManifestImage.sizes}
-              srcSet={useGenerateImageCandidates(classeManifestImage.srcSet)}
-              loading="lazy"
-              className="image"
-            />
+            <picture>
+              <source
+                sizes={classeManifestImage.sizes}
+                srcSet={useGenerateImageCandidates(
+                  classeManifestImage.srcSetWebp,
+                )}
+                type="image/webp"
+              />
+
+              <img
+                src={classeManifestImage.mainImage}
+                alt={t(classeManifestImage.alt)}
+                width={classeManifestImage.width}
+                height={classeManifestImage.height}
+                sizes={classeManifestImage.sizes}
+                srcSet={useGenerateImageCandidates(classeManifestImage.srcSet)}
+                loading="lazy"
+                className="image"
+              />
+            </picture>
           </Cell>
         </Cell>
         <Cell hasGap isNegative={isBlack}>
