@@ -446,6 +446,14 @@ import remoteOnSiteTrainingImage1080 from '/public/images/formacion-remoto-prese
 import remoteOnSiteTrainingImage828 from '/public/images/formacion-remoto-presencial-828.jpg'
 import remoteOnSiteTrainingImage750 from '/public/images/formacion-remoto-presencial-750.jpg'
 import remoteOnSiteTrainingImage640 from '/public/images/formacion-remoto-presencial-640.jpg'
+import remoteOnSiteTrainingMainImageWebp from '/public/images/formacion-remoto-presencial.webp'
+import remoteOnSiteTrainingImageWebp2048 from '/public/images/formacion-remoto-presencial-2048.webp'
+import remoteOnSiteTrainingImageWebp1920 from '/public/images/formacion-remoto-presencial-1920.webp'
+import remoteOnSiteTrainingImageWebp1200 from '/public/images/formacion-remoto-presencial-1200.webp'
+import remoteOnSiteTrainingImageWebp1080 from '/public/images/formacion-remoto-presencial-1080.webp'
+import remoteOnSiteTrainingImageWebp828 from '/public/images/formacion-remoto-presencial-828.webp'
+import remoteOnSiteTrainingImageWebp750 from '/public/images/formacion-remoto-presencial-750.webp'
+import remoteOnSiteTrainingImageWebp640 from '/public/images/formacion-remoto-presencial-640.webp'
 const REMOTE_ON_SITE_TRAINING_IMAGE = {
   mainImage: remoteOnSiteTrainingMainImage,
   alt: 'alt-image:man-working-remotely',
@@ -479,6 +487,40 @@ const REMOTE_ON_SITE_TRAINING_IMAGE = {
     },
     {
       src: remoteOnSiteTrainingImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: remoteOnSiteTrainingMainImageWebp,
+      width: 3264,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp828,
+      width: 828,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp750,
+      width: 750,
+    },
+    {
+      src: remoteOnSiteTrainingImageWebp640,
       width: 640,
     },
   ],

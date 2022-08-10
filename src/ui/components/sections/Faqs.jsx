@@ -33,18 +33,28 @@ const Faqs = ({ list, isBlack, isFluor }) => {
       </Row>
       <Row type="half">
         <Cell>
-          <img
-            src={remoteOnSiteTrainingImage.mainImage}
-            alt={t(remoteOnSiteTrainingImage.alt)}
-            width={remoteOnSiteTrainingImage.width}
-            height={remoteOnSiteTrainingImage.height}
-            sizes={remoteOnSiteTrainingImage.sizes}
-            srcSet={useGenerateImageCandidates(
-              remoteOnSiteTrainingImage.srcSet,
-            )}
-            loading="lazy"
-            className="image"
-          />
+          <picture>
+            <source
+              sizes={remoteOnSiteTrainingImage.sizes}
+              srcSet={useGenerateImageCandidates(
+                remoteOnSiteTrainingImage.srcSetWebp,
+              )}
+              type="image/webp"
+            />
+
+            <img
+              src={remoteOnSiteTrainingImage.mainImage}
+              alt={t(remoteOnSiteTrainingImage.alt)}
+              width={remoteOnSiteTrainingImage.width}
+              height={remoteOnSiteTrainingImage.height}
+              sizes={remoteOnSiteTrainingImage.sizes}
+              srcSet={useGenerateImageCandidates(
+                remoteOnSiteTrainingImage.srcSet,
+              )}
+              loading="lazy"
+              className="image"
+            />
+          </picture>
         </Cell>
         <Cell>
           <FaqsContainer list={list} />
