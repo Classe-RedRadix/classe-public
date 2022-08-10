@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import InfoHead from '../../InfoHead'
 
-import LegalTerms from '../../ui/views/cookies/Cookies'
+import CookiesPolicy from '../../ui/views/cookies/Cookies'
 import { COURSES } from '../../data'
 import {
   useBackgroundChange,
@@ -12,7 +12,7 @@ import {
   useTranslations,
   useBreadcrumbListSchema,
 } from '../../hooks'
-const LegalTermsView = () => {
+const CookiesPolicyView = () => {
   const router = useRouter()
   const interestedIn = router.query['interested-in']
 
@@ -89,7 +89,7 @@ const LegalTermsView = () => {
           }}
         />
       </InfoHead>
-      <LegalTerms
+      <CookiesPolicy
         isBlack={isBlack}
         isFluor={isFluor}
         onContactFormSubmit={handleContactFormSubmit}
@@ -100,4 +100,4 @@ const LegalTermsView = () => {
   )
 }
 
-export default LegalTermsView
+export default CookiesPolicyView

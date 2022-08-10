@@ -86,11 +86,9 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
             </div>
             <Input
               placeholder={formatMessage('general:name-lastname-placeholder')}
-              handleBlur={() => {}}
               handleChange={contactFormParams.onNameChange}
               value={contactFormParams.name}
               name="name"
-              type="name"
               isNegative
               id="contactName"
             />
@@ -174,7 +172,6 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
             </div>
             <Input
               placeholder={formatMessage('general:placeholder')}
-              handleBlur={() => {}}
               handleChange={contactFormParams.onEmailChange}
               name="email"
               type="email"

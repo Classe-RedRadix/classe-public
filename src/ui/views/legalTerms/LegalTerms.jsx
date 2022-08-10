@@ -83,16 +83,16 @@ const LegalTerms = ({
                   <h2 className="h3 ">
                     {formatMessage('legal-terms:section01-title')}
                   </h2>
-                  <p className="h4">
+                  <h3 className="h4">
                     {formatMessage('legal-terms:section01-sub01')}
-                  </p>
+                  </h3>
                   <p className="p">
                     {formatMessage('legal-terms:section01-sub01-block-1')}
                   </p>
 
-                  <p className="h4">
+                  <h3 className="h4">
                     {formatMessage('legal-terms:section01-sub02')}
-                  </p>
+                  </h3>
                   <p className="p">
                     {formatMessage('legal-terms:section01-sub02-block-1')}
                   </p>
