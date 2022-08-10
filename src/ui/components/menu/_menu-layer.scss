@@ -171,15 +171,15 @@
 
     .contact-formBlock {
       position: relative;
+      padding-bottom: 1.4375rem;
       //TODO: Refactor error message
       &--legal {
+        position: relative;
         &:not(.contact-formBlock--error) {
           padding-bottom: 1.4375rem;
         }
       }
-      &:not(.contact-formBlock--error) {
-        padding-bottom: 1.4375rem;
-      }
+
       &.contact-formBlock-title {
         padding-bottom: 0;
       }
@@ -196,10 +196,9 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin-top: 1rem;
+        padding-bottom: 1.5625rem;
+        position: relative;
 
-        &:not(.contact-formBlock--error) {
-          padding-bottom: 1.5625rem;
-        }
         & + .contact-formBlock {
           margin-top: 1.5rem;
         }
@@ -213,6 +212,7 @@
         margin-top: 1.5rem;
         padding: 0;
       }
+
       &--error {
         .input-field {
           border-color: $error;
@@ -221,17 +221,25 @@
           color: $error;
         }
         small {
-          color: $error;
-          display: flex;
-          align-items: center;
-          gap: 0.3125rem;
-          margin-top: 0.3125rem;
-        }
-        .icon-error {
-          max-width: 0.9375rem;
-          height: 0.9375rem;
+          transition: opacity 0.3s;
+          opacity: 1;
         }
       }
+    }
+    small {
+      display: flex;
+      align-items: center;
+      gap: 0.3125rem;
+      margin-top: 0.3125rem;
+      opacity: 0;
+      color: $error;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    .icon-error {
+      max-width: 0.9375rem;
+      height: 0.9375rem;
     }
   }
 

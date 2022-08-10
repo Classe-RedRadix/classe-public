@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { copyClasseEmailToClipboard } from '../../../business'
 import { useTranslations } from '../../../hooks'
 import cx from 'classnames'
@@ -15,12 +15,36 @@ import ExclamationIcon from '../../../assets/icons/ExclamationIcon'
 const MenuContact = ({ linesHidden, contactFormParams }) => {
   const formatMessage = useTranslations()
   const [mensSuccess, setMensSuccess] = useState(false)
-
-  const contentSuccess = useRef(null)
   const showMessageSuccess = () => {
     contentSuccess.current.classList.add('isVisible')
   }
 
+  const contentSuccess = useRef(null)
+
+  const errorName = contactFormParams.errors.nameNoSelected
+  const errorOption = contactFormParams.errors.optionNoSelected
+  const errorEmail = contactFormParams.errors.emailNoSelected
+  const errorLegalTerms = contactFormParams.errors.termsNoSelected
+
+  const itemFormName = useRef(null)
+  const itemFormOption = useRef(null)
+  const itemFormEmail = useRef(null)
+  const itemFormLegal = useRef(null)
+
+  const classError = (errorText, itemForm) => {
+    if (errorText !== undefined) {
+      setTimeout(() => itemForm.classList.add('contact-formBlock--error'), 100)
+    } else {
+      itemForm.classList.remove('contact-formBlock--error')
+    }
+  }
+
+  useEffect(() => {
+    classError(errorName, itemFormName.current)
+    classError(errorOption, itemFormOption.current)
+    classError(errorEmail, itemFormEmail.current)
+    classError(errorLegalTerms, itemFormLegal.current)
+  }, [errorName, errorOption, errorEmail, errorLegalTerms])
   return (
     <Row type="quarter" extraClass="menuLayer-contact">
       <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
@@ -68,15 +92,7 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
             })
           }}
         >
-          <div
-            className={cx(
-              'contact-formBlock',
-              `${
-                contactFormParams.errors.nameNoSelected !== undefined &&
-                'contact-formBlock--error'
-              }`,
-            )}
-          >
+          <div className="contact-formBlock" ref={itemFormName}>
             <div className="-scrambleTextWrapper">
               <label className="h3 -scrambleText" htmlFor="contactName">
                 {formatMessage('contact:my-name-is', {
@@ -95,10 +111,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               id="contactName"
             />
 
-            {contactFormParams.errors.nameNoSelected !== undefined ? (
+            {errorName !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {contactFormParams.errors.nameNoSelected}
+                {errorName}
               </small>
             ) : null}
           </div>
@@ -128,15 +144,7 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               </label>
             </div>
           </div>
-          <div
-            className={cx(
-              'contact-formBlock--flex',
-              `${
-                contactFormParams.errors.optionNoSelected !== undefined &&
-                'contact-formBlock--error'
-              }`,
-            )}
-          >
+          <div className="contact-formBlock--flex" ref={itemFormOption}>
             {contactFormParams.interestedInOptions.map(option => (
               <Checkbox
                 key={`interested-in-${option.id}`}
@@ -149,22 +157,14 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
                 isChecked={option.checked}
               />
             ))}
-            {contactFormParams.errors.optionNoSelected !== undefined ? (
+            {errorOption !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {contactFormParams.errors.optionNoSelected}
+                {errorOption}
               </small>
             ) : null}
           </div>
-          <div
-            className={cx(
-              'contact-formBlock',
-              `${
-                contactFormParams.errors.emailNoSelected !== undefined &&
-                'contact-formBlock--error'
-              }`,
-            )}
-          >
+          <div className="contact-formBlock" ref={itemFormEmail}>
             <div className="-scrambleTextWrapper">
               <label className="h3 -scrambleText" htmlFor="contactEmail">
                 {formatMessage('contact:my-email', {
@@ -182,23 +182,15 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               isNegative
               id="contactEmail"
             />
-            {contactFormParams.errors.emailNoSelected !== undefined ? (
+            {errorEmail !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {contactFormParams.errors.emailNoSelected}
+                {errorEmail}
               </small>
             ) : null}
           </div>
-          <div className="contact-formBlock">
-            <div
-              className={cx(
-                'contact-formBlock--legal',
-                `${
-                  contactFormParams.errors.termsNoSelected !== undefined &&
-                  'contact-formBlock--error'
-                }`,
-              )}
-            >
+          <div className="contact-formBlock" ref={itemFormLegal}>
+            <div className="contact-formBlock--legal">
               <Checkbox
                 hasMessage
                 handleChange={contactFormParams.toggleTermsAndConditions}
@@ -206,10 +198,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
                 name="conditions"
                 isChecked={contactFormParams.termsAndConditions}
               />
-              {contactFormParams.errors.termsNoSelected !== undefined ? (
+              {errorLegalTerms !== undefined ? (
                 <small>
                   <ExclamationIcon color={'#f88078'} className="icon-error" />
-                  {contactFormParams.errors.termsNoSelected}
+                  {errorLegalTerms}
                 </small>
               ) : null}
             </div>
