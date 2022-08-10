@@ -48,13 +48,12 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
   return (
     <Row type="quarter" extraClass="menuLayer-contact">
       <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
-        <div className="-scrambleTextWrapper">
-          <h1 className="h2 -scrambleText">
-            {formatMessage('contact:second-title', {
-              line: text => <span className="line">{text}</span>,
-            })}
-          </h1>
-        </div>
+        <h1 className="h2 -scrambleText">
+          {formatMessage('contact:second-title', {
+            line: text => <span className="line">{text}</span>,
+          })}
+        </h1>
+
         <address className="menuLayer-contactAddress">
           <div className="heading menuLayer-contactAddressText">
             {formatMessage('contact:address1', {
@@ -93,13 +92,12 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
           }}
         >
           <div className="contact-formBlock" ref={itemFormName}>
-            <div className="-scrambleTextWrapper">
-              <label className="h3 -scrambleText" htmlFor="contactName">
-                {formatMessage('contact:my-name-is', {
-                  line: text => <span className="line">{text}</span>,
-                })}
-              </label>
-            </div>
+            <label className="h3" htmlFor="contactName">
+              {formatMessage('contact:my-name-is', {
+                line: text => <span className="line">{text}</span>,
+              })}
+            </label>
+
             <Input
               placeholder={formatMessage('general:name-lastname-placeholder')}
               handleBlur={() => {}}
@@ -135,15 +133,13 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               isChecked={contactFormParams.userType === 'student'}
             />
           </div>
-          <div className="contact-formBlock contact-formBlock-title">
-            <div className="-scrambleTextWrapper">
-              <label className="h3 -scrambleText">
-                {formatMessage('contact:interested-in', {
-                  line: text => <span className="line">{text}</span>,
-                })}
-              </label>
-            </div>
-          </div>
+
+          <label className="h3">
+            {formatMessage('contact:interested-in', {
+              line: text => <span className="line">{text}</span>,
+            })}
+          </label>
+
           <div className="contact-formBlock--flex" ref={itemFormOption}>
             {contactFormParams.interestedInOptions.map(option => (
               <Checkbox
@@ -165,59 +161,53 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
             ) : null}
           </div>
           <div className="contact-formBlock" ref={itemFormEmail}>
-            <div className="-scrambleTextWrapper">
-              <label className="h3 -scrambleText" htmlFor="contactEmail">
-                {formatMessage('contact:my-email', {
-                  line: text => <span className="line">{text}</span>,
-                })}
-              </label>
-            </div>
-            <Input
-              placeholder={formatMessage('general:placeholder')}
-              handleBlur={() => {}}
-              handleChange={contactFormParams.onEmailChange}
-              name="email"
-              type="email"
-              value={contactFormParams.email}
-              isNegative
-              id="contactEmail"
+            <label className="h3" htmlFor="contactEmail">
+              {formatMessage('contact:my-email', {
+                line: text => <span className="line">{text}</span>,
+              })}
+            </label>
+          </div>
+          <Input
+            placeholder={formatMessage('general:placeholder')}
+            handleBlur={() => {}}
+            handleChange={contactFormParams.onEmailChange}
+            name="email"
+            type="email"
+            value={contactFormParams.email}
+            isNegative
+            id="contactEmail"
+          />
+          {errorEmail !== undefined ? (
+            <small>
+              <ExclamationIcon color={'#f88078'} className="icon-error" />
+              {errorEmail}
+            </small>
+          ) : null}
+          <div className="contact-formBlock" ref={itemFormLegal}>
+            <Checkbox
+              hasMessage
+              handleChange={contactFormParams.toggleTermsAndConditions}
+              label={formatMessage('general:conditions-check')}
+              name="conditions"
+              isChecked={contactFormParams.termsAndConditions}
             />
-            {errorEmail !== undefined ? (
+            {errorLegalTerms !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {errorEmail}
+                {errorLegalTerms}
               </small>
             ) : null}
           </div>
-          <div className="contact-formBlock" ref={itemFormLegal}>
-            <div className="contact-formBlock--legal">
-              <Checkbox
-                hasMessage
-                handleChange={contactFormParams.toggleTermsAndConditions}
-                label={formatMessage('general:conditions-check')}
-                name="conditions"
-                isChecked={contactFormParams.termsAndConditions}
-              />
-              {errorLegalTerms !== undefined ? (
-                <small>
-                  <ExclamationIcon color={'#f88078'} className="icon-error" />
-                  {errorLegalTerms}
-                </small>
-              ) : null}
-            </div>
-            <Button isNegative isFull text={formatMessage('general:send')} />
-          </div>
+          <Button isNegative isFull text={formatMessage('general:send')} />
         </form>
         {mensSuccess && (
           <div className="mensSuccess" ref={contentSuccess}>
             <div className="contact-formBlock contact-formBlock-title">
-              <div className="-scrambleTextWrapper">
-                <label className="h3 -scrambleText">
-                  {formatMessage('contact:success', {
-                    line: text => <span className="line">{text}</span>,
-                  })}
-                </label>
-              </div>
+              <label className="h3">
+                {formatMessage('contact:success', {
+                  line: text => <span className="line">{text}</span>,
+                })}
+              </label>
             </div>
           </div>
         )}
