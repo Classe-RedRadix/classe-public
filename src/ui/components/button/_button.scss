@@ -46,10 +46,4 @@
     text-align: center;
     transform: translateY(0.125rem);
   }
-
-  @include mq(sm) {
-    &.is-full {
-      padding: 1.25rem 1.5rem;
-    }
-  }
 }
