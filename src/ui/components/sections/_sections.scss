@@ -121,6 +121,10 @@
     }
   }
 
+  &.is-black .mainButton {
+    border-color: $white;
+  }
+
   .row.is-half {
     display: flex;
     align-items: stretch;
