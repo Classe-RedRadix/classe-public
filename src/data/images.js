@@ -622,6 +622,14 @@ import javascriptCourseImage1080 from '/public/images/curso-javascript-1080.jpg'
 import javascriptCourseImage828 from '/public/images/curso-javascript-828.jpg'
 import javascriptCourseImage750 from '/public/images/curso-javascript-750.jpg'
 import javascriptCourseImage640 from '/public/images/curso-javascript-640.jpg'
+import javascriptCourseMainImageWebp from '/public/images/curso-javascript.webp'
+import javascriptCourseImageWebp2048 from '/public/images/curso-javascript-2048.webp'
+import javascriptCourseImageWebp1920 from '/public/images/curso-javascript-1920.webp'
+import javascriptCourseImageWebp1200 from '/public/images/curso-javascript-1200.webp'
+import javascriptCourseImageWebp1080 from '/public/images/curso-javascript-1080.webp'
+import javascriptCourseImageWebp828 from '/public/images/curso-javascript-828.webp'
+import javascriptCourseImageWebp750 from '/public/images/curso-javascript-750.webp'
+import javascriptCourseImageWebp640 from '/public/images/curso-javascript-640.webp'
 const JAVASCRIPT_COURSE_IMAGE = {
   mainImage: javascriptCourseMainImage,
   alt: 'course:js-alt-image',
@@ -658,6 +666,40 @@ const JAVASCRIPT_COURSE_IMAGE = {
       width: 640,
     },
   ],
+  srcSetWebp: [
+    {
+      src: javascriptCourseMainImageWebp,
+      width: 3456,
+    },
+    {
+      src: javascriptCourseImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: javascriptCourseImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: javascriptCourseImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: javascriptCourseImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: javascriptCourseImageWebp828,
+      width: 828,
+    },
+    {
+      src: javascriptCourseImageWebp750,
+      width: 750,
+    },
+    {
+      src: javascriptCourseImageWebp640,
+      width: 640,
+    },
+  ],
 }
 
 import uiDevelopmentCourseMainImage from '/public/images/curso-maqueta.jpg'
@@ -668,6 +710,14 @@ import uiDevelopmentCourseImage1080 from '/public/images/curso-maqueta-1080.jpg'
 import uiDevelopmentCourseImage828 from '/public/images/curso-maqueta-828.jpg'
 import uiDevelopmentCourseImage750 from '/public/images/curso-maqueta-750.jpg'
 import uiDevelopmentCourseImage640 from '/public/images/curso-maqueta-640.jpg'
+import uiDevelopmentCourseMainImageWebp from '/public/images/curso-maqueta.webp'
+import uiDevelopmentCourseImageWebp2048 from '/public/images/curso-maqueta-2048.webp'
+import uiDevelopmentCourseImageWebp1920 from '/public/images/curso-maqueta-1920.webp'
+import uiDevelopmentCourseImageWebp1200 from '/public/images/curso-maqueta-1200.webp'
+import uiDevelopmentCourseImageWebp1080 from '/public/images/curso-maqueta-1080.webp'
+import uiDevelopmentCourseImageWebp828 from '/public/images/curso-maqueta-828.webp'
+import uiDevelopmentCourseImageWebp750 from '/public/images/curso-maqueta-750.webp'
+import uiDevelopmentCourseImageWebp640 from '/public/images/curso-maqueta-640.webp'
 const UI_DEVELOPMENT_COURSE_IMAGE = {
   mainImage: uiDevelopmentCourseMainImage,
   alt: 'course:front-react-alt-image',
@@ -704,6 +754,40 @@ const UI_DEVELOPMENT_COURSE_IMAGE = {
       width: 640,
     },
   ],
+  srcSetWebp: [
+    {
+      src: uiDevelopmentCourseMainImageWebp,
+      width: 3480,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp828,
+      width: 828,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp750,
+      width: 750,
+    },
+    {
+      src: uiDevelopmentCourseImageWebp640,
+      width: 640,
+    },
+  ],
 }
 
 import frontCourseMainImage from '/public/images/curso-front.jpg'
@@ -714,6 +798,14 @@ import frontCourseImage1080 from '/public/images/curso-front-1080.jpg'
 import frontCourseImage828 from '/public/images/curso-front-828.jpg'
 import frontCourseImage750 from '/public/images/curso-front-750.jpg'
 import frontCourseImage640 from '/public/images/curso-front-640.jpg'
+import frontCourseMainImageWebp from '/public/images/curso-front.webp'
+import frontCourseImageWebp2048 from '/public/images/curso-front-2048.webp'
+import frontCourseImageWebp1920 from '/public/images/curso-front-1920.webp'
+import frontCourseImageWebp1200 from '/public/images/curso-front-1200.webp'
+import frontCourseImageWebp1080 from '/public/images/curso-front-1080.webp'
+import frontCourseImageWebp828 from '/public/images/curso-front-828.webp'
+import frontCourseImageWebp750 from '/public/images/curso-front-750.webp'
+import frontCourseImageWebp640 from '/public/images/curso-front-640.webp'
 const FRONT_COURSE_IMAGE = {
   mainImage: frontCourseMainImage,
   alt: 'course:js-alt-image',
@@ -750,6 +842,40 @@ const FRONT_COURSE_IMAGE = {
       width: 640,
     },
   ],
+  srcSetWebp: [
+    {
+      src: frontCourseMainImageWebp,
+      width: 2048,
+    },
+    {
+      src: frontCourseImageWebp2048,
+      width: 2048,
+    },
+    {
+      src: frontCourseImageWebp1920,
+      width: 1920,
+    },
+    {
+      src: frontCourseImageWebp1200,
+      width: 1200,
+    },
+    {
+      src: frontCourseImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: frontCourseImageWebp828,
+      width: 828,
+    },
+    {
+      src: frontCourseImageWebp750,
+      width: 750,
+    },
+    {
+      src: frontCourseImageWebp640,
+      width: 640,
+    },
+  ],
 }
 
 import backCourseMainImage from '/public/images/curso-back.jpg'
@@ -757,6 +883,11 @@ import backCourseImage1080 from '/public/images/curso-back-1080.jpg'
 import backCourseImage828 from '/public/images/curso-back-828.jpg'
 import backCourseImage750 from '/public/images/curso-back-750.jpg'
 import backCourseImage640 from '/public/images/curso-back-640.jpg'
+import backCourseMainImageWebp from '/public/images/curso-back.webp'
+import backCourseImageWebp1080 from '/public/images/curso-back-1080.webp'
+import backCourseImageWebp828 from '/public/images/curso-back-828.webp'
+import backCourseImageWebp750 from '/public/images/curso-back-750.webp'
+import backCourseImageWebp640 from '/public/images/curso-back-640.webp'
 const BACK_COURSE_IMAGE = {
   mainImage: backCourseMainImage,
   alt: 'course:back-node-alt-image',
@@ -778,6 +909,28 @@ const BACK_COURSE_IMAGE = {
     },
     {
       src: backCourseImage640,
+      width: 640,
+    },
+  ],
+  srcSetWebp: [
+    {
+      src: backCourseMainImageWebp,
+      width: 1200,
+    },
+    {
+      src: backCourseImageWebp1080,
+      width: 1080,
+    },
+    {
+      src: backCourseImageWebp828,
+      width: 828,
+    },
+    {
+      src: backCourseImageWebp750,
+      width: 750,
+    },
+    {
+      src: backCourseImageWebp640,
       width: 640,
     },
   ],
