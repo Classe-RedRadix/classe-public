@@ -14,7 +14,12 @@
   pointer-events: none;
   z-index: $index-menu-layer;
   .row + .row {
-    margin-top: 0;
+    margin-top: -1px;
+  }
+  @include mq(md) {
+    .cell + .cell {
+      margin-left: -1px;
+    }
   }
   .image {
     @include mq(xl) {
