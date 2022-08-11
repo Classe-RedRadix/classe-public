@@ -68,7 +68,7 @@ const MenuLayer = ({
               onClick={handleClose}
               role="link"
             >
-              [ <span className="braketHover">{t(actionText)}</span> ]
+              [ <span className="bracketHover">{t(actionText)}</span> ]
             </button>
           </div>
         ) : null}
