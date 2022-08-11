@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-import CookiesPolicy from './Cookies'
+import Cookies from './Cookies'
 import { useBackgroundChange, useScrambleText } from '../../../hooks'
 
 import { COURSES } from '../../../data'
 
 export default {
   title: 'Views/Legal/Cookies Policy',
-  component: CookiesPolicy,
+  component: Cookies,
 }
 
 export const _CookiesPolicy = () => {
@@ -17,7 +17,7 @@ export const _CookiesPolicy = () => {
   useBackgroundChange(setIsBlack, setIsFluor)
   useScrambleText()
   return (
-    <CookiesPolicy
+    <Cookies
       isBlack={isBlack}
       isFluor={isFluor}
       contactFormParams={{
@@ -32,6 +32,6 @@ export const _CookiesPolicy = () => {
         saveToFirebase: () => {},
       }}
       courses={COURSES}
-    ></CookiesPolicy>
+    ></Cookies>
   )
 }

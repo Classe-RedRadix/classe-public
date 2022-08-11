@@ -16,7 +16,7 @@ import Footer from '../../components/footer/Footer'
 import Row from '../../components/row/Row'
 import Cell from '../../components/cell/Cell'
 
-const CookiesPolicy = ({
+const Cookies = ({
   isBlack,
   isFluor,
   isLock,
@@ -105,7 +105,7 @@ const CookiesPolicy = ({
   )
 }
 
-CookiesPolicy.propTypes = {
+Cookies.propTypes = {
   isBlack: PropTypes.bool,
   isFluor: PropTypes.bool,
   isLock: PropTypes.bool,
@@ -115,4 +115,4 @@ CookiesPolicy.propTypes = {
   contactFormParams: ContactFormParamsPropType,
 }
 
-export default CookiesPolicy
+export default Cookies
