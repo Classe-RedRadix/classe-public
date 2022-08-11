@@ -10,11 +10,15 @@ const Input = ({
   placeholder,
   type,
   value,
+  isRounded,
+  isUppercase,
   isNegative,
   id,
 }) => {
   const classes = cx('input', {
     'has-submit': handleSubmit,
+    'is-rounded': isRounded,
+    'is-uppercase': isUppercase,
     'is-negative': isNegative,
   })
 
@@ -45,6 +49,8 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['email', 'text']).isRequired,
   value: PropTypes.string.isRequired,
+  isRounded: PropTypes.bool,
+  isUppercase: PropTypes.bool,
   isNegative: PropTypes.bool,
   id: PropTypes.string,
 }
