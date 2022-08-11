@@ -19,7 +19,6 @@ import Vivanta from '/public/images/logos/vivanta.svg'
 
 import { COURSES } from '../data'
 import InfoHead from '../InfoHead'
-import Hero from '../ui/components/hero/Hero'
 
 import {
   useViewportHeight,
