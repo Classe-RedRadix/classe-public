@@ -20,18 +20,15 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
   }
 
   const contentSuccess = useRef(null)
-
-  const errorName = contactFormParams.errors.nameNoSelected
-  const errorOption = contactFormParams.errors.optionNoSelected
-  const errorEmail = contactFormParams.errors.emailNoSelected
-  const errorLegalTerms = contactFormParams.errors.termsNoSelected
+  const { nameNoSelected, optionNoSelected, emailNoSelected, termsNoSelected } =
+    contactFormParams.errors
 
   const itemFormName = useRef(null)
   const itemFormOption = useRef(null)
   const itemFormEmail = useRef(null)
   const itemFormLegal = useRef(null)
 
-  const classError = (errorText, itemForm) => {
+  const toggleErrorClass = (errorText, itemForm) => {
     if (errorText !== undefined) {
       setTimeout(() => itemForm.classList.add('contact-formBlock--error'), 100)
     } else {
@@ -40,11 +37,20 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
   }
 
   useEffect(() => {
-    classError(errorName, itemFormName.current)
-    classError(errorOption, itemFormOption.current)
-    classError(errorEmail, itemFormEmail.current)
-    classError(errorLegalTerms, itemFormLegal.current)
-  }, [errorName, errorOption, errorEmail, errorLegalTerms])
+    toggleErrorClass(nameNoSelected, itemFormName.current)
+  }, [nameNoSelected])
+
+  useEffect(() => {
+    toggleErrorClass(optionNoSelected, itemFormOption.current)
+  }, [optionNoSelected])
+
+  useEffect(() => {
+    toggleErrorClass(emailNoSelected, itemFormEmail.current)
+  }, [emailNoSelected])
+
+  useEffect(() => {
+    toggleErrorClass(termsNoSelected, itemFormLegal.current)
+  }, [termsNoSelected])
   return (
     <Row type="quarter" extraClass="menuLayer-contact">
       <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
@@ -107,10 +113,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               id="contactName"
             />
 
-            {errorName !== undefined ? (
+            {nameNoSelected !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {errorName}
+                {nameNoSelected}
               </small>
             ) : null}
           </div>
@@ -151,10 +157,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
                 isChecked={option.checked}
               />
             ))}
-            {errorOption !== undefined ? (
+            {optionNoSelected !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {errorOption}
+                {optionNoSelected}
               </small>
             ) : null}
           </div>
@@ -174,10 +180,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               isNegative
               id="contactEmail"
             />
-            {errorEmail !== undefined ? (
+            {emailNoSelected !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {errorEmail}
+                {emailNoSelected}
               </small>
             ) : null}
           </div>
@@ -190,10 +196,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               name="conditions"
               isChecked={contactFormParams.termsAndConditions}
             />
-            {errorLegalTerms !== undefined ? (
+            {termsNoSelected !== undefined ? (
               <small>
                 <ExclamationIcon color={'#f88078'} className="icon-error" />
-                {errorLegalTerms}
+                {termsNoSelected}
               </small>
             ) : null}
           </div>
