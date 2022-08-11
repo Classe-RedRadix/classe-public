@@ -46,7 +46,6 @@ const CookiesPolicy = ({
         extraClass="legalView"
       >
         <Menu
-          type="home"
           contactFormParams={contactFormParams}
           isBlack={isBlack}
           courses={courses}

@@ -75,7 +75,6 @@ const Home = ({
         {visible && <Hero text="loader:text" loaded={loaded} />}
 
         <Menu
-          type="home"
           contactFormParams={contactFormParams}
           isBlack={isBlack}
           courses={courses}
