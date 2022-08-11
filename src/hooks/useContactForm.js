@@ -68,22 +68,6 @@ const useContactForm = interestedInCourseId => {
     }
   }
 
-  const removeInterestedInOptionError = () => {
-    removeError('optionNoSelected')
-  }
-
-  const removeNameError = () => {
-    removeError('nameNoSelected')
-  }
-
-  const removeEmailError = () => {
-    removeError('emailNoSelected')
-  }
-
-  const removeTermsError = () => {
-    removeError('termsNoSelected')
-  }
-
   const onInterestedInOptionChange = interestedInOption => {
     setInterestedInOptions(interestedInOptions =>
       interestedInOptions.map(option =>
@@ -96,24 +80,24 @@ const useContactForm = interestedInCourseId => {
       ),
     )
 
-    removeInterestedInOptionError()
+    removeError('optionNoSelected')
   }
 
   useEffect(() => {
     if (name.trimRight() !== '') {
-      removeNameError()
+      removeError('nameNoSelected')
     }
   }, [name])
 
   useEffect(() => {
     if (email.trimRight() !== '') {
-      removeEmailError()
+      removeError('emailNoSelected')
     }
   }, [email])
 
   useEffect(() => {
     if (termsAndConditions) {
-      removeTermsError()
+      removeError('termsNoSelected')
     }
   }, [termsAndConditions])
 
