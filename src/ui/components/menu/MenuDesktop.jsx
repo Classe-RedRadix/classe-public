@@ -30,7 +30,7 @@ const MenuDesktop = ({
         >
           <span className="menu-textButton">
             [
-            <span className="braketHover">
+            <span className="bracketHover">
               {courses < 10 ? `0${courses}` : courses}
             </span>
             ] {formatMessage('menu:courses')}

@@ -14,8 +14,10 @@
     opacity: 0;
     pointer-events: none;
 
-    &:checked + .checkbox-icon,
-    &:checked + .checkbox-icon + .checkbox-label {
+    .is-black &:checked + .checkbox-icon,
+    .menuLayer &:checked + .checkbox-icon,
+    .is-black &:checked + .checkbox-icon + .checkbox-label,
+    .menuLayer &:checked + .checkbox-icon + .checkbox-label {
       color: $fluor;
     }
 
