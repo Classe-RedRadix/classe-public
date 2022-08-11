@@ -217,7 +217,7 @@
   "calendar:finish": "Finish",
 
   "companies:header": "Empresas",
-  "companies:title": "<lineAriaHidden>#</lineAriaHidden><lineTab>Empresas</lineTab> <lineTab>que han</lineTab> <lineTab>vuelto a</lineTab> <lineTabAriaHidden>Class;e</lineTabAriaHidden><screenReadOnly>Classe</screenReadOnly> <lineAriaHidden>#</lineAriaHidden>",
+  "companies:title": "<lineAriaHidden>#</lineAriaHidden><lineTab>Empresas</lineTab> <lineTab>que han</lineTab> <lineTab>vuelto a</lineTab> <lineTabAriaHidden>Class(e)</lineTabAriaHidden><screenReadOnly>Classe</screenReadOnly> <lineAriaHidden>#</lineAriaHidden>",
   "companies:button": "¿Quieres ser una de ellas? contáctanos",
 
   "faqs:header": "Faq's",
