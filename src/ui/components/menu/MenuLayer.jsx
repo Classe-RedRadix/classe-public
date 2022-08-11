@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -150,6 +150,13 @@ MenuLayer.propTypes = {
   course: CoursePropType,
   courses: PropTypes.arrayOf(CoursePropType.isRequired).isRequired,
   isOpen: PropTypes.bool,
+  isContactOpen: PropTypes.bool,
+  isCourseOpen: PropTypes.bool,
+  areCoursesOpen: CoursesList.propTypes.isPlacedAtHome,
+  contactFormParams: MenuContact.propTypes.contactFormParams,
+  actionText: PropTypes.string,
+  goToHome: PropTypes.func,
+  openCourses: PropTypes.func,
   hasClose: PropTypes.bool,
   handleClose: PropTypes.func.isRequired,
   openContact: PropTypes.func.isRequired,

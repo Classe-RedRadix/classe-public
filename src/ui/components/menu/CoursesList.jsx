@@ -21,8 +21,8 @@ const CoursesList = ({ courses, openCourse, isPlacedAtHome }) => {
         {courses.map((course, index) => (
           <li key={t(course.information.title)}>
             <ConditionalWrapper
-            condition={!isPlacedAtHome}
-            wrapper={children => <h2>{children}</h2>}
+              condition={!isPlacedAtHome}
+              wrapper={children => <h2>{children}</h2>}
             >
               <a
                 className="coursesList-link h1"

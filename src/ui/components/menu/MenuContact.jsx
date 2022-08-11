@@ -1,7 +1,12 @@
 import { useRef, useState } from 'react'
+import cx from 'classnames'
+
 import { copyClasseEmailToClipboard } from '../../../business'
 import { useTranslations } from '../../../hooks'
-import cx from 'classnames'
+
+import ExclamationIcon from '../../../assets/icons/ExclamationIcon'
+
+import { ContactFormParamsPropType } from '../../sharedProptypes'
 
 import Row from '../row/Row'
 import Cell from '../cell/Cell'
@@ -9,8 +14,6 @@ import Input from '../forms/Input'
 import Button from '../button/Button'
 import Checkbox from '../forms/Checkbox'
 import Radio from '../forms/Radio'
-
-import ExclamationIcon from '../../../assets/icons/ExclamationIcon'
 
 const MenuContact = ({ linesHidden, contactFormParams }) => {
   const formatMessage = useTranslations()
@@ -229,6 +232,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
       </Cell>
     </Row>
   )
+}
+
+MenuContact.propTypes = {
+  contactFormParams: ContactFormParamsPropType,
 }
 
 export default MenuContact
