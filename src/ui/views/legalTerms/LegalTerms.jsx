@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-// import { COURSES } from 'data'
+
 import { useMenu } from '../../../hooks'
 import {
   CoursePropType,
@@ -10,7 +9,6 @@ import useTranslations from '../../../hooks/useTranslations'
 
 import MainWrapper from '../../components/wrappers/MainWrapper'
 import SectionWrapper from '../../components/wrappers/SectionWrapper'
-
 import Menu from '../../components/menu/Menu'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
