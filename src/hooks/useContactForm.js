@@ -84,8 +84,6 @@ const useContactForm = interestedInCourseId => {
     removeError('termsNoSelected')
   }
 
-  const isStringValid = value => value.trimRight() !== ''
-
   const onInterestedInOptionChange = interestedInOption => {
     setInterestedInOptions(interestedInOptions =>
       interestedInOptions.map(option =>
@@ -102,13 +100,13 @@ const useContactForm = interestedInCourseId => {
   }
 
   useEffect(() => {
-    if (isStringValid(name)) {
+    if (name.trimRight() !== '') {
       removeNameError()
     }
   }, [name])
 
   useEffect(() => {
-    if (isStringValid(email)) {
+    if (email.trimRight() !== '') {
       removeEmailError()
     }
   }, [email])
@@ -147,12 +145,12 @@ const useContactForm = interestedInCourseId => {
           'Selecciona al menos un curso de tu interés'
       }
 
-      if (!isStringValid(name)) {
+      if (name.trimRight() === '') {
         validationErrors.nameNoSelected = 'El nombre no puede estar vacío'
       }
     }
 
-    if (!isStringValid(email)) {
+    if (email.trimRight() === '') {
       validationErrors.emailNoSelected = 'Introduce un email válido'
     }
 
