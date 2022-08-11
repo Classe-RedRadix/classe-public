@@ -66,7 +66,6 @@ const Footer = ({
             </div>
             <div className="footer-formBlock">
               <Input
-                handleBlur={() => {}}
                 handleChange={contactFormParams.onEmailChange}
                 handleSubmit={() => {}}
                 name="email"
