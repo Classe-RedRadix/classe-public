@@ -5,7 +5,6 @@ import ArrowIcon from './../../../assets/icons/ArrowIcon'
 const Input = ({
   handleBlur,
   handleChange,
-  handleSubmit,
   name,
   placeholder,
   type,
@@ -16,7 +15,6 @@ const Input = ({
   id,
 }) => {
   const classes = cx('input', {
-    'has-submit': handleSubmit,
     'is-rounded': isRounded,
     'is-uppercase': isUppercase,
     'is-negative': isNegative,
@@ -34,9 +32,6 @@ const Input = ({
         value={value}
         id={id}
       />
-      {handleSubmit ? (
-        <ArrowIcon className="icon input-submit" onClick={handleSubmit} />
-      ) : null}
     </div>
   )
 }
@@ -44,7 +39,6 @@ const Input = ({
 Input.propTypes = {
   handleBlur: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['email', 'text']).isRequired,
