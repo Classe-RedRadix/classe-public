@@ -34,16 +34,23 @@ const Find = ({ isBlack, isFluor }) => {
           </div>
         </Cell>
         <Cell isNegative={isBlack}>
-          <img
-            src={contactImage.mainImage}
-            alt={t(contactImage.alt)}
-            width={contactImage.width}
-            height={contactImage.height}
-            sizes={contactImage.sizes}
-            srcSet={useGenerateImageCandidates(contactImage.srcSet)}
-            loading="lazy"
-            className="image"
-          />
+          <picture>
+            <source
+              sizes={contactImage.sizes}
+              srcSet={useGenerateImageCandidates(contactImage.srcSetWebp)}
+              type="image/webp"
+            />
+            <img
+              src={contactImage.mainImage}
+              alt={t(contactImage.alt)}
+              width={contactImage.width}
+              height={contactImage.height}
+              sizes={contactImage.sizes}
+              srcSet={useGenerateImageCandidates(contactImage.srcSet)}
+              loading="lazy"
+              className="image"
+            />
+          </picture>
         </Cell>
       </Row>
       <Row type="half">

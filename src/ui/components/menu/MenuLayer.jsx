@@ -93,16 +93,24 @@ const MenuLayer = ({
           ) : (
             <Row type="quarter" extraClass="menuLayer-courses">
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
-                <img
-                  src={coursesImage.mainImage}
-                  alt={t(coursesImage.alt)}
-                  width={coursesImage.width}
-                  height={coursesImage.height}
-                  sizes={coursesImage.sizes}
-                  srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
-                  loading="lazy"
-                  className="image"
-                />
+                <picture>
+                  <source
+                    sizes={coursesImage.sizes}
+                    srcSet={useGenerateImageCandidates(coursesImage.srcSetWebp)}
+                    type="image/webp"
+                  />
+
+                  <img
+                    src={coursesImage.mainImage}
+                    alt={t(coursesImage.alt)}
+                    width={coursesImage.width}
+                    height={coursesImage.height}
+                    sizes={coursesImage.sizes}
+                    srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
+                    loading="lazy"
+                    className="image"
+                  />
+                </picture>
               </Cell>
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
                 <CoursesList

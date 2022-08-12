@@ -66,7 +66,6 @@ const Footer = ({
             </div>
             <div className="footer-formBlock">
               <Input
-                handleBlur={() => {}}
                 handleChange={contactFormParams.onEmailChange}
                 handleSubmit={() => {}}
                 name="email"
@@ -74,10 +73,7 @@ const Footer = ({
                 type="email"
                 value={contactFormParams.email}
               />
-              <Button
-                text={formatMessage('newsletter:btn')}
-                onClick={() => {}}
-              />
+              <Button type="submit" text={formatMessage('newsletter:btn')} />
             </div>
             <div className="footer-formBlock">
               <Checkbox
