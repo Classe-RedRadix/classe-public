@@ -33,6 +33,7 @@ const CookiesView = () => {
     toggleTermsAndConditions,
     saveToFirebase: saveContactFormToFirebase,
     errors,
+    clearForm,
   } = useContactForm(interestedIn)
 
   useBackgroundChange(setIsBlack, setIsFluor)
@@ -73,6 +74,7 @@ const CookiesView = () => {
     toggleTermsAndConditions,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   }
 
   return (

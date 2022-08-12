@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import { MEDIA_QUERIES } from '../../../constants'
@@ -32,6 +33,12 @@ const Menu = ({
   openCourse,
 }) => {
   const size = useWindowSize()
+
+  useEffect(() => {
+    if (!isContactOpen) {
+      contactFormParams.clearForm()
+    }
+  }, [isContactOpen])
 
   return (
     <>

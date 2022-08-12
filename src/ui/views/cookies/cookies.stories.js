@@ -30,6 +30,7 @@ export const _CookiesPolicy = () => {
         name: '',
         onNameChange: () => {},
         saveToFirebase: () => {},
+        clearForm: () => {},
       }}
       courses={COURSES}
     ></Cookies>

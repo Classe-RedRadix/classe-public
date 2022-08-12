@@ -33,6 +33,7 @@ const LegalTermsView = () => {
     toggleTermsAndConditions,
     saveToFirebase: saveContactFormToFirebase,
     errors,
+    clearForm,
   } = useContactForm(interestedIn)
 
   useBackgroundChange(setIsBlack, setIsFluor)
@@ -73,6 +74,7 @@ const LegalTermsView = () => {
     toggleTermsAndConditions,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   }
 
   return (
