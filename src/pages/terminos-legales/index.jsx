@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import InfoHead from '../../InfoHead'
 
-import LegalTerms from '../../ui/views/legalTerms/LegalTerms'
+import { LegalTerms } from '../../ui/views'
 import { COURSES } from '../../data'
 import {
   useBackgroundChange,
@@ -12,6 +12,7 @@ import {
   useTranslations,
   useBreadcrumbListSchema,
 } from '../../hooks'
+
 const LegalTermsView = () => {
   const router = useRouter()
   const interestedIn = router.query['interested-in']
