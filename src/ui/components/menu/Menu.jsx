@@ -22,6 +22,7 @@ const Menu = ({
   handleText,
   areCoursesOpen = false,
   course = null,
+  hasPageTitle,
   handleClose,
   goToHome,
   openContact,
@@ -35,6 +36,7 @@ const Menu = ({
   return (
     <>
       <MenuLayer
+        hasPageTitle={hasPageTitle}
         actionText={actionText}
         courses={courses}
         contactFormParams={contactFormParams}
@@ -91,6 +93,7 @@ Menu.propTypes = {
   areCoursesOpen: PropTypes.bool,
   isContactOpen: PropTypes.bool,
   isCourseOpen: PropTypes.bool,
+  hasPageTitle: PropTypes.bool,
   actionText: PropTypes.string,
   handleText: PropTypes.func,
   handleClose: PropTypes.func,

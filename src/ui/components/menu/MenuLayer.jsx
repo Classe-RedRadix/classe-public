@@ -26,6 +26,7 @@ const MenuLayer = ({
   isContactOpen,
   isCourseOpen,
   areCoursesOpen,
+  hasPageTitle,
   handleClose,
   openContact,
   goToHome,
@@ -53,7 +54,8 @@ const MenuLayer = ({
     }
   }, [isOpen])
 
-  const hasHomeTitle = !areCoursesOpen && !isCourseOpen && !isContactOpen
+  const hasHomeTitle =
+    !areCoursesOpen && !isCourseOpen && !isContactOpen && !hasPageTitle
 
   const coursesImage = IMAGES.COURSES_IMAGE
 
@@ -153,6 +155,7 @@ MenuLayer.propTypes = {
   isContactOpen: PropTypes.bool,
   isCourseOpen: PropTypes.bool,
   areCoursesOpen: CoursesList.propTypes.isPlacedAtHome,
+  hasPageTitle: PropTypes.bool,
   contactFormParams: MenuContact.propTypes.contactFormParams,
   actionText: PropTypes.string,
   goToHome: PropTypes.func,

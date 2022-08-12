@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import { useMenu } from '../../../hooks'
@@ -36,6 +37,18 @@ const Cookies = ({
     openCourse,
   } = useMenu()
 
+  const [pageTitle, setPageTitle] = useState(
+    !areCoursesOpen && !isCourseOpen && !isContactOpen,
+  )
+
+  const interceptHandler = useCallback(
+    callback => {
+      callback()
+      setTimeout(() => setPageTitle(pageTitle => !pageTitle), 1000)
+    },
+    [pageTitle],
+  )
+
   return (
     <>
       <MainWrapper
@@ -45,16 +58,17 @@ const Cookies = ({
         extraClass="legalView"
       >
         <Menu
+          hasPageTitle={pageTitle}
           contactFormParams={contactFormParams}
           isBlack={isBlack}
           courses={courses}
           areCoursesOpen={areCoursesOpen}
           course={course}
-          handleClose={handleClose}
-          openContact={openContact}
-          openCourses={openCourses}
           isContactOpen={isContactOpen}
           isCourseOpen={isCourseOpen}
+          handleClose={handleClose}
+          openContact={() => interceptHandler(openContact)}
+          openCourses={() => interceptHandler(openCourses)}
           openCourse={openCourse}
         />
         <div className="blurableWrapper">
@@ -62,16 +76,18 @@ const Cookies = ({
             <Row type="full">
               <Cell isColumn>
                 <Cell isNegative={isBlack}>
-                  <div className="scrambleTextWrapper">
-                    <h1 className="h1 scrambleText">
-                      {formatMessage('cookies-policy:title', {
-                        line: text => <span className="line">{text}</span>,
-                        lineTab: text => (
-                          <span className="line has-tab">{text}</span>
-                        ),
-                      })}
-                    </h1>
-                  </div>
+                  {pageTitle ? (
+                    <div className="scrambleTextWrapper">
+                      <h1 className="h1 scrambleText">
+                        {formatMessage('cookies-policy:title', {
+                          line: text => <span className="line">{text}</span>,
+                          lineTab: text => (
+                            <span className="line has-tab">{text}</span>
+                          ),
+                        })}
+                      </h1>
+                    </div>
+                  ) : null}
                 </Cell>
               </Cell>
             </Row>
