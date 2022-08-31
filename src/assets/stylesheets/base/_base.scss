@@ -189,7 +189,9 @@ button {
 
   .line {
     opacity: 0;
-    white-space: nowrap;
+    @include mq(md) {
+      white-space: nowrap;
+    }
   }
 
   .line.has-wrap {
