@@ -148,8 +148,6 @@ const Home = ({
             <Header title={formatMessage('find:header')} number={9} />
             <Find isBlack={isBlack} isFluor={isFluor} />
             <Header isClose title={formatMessage('find:header')} />
-
-            <Header title={formatMessage('footer:header')} number={10} />
           </main>
           <Footer
             courses={courses}

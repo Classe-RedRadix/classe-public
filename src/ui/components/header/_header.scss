@@ -18,5 +18,9 @@
     & + .sectionWrapper {
       margin-top: 2rem;
     }
+    .footer & {
+      margin-bottom: 2rem;
+      padding: 0;
+    }
   }
 }
