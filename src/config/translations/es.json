@@ -39,7 +39,7 @@
   "schema-contact-page:headline": "Classe, cursos de programación y producto digital por y para desarrolladores.",
   "schema-contact-page:description": "Formación presencial y en remoto  pensada por y para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
   "schema-contact-page:main-entity-of-page-name": "Contacto",
-  "schema-contact-page:email": "info@clase.dev",
+  "schema-contact-page:email": "info@classe.dev",
   "schema-contact-page:address": "Calle Calatrava, 27",
   "schema-contact-page:postal-code": "28005",
   "schema-contact-page:locality": "Madrid",
@@ -246,7 +246,6 @@
   "find:description": "Si quieres venir a nuestras oficinas, estamos en pleno centro de Madrid, en la calle Calatrava, 27, al lado del Metro de La Latina.",
   "find:description2": "INFO<ariaHidden>[at]</ariaHidden><screenReader>@</screenReader>classe.dev",
   "find:claim": "<line>Y detrás</line> <lineTab>de la</lineTab> <lineTab>pantalla</lineTab>",
-  "find:aria": "Copia nuestro email en el portapapeles",
 
   "contact:second-title": "<line>Contacta</line> <line>con Classe</line>",
   "contact:address1": "<line>Madrid, Calatrava, 27</line> <line>[Metro La Latina]</line>",
@@ -255,6 +254,7 @@
   "contact:interested-in": "<line>Estoy interesado en</line>",
   "contact:my-email": "<line>Y este es mi correo</line>",
   "contact:success": "Gracias! Te responderemos lo antes posible.",
+  "contact:address-link": "https://www.google.es/maps/place/Redradix/@40.4092458,-3.7143432,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287e4a90167b:0x9bfdc0ed1f91d800!8m2!3d40.4092458!4d-3.7121545?shorturl=1",
 
   "footer:header": "Bye bye",
   "footer:title": "<line>Stay</line> <lineTab>in the</lineTab> <lineTab>know</lineTab>",

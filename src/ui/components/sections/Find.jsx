@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { copyClasseEmailToClipboard } from '../../../business'
 import { useTranslations, useGenerateImageCandidates } from '../../../hooks'
 import SectionWrapper from '../wrappers/SectionWrapper'
 import Row from '../row/Row'
@@ -67,16 +66,16 @@ const Find = ({ isBlack, isFluor }) => {
               })}
             </h3>
           </div>
-          <button
+          <a
             className="notes"
-            aria-label={t('find:aria')}
-            onClick={copyClasseEmailToClipboard}
+            href={`mailto:${t('schema-contact-page:email')}`}
+            target="_blank"
           >
             {t('find:description2', {
               ariaHidden: text => <span aria-hidden="true">{text}</span>,
               screenReader: text => <span className="sr-only">{text}</span>,
             })}
-          </button>
+          </a>
         </Cell>
       </Row>
     </SectionWrapper>

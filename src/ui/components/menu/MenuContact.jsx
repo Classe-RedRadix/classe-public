@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-
-import { copyClasseEmailToClipboard } from '../../../business'
 import { useTranslations } from '../../../hooks'
 
 import ExclamationIcon from '../../../assets/icons/ExclamationIcon'
@@ -63,16 +61,19 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
         </h1>
 
         <address className="menuLayer-contactAddress">
-          <div className="heading menuLayer-contactAddressText">
+          <a
+            className="heading menuLayer-contactAddressText"
+            href={formatMessage('contact:address-link')}
+            target="_blank"
+          >
             {formatMessage('contact:address1', {
               line: text => <span className="line">{text}</span>,
             })}
-          </div>
-          {/* TODO: add the cursor pointer in the css (?) */}
-          <div
+          </a>
+          <a
             className="heading menuLayer-contactAddressText"
-            style={{ cursor: 'pointer' }}
-            onClick={copyClasseEmailToClipboard}
+            href={`mailto:${formatMessage('schema-contact-page:email')}`}
+            target="_blank"
           >
             {formatMessage('contact:address2', {
               lineAriaHidden: text => (
@@ -82,7 +83,7 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
               ),
               screenReadOnly: text => <span className="sr-only">{text}</span>,
             })}
-          </div>
+          </a>
         </address>
       </Cell>
       <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
@@ -108,9 +109,10 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
 
             <Input
               placeholder={formatMessage('general:name-lastname-placeholder')}
+              handleBlur={() => {}}
               handleChange={contactFormParams.onNameChange}
               value={contactFormParams.name}
-              name="name"
+              type="name"
               isNegative
               id="contactName"
             />

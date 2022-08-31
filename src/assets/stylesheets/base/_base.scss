@@ -71,6 +71,10 @@ a {
 
 address {
   font-style: normal;
+
+  & .heading {
+    font-weight: 700;
+  }
 }
 
 button {
