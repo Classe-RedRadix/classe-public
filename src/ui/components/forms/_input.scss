@@ -5,15 +5,6 @@
   width: 100%;
   height: auto;
 
-  &.has-submit .input-field {
-    @extend %notes-typo;
-    padding: 1rem 4rem 1rem 2rem;
-    text-transform: uppercase;
-    border: 1px solid $black;
-    border-radius: 3.75rem;
-    outline: none;
-  }
-
   &-field {
     @extend %p-typo;
     display: block;
@@ -28,6 +19,18 @@
     transition: color $fade-simple, border $fade-simple;
     box-sizing: border-box;
 
+    .is-rounded & {
+      @extend %notes-typo;
+      padding: 1rem 4rem 1rem 2rem;
+      border: 1px solid $black;
+      border-radius: 3.75rem;
+      outline: none;
+    }
+
+    .is-uppercase & {
+      text-transform: uppercase;
+    }
+  
     &::placeholder {
       color: $black;
       transition: color $fade-simple;
@@ -62,7 +65,7 @@
   }
 
   @include mq(md) {
-    &.has-submit .input-field {
+    &.rounded .input-field {
       padding: 1rem 4.5rem 1rem 2rem;
     }
 

@@ -67,7 +67,8 @@ const Footer = ({
             <div className="footer-formBlock">
               <Input
                 handleChange={contactFormParams.onEmailChange}
-                handleSubmit={() => {}}
+                isRounded
+                isUppercase
                 name="email"
                 placeholder={formatMessage('newsletter:placeholder')}
                 type="email"
