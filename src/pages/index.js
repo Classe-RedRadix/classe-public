@@ -19,7 +19,6 @@ import Vivanta from '/public/images/logos/vivanta.svg'
 
 import { COURSES } from '../data'
 import InfoHead from '../InfoHead'
-import Hero from '../ui/components/hero/Hero'
 
 import {
   useViewportHeight,
@@ -55,6 +54,7 @@ const Home = () => {
     toggleTermsAndConditions,
     saveToFirebase: saveContactFormToFirebase,
     errors,
+    clearForm,
   } = useContactForm(interestedIn)
 
   useViewportHeight()
@@ -197,6 +197,7 @@ const Home = () => {
     toggleTermsAndConditions,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   }
 
   return (

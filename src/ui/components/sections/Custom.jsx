@@ -33,16 +33,26 @@ const Custom = ({ isBlack, isFluor, openCourses }) => {
           </div>
         </Cell>
         <Cell isNegative={isBlack}>
-          <img
-            src={tailorMadeCoursesImage.mainImage}
-            alt={t(tailorMadeCoursesImage.alt)}
-            width={tailorMadeCoursesImage.width}
-            height={tailorMadeCoursesImage.height}
-            sizes={tailorMadeCoursesImage.sizes}
-            srcSet={useGenerateImageCandidates(tailorMadeCoursesImage.srcSet)}
-            loading="lazy"
-            className="image"
-          />
+          <picture>
+            <source
+              sizes={tailorMadeCoursesImage.sizes}
+              srcSet={useGenerateImageCandidates(
+                tailorMadeCoursesImage.srcSetWebp,
+              )}
+              type="image/webp"
+            />
+
+            <img
+              src={tailorMadeCoursesImage.mainImage}
+              alt={t(tailorMadeCoursesImage.alt)}
+              width={tailorMadeCoursesImage.width}
+              height={tailorMadeCoursesImage.height}
+              sizes={tailorMadeCoursesImage.sizes}
+              srcSet={useGenerateImageCandidates(tailorMadeCoursesImage.srcSet)}
+              loading="lazy"
+              className="image"
+            />
+          </picture>
         </Cell>
       </Row>
       <Row type="half">

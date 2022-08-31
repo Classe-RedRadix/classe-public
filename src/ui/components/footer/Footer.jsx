@@ -66,18 +66,15 @@ const Footer = ({
             </div>
             <div className="footer-formBlock">
               <Input
-                handleBlur={() => {}}
                 handleChange={contactFormParams.onEmailChange}
-                handleSubmit={() => {}}
+                isRounded
+                isUppercase
                 name="email"
                 placeholder={formatMessage('newsletter:placeholder')}
                 type="email"
                 value={contactFormParams.email}
               />
-              <Button
-                text={formatMessage('newsletter:btn')}
-                onClick={() => {}}
-              />
+              <Button type="submit" text={formatMessage('newsletter:btn')} />
             </div>
             <div className="footer-formBlock">
               <Checkbox

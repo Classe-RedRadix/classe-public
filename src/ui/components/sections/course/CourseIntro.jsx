@@ -58,16 +58,23 @@ const Course = React.forwardRef(
           </Row>
           <Row type="half" extraClass="courseIntro-data">
             <Cell isNegative>
-              <img
-                src={image.mainImage}
-                alt={formatMessage(image.alt)}
-                width={image.width}
-                height={image.height}
-                sizes={image.sizes}
-                srcSet={useGenerateImageCandidates(image.srcSet)}
-                loading="lazy"
-                className="image"
-              />
+              <picture>
+                <source
+                  sizes={image.sizes}
+                  srcSet={useGenerateImageCandidates(image.srcSetWebp)}
+                  type="image/webp"
+                />
+                <img
+                  src={image.mainImage}
+                  alt={formatMessage(image.alt)}
+                  width={image.width}
+                  height={image.height}
+                  sizes={image.sizes}
+                  srcSet={useGenerateImageCandidates(image.srcSet)}
+                  loading="lazy"
+                  className="image"
+                />
+              </picture>
             </Cell>
 
             {/**

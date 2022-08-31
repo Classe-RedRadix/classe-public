@@ -10,8 +10,17 @@ const useScrambleText = () => {
   useEffect(() => {
     const textWrappers = document.querySelectorAll('.scrambleTextWrapper')
     textWrappers.forEach(wrapper => {
+      let cloned
       const text = wrapper.querySelector('.scrambleText')
-      const cloned = text.cloneNode(true)
+
+      if (text.nodeName === 'H1') {
+        cloned = document.createElement('span')
+        cloned.innerHTML = text.innerHTML
+        cloned.classList = text.classList
+      } else {
+        cloned = text.cloneNode(true)
+      }
+
       cloned.classList.add('is-cloned')
       cloned.setAttribute('aria-hidden', 'true')
       wrapper.appendChild(cloned)

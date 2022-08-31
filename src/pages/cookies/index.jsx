@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import InfoHead from '../../InfoHead'
 
-import LegalTerms from '../../ui/views/cookies/Cookies'
+import { Cookies } from '../../ui/views'
 import { COURSES } from '../../data'
 import {
   useBackgroundChange,
@@ -12,7 +12,8 @@ import {
   useTranslations,
   useBreadcrumbListSchema,
 } from '../../hooks'
-const LegalTermsView = () => {
+
+const CookiesView = () => {
   const router = useRouter()
   const interestedIn = router.query['interested-in']
 
@@ -32,6 +33,7 @@ const LegalTermsView = () => {
     toggleTermsAndConditions,
     saveToFirebase: saveContactFormToFirebase,
     errors,
+    clearForm,
   } = useContactForm(interestedIn)
 
   useBackgroundChange(setIsBlack, setIsFluor)
@@ -72,6 +74,7 @@ const LegalTermsView = () => {
     toggleTermsAndConditions,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   }
 
   return (
@@ -89,7 +92,7 @@ const LegalTermsView = () => {
           }}
         />
       </InfoHead>
-      <LegalTerms
+      <Cookies
         isBlack={isBlack}
         isFluor={isFluor}
         onContactFormSubmit={handleContactFormSubmit}
@@ -100,4 +103,4 @@ const LegalTermsView = () => {
   )
 }
 
-export default LegalTermsView
+export default CookiesView

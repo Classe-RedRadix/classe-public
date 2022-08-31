@@ -51,6 +51,7 @@ const ContactFormParamsPropType = PropTypes.shape({
   termsAndConditions: PropTypes.bool,
   toggleTermsAndConditions: PropTypes.func,
   saveToFirebase: PropTypes.func,
+  clearForm: PropTypes.func,
 })
 
 const DatesPropType = PropTypes.arrayOf(
