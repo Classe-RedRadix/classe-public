@@ -44,12 +44,20 @@
 
   &-text {
     text-align: center;
-    transform: translateY(0.125rem);
-  }
 
-  @include mq(sm) {
-    &.is-full {
-      padding: 1.25rem 1.5rem;
+    // NOTE: Due to an weird default font's vertical alignment
+    // and since different browsers renders text with different ways
+    // we need to add this two selectors to compensate its height
+    // finding the balance between the line-height and extra pseudo-element
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+    }
+
+    &.button {
+      line-height: 0.65;
     }
   }
 }

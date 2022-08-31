@@ -29,14 +29,44 @@ const useContactForm = interestedInCourseId => {
   )
 
   // NOTE: we are not sending this value, it's just a form control
-  const [termsAndConditions, toggleTermsAndConditions] = useCheckbox(false)
+  const [termsAndConditions, toggleTermsAndConditions, setTermsAndConditions] =
+    useCheckbox(false)
 
   // States to know the request status
   const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState(null)
+  const [isError, setIsError] = useState(false)
   const [error, setError] = useState(null)
   const [isSaved, setIsSaved] = useState(false)
   const [errors, setErrors] = useState({})
+
+  const clearForm = () => {
+    setName('')
+    setEmail('')
+    setUserType('company')
+    setInterestedInOptions(
+      COURSES.map(course => ({
+        checked: course.id === interestedInCourseId,
+        id: course.id,
+        label: formatMessage(course.information.title),
+      })),
+    )
+    setTermsAndConditions(false)
+    setIsLoading(false)
+    setIsError(false)
+    setError(null)
+    setIsSaved(false)
+    setErrors({})
+  }
+
+  const removeError = key => {
+    if (key in errors) {
+      setErrors(prev => {
+        const validationErrors = { ...prev }
+        delete validationErrors[key]
+        return validationErrors
+      })
+    }
+  }
 
   const onInterestedInOptionChange = interestedInOption => {
     setInterestedInOptions(interestedInOptions =>
@@ -49,7 +79,27 @@ const useContactForm = interestedInCourseId => {
         }),
       ),
     )
+
+    removeError('optionNoSelected')
   }
+
+  useEffect(() => {
+    if (name.trimRight() !== '') {
+      removeError('nameNoSelected')
+    }
+  }, [name])
+
+  useEffect(() => {
+    if (email.trimRight() !== '') {
+      removeError('emailNoSelected')
+    }
+  }, [email])
+
+  useEffect(() => {
+    if (termsAndConditions) {
+      removeError('termsNoSelected')
+    }
+  }, [termsAndConditions])
 
   /**
    *
@@ -180,6 +230,7 @@ const useContactForm = interestedInCourseId => {
     onInterestedInOptionChange,
     termsAndConditions,
     toggleTermsAndConditions,
+    clearForm,
   }
 }
 

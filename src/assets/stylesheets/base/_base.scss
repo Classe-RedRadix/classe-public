@@ -71,6 +71,10 @@ a {
 
 address {
   font-style: normal;
+
+  & .heading {
+    font-weight: 700;
+  }
 }
 
 button {
@@ -201,7 +205,7 @@ button {
   }
 }
 
-.braketHover {
+.bracketHover {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
@@ -214,10 +218,6 @@ button {
   .h3,
   .notes {
     letter-spacing: -0.02rem;
-  }
-
-  .h4 {
-    text-transform: none;
   }
 
   .line.has-tab {

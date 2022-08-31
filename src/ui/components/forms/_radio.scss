@@ -14,8 +14,10 @@
     opacity: 0;
     pointer-events: none;
 
-    &:checked + .radio-icon,
-    &:checked + .radio-icon + .radio-label {
+    .is-black &:checked + .radio-icon,
+    .menuLayer &:checked + .radio-icon,
+    .is-black &:checked + .radio-icon + .radio-label,
+    .menuLayer &:checked + .radio-icon + .radio-label {
       color: $fluor;
     }
 

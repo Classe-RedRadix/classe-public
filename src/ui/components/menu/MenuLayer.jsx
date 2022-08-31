@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -26,6 +26,7 @@ const MenuLayer = ({
   isContactOpen,
   isCourseOpen,
   areCoursesOpen,
+  hasPageTitle,
   handleClose,
   openContact,
   goToHome,
@@ -53,7 +54,8 @@ const MenuLayer = ({
     }
   }, [isOpen])
 
-  const hasHomeTitle = !areCoursesOpen && !isCourseOpen && !isContactOpen
+  const hasHomeTitle =
+    !areCoursesOpen && !isCourseOpen && !isContactOpen && !hasPageTitle
 
   const coursesImage = IMAGES.COURSES_IMAGE
 
@@ -68,7 +70,7 @@ const MenuLayer = ({
               onClick={handleClose}
               role="link"
             >
-              [ <span className="braketHover">{t(actionText)}</span> ]
+              [ <span className="bracketHover">{t(actionText)}</span> ]
             </button>
           </div>
         ) : null}
@@ -91,16 +93,24 @@ const MenuLayer = ({
           ) : (
             <Row type="quarter" extraClass="menuLayer-courses">
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
-                <img
-                  src={coursesImage.mainImage}
-                  alt={t(coursesImage.alt)}
-                  width={coursesImage.width}
-                  height={coursesImage.height}
-                  sizes={coursesImage.sizes}
-                  srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
-                  loading="lazy"
-                  className="image"
-                />
+                <picture>
+                  <source
+                    sizes={coursesImage.sizes}
+                    srcSet={useGenerateImageCandidates(coursesImage.srcSetWebp)}
+                    type="image/webp"
+                  />
+
+                  <img
+                    src={coursesImage.mainImage}
+                    alt={t(coursesImage.alt)}
+                    width={coursesImage.width}
+                    height={coursesImage.height}
+                    sizes={coursesImage.sizes}
+                    srcSet={useGenerateImageCandidates(coursesImage.srcSet)}
+                    loading="lazy"
+                    className="image"
+                  />
+                </picture>
               </Cell>
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
                 <CoursesList
@@ -150,6 +160,14 @@ MenuLayer.propTypes = {
   course: CoursePropType,
   courses: PropTypes.arrayOf(CoursePropType.isRequired).isRequired,
   isOpen: PropTypes.bool,
+  isContactOpen: PropTypes.bool,
+  isCourseOpen: PropTypes.bool,
+  areCoursesOpen: CoursesList.propTypes.isPlacedAtHome,
+  hasPageTitle: PropTypes.bool,
+  contactFormParams: MenuContact.propTypes.contactFormParams,
+  actionText: PropTypes.string,
+  goToHome: PropTypes.func,
+  openCourses: PropTypes.func,
   hasClose: PropTypes.bool,
   handleClose: PropTypes.func.isRequired,
   openContact: PropTypes.func.isRequired,

@@ -172,52 +172,27 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
     }
 
     .contact-formBlock {
       position: relative;
-      //TODO: Refactor error message
-      &--legal {
-        &:not(.contact-formBlock--error) {
-          padding-bottom: 1.4375rem;
-        }
-      }
-      &:not(.contact-formBlock--error) {
-        padding-bottom: 1.4375rem;
-      }
-      &.contact-formBlock-title {
-        padding-bottom: 0;
-      }
-      & + .contact-formBlock {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        gap: 1.25rem;
-      }
+      padding-bottom: 1.4375rem;
 
       &--flex {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-top: 1rem;
-
-        &:not(.contact-formBlock--error) {
-          padding-bottom: 1.5625rem;
-        }
-        & + .contact-formBlock {
-          margin-top: 1.5rem;
-        }
+        padding-bottom: 1.5625rem;
+        position: relative;
 
         .checkbox,
         .radio {
           margin-top: 0.75rem;
         }
       }
-      &:last-child {
-        margin-top: 1.5rem;
-        padding: 0;
-      }
+
       &--error {
         .input-field {
           border-color: $error;
@@ -226,17 +201,25 @@
           color: $error;
         }
         small {
-          color: $error;
-          display: flex;
-          align-items: center;
-          gap: 0.3125rem;
-          margin-top: 0.3125rem;
-        }
-        .icon-error {
-          max-width: 0.9375rem;
-          height: 0.9375rem;
+          transition: opacity 0.3s;
+          opacity: 1;
         }
       }
+    }
+    small {
+      display: flex;
+      align-items: center;
+      gap: 0.3125rem;
+      margin-top: 0.3125rem;
+      opacity: 0;
+      color: $error;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    .icon-error {
+      max-width: 0.9375rem;
+      height: 0.9375rem;
     }
   }
 

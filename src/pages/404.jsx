@@ -15,6 +15,7 @@ const Error404 = () => {
     errors,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   } = useContactForm()
 
   const contactFormParams = {
@@ -28,6 +29,7 @@ const Error404 = () => {
     errors,
     onNameChange,
     saveToFirebase: saveContactFormToFirebase,
+    clearForm,
   }
 
   return (

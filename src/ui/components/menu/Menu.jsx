@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import { MEDIA_QUERIES } from '../../../constants'
@@ -9,7 +9,6 @@ import MenuLayer from './MenuLayer'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 
-import { useRouter } from 'next/router'
 import {
   CoursePropType,
   ContactFormParamsPropType,
@@ -24,6 +23,7 @@ const Menu = ({
   handleText,
   areCoursesOpen = false,
   course = null,
+  hasPageTitle,
   handleClose,
   goToHome,
   openContact,
@@ -34,9 +34,16 @@ const Menu = ({
 }) => {
   const size = useWindowSize()
 
+  useEffect(() => {
+    if (!isContactOpen) {
+      contactFormParams.clearForm()
+    }
+  }, [isContactOpen])
+
   return (
     <>
       <MenuLayer
+        hasPageTitle={hasPageTitle}
         actionText={actionText}
         courses={courses}
         contactFormParams={contactFormParams}
@@ -93,6 +100,7 @@ Menu.propTypes = {
   areCoursesOpen: PropTypes.bool,
   isContactOpen: PropTypes.bool,
   isCourseOpen: PropTypes.bool,
+  hasPageTitle: PropTypes.bool,
   actionText: PropTypes.string,
   handleText: PropTypes.func,
   handleClose: PropTypes.func,

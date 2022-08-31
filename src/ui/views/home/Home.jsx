@@ -75,7 +75,6 @@ const Home = ({
         {visible && <Hero text="loader:text" loaded={loaded} />}
 
         <Menu
-          type="home"
           contactFormParams={contactFormParams}
           isBlack={isBlack}
           courses={courses}
@@ -90,69 +89,67 @@ const Home = ({
         />
         <div className="blurableWrapper">
           <main>
+            <Header title={formatMessage('manifest:header')} number={1} />
+            <Manifest isBlack={isBlack} isFluor={isFluor} />
+            <Header isClose title={formatMessage('manifest:header')} />
 
-          <Header title={formatMessage('manifest:header')} number={1} />
-          <Manifest isBlack={isBlack} isFluor={isFluor} />
-          <Header isClose title={formatMessage('manifest:header')} />
+            <Header title={formatMessage('courses:header')} number={2} />
+            <Courses
+              courses={courses}
+              isBlack={isBlack}
+              isFluor={isFluor}
+              openCourse={openCourse}
+              openContact={openContact}
+            />
+            <Header isClose title={formatMessage('courses:header')} />
 
-          <Header title={formatMessage('courses:header')} number={2} />
-          <Courses
-            courses={courses}
-            isBlack={isBlack}
-            isFluor={isFluor}
-            openCourse={openCourse}
-            openContact={openContact}
-          />
-          <Header isClose title={formatMessage('courses:header')} />
+            <Header title={formatMessage('custom:header')} number={3} />
+            <Custom
+              isBlack={isBlack}
+              isFluor={isFluor}
+              openCourses={openCourses}
+            />
+            <Header isClose title={formatMessage('custom:header')} />
 
-          <Header title={formatMessage('custom:header')} number={3} />
-          <Custom
-            isBlack={isBlack}
-            isFluor={isFluor}
-            openCourses={openCourses}
-          />
-          <Header isClose title={formatMessage('custom:header')} />
+            <Header title={formatMessage('featured:header')} number={4} />
+            <Featured
+              isBlack={isBlack}
+              isFluor={isFluor}
+              course={featuredCourse}
+              openCourse={openCourse}
+            />
+            <Header isClose title={formatMessage('featured:header')} />
 
-          <Header title={formatMessage('featured:header')} number={4} />
-          <Featured
-            isBlack={isBlack}
-            isFluor={isFluor}
-            course={featuredCourse}
-            openCourse={openCourse}
-          />
-          <Header isClose title={formatMessage('featured:header')} />
+            <Header title={formatMessage('facts:header')} number={5} />
+            <Facts isBlack={isBlack} isFluor={isFluor} />
+            <Header isClose title={formatMessage('facts:header')} />
 
-          <Header title={formatMessage('facts:header')} number={5} />
-          <Facts isBlack={isBlack} isFluor={isFluor} />
-          <Header isClose title={formatMessage('facts:header')} />
+            <Header title={formatMessage('calendar:header')} number={6} />
+            <Calendar
+              isBlack={isBlack}
+              isFluor={isFluor}
+              openContact={openContact}
+            />
+            <Header isClose title={formatMessage('calendar:header')} />
 
-          <Header title={formatMessage('calendar:header')} number={6} />
-          <Calendar
-            isBlack={isBlack}
-            isFluor={isFluor}
-            openContact={openContact}
-          />
-          <Header isClose title={formatMessage('calendar:header')} />
+            <Header title={formatMessage('companies:header')} number={7} />
+            <Companies
+              logos={logos}
+              isBlack={isBlack}
+              isFluor={isFluor}
+              openContact={openContact}
+            />
+            <Header isClose title={formatMessage('companies:header')} />
 
-          <Header title={formatMessage('companies:header')} number={7} />
-          <Companies
-            logos={logos}
-            isBlack={isBlack}
-            isFluor={isFluor}
-            openContact={openContact}
-          />
-          <Header isClose title={formatMessage('companies:header')} />
+            <Header title={formatMessage('faqs:header')} number={8} />
+            <Faqs isBlack={isBlack} isFluor={isFluor} list={faqsList} />
+            <Header isClose title={formatMessage('faqs:header')} />
 
-          <Header title={formatMessage('faqs:header')} number={8} />
-          <Faqs isBlack={isBlack} isFluor={isFluor} list={faqsList} />
-          <Header isClose title={formatMessage('faqs:header')} />
+            <Header title={formatMessage('find:header')} number={9} />
+            <Find isBlack={isBlack} isFluor={isFluor} />
+            <Header isClose title={formatMessage('find:header')} />
 
-          <Header title={formatMessage('find:header')} number={9} />
-          <Find isBlack={isBlack} isFluor={isFluor} />
-          <Header isClose title={formatMessage('find:header')} />
-
-          <Header title={formatMessage('footer:header')} number={10} />
-
+            <Header title={formatMessage('footer:header')} number={10} />
           </main>
           <Footer
             courses={courses}

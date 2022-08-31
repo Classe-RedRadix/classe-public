@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import useTranslations from '../../../hooks/useTranslations'
 import MainWrapper from '../../components/wrappers/MainWrapper'
@@ -7,7 +7,6 @@ import Menu from '../../components/menu/Menu'
 import Row from '../../components/row/Row'
 import Button from '../../components/button/Button'
 import Cell from '../../components/cell/Cell'
-import ArrowFact from '../../../assets/icons/ArrowFact'
 import ArrowError from '../../../assets/icons/ArrowError'
 import useFitText from 'use-fit-text'
 import { useMenu } from '../../../hooks'
@@ -30,8 +29,7 @@ const Error = ({ isBlack, isFluor, isLock, courses, contactFormParams }) => {
     openCourse,
   } = useMenu()
 
-  const onFinish = useCallback(fontSize => {}, [])
-  const { fontSize, ref } = useFitText({ maxFontSize: 8000, onFinish })
+  const { fontSize, ref } = useFitText({ maxFontSize: 8000 })
 
   const twisterMath = (x, y, xShapeCenter, yShapeCenter) => {
     return Math.atan2(x - xShapeCenter, -(y - yShapeCenter)) * (180 / Math.PI)
@@ -53,7 +51,6 @@ const Error = ({ isBlack, isFluor, isLock, courses, contactFormParams }) => {
   const cursorFinderEvent = e => {
     const x = e.clientX
     const y = e.clientY
-    const coor = 'Coordinates: (' + x + ',' + y + ')'
 
     const theArrows = document.getElementsByClassName('error-arrow')
     for (var i = 0; i < theArrows.length; i++) {
@@ -110,7 +107,6 @@ const Error = ({ isBlack, isFluor, isLock, courses, contactFormParams }) => {
                     text={t('error:back-to-homne')}
                   />
                 </div>
-
                 {arrows}
               </div>
             </Cell>

@@ -38,18 +38,28 @@ const Courses = ({ courses, isBlack, isFluor, openCourse, openContact }) => {
             </div>
           </Cell>
           <Cell isNegative={isBlack}>
-            <img
-              src={professionalTrainingImage.mainImage}
-              alt={t(professionalTrainingImage.alt)}
-              width={professionalTrainingImage.width}
-              height={professionalTrainingImage.height}
-              sizes={professionalTrainingImage.sizes}
-              srcSet={useGenerateImageCandidates(
-                professionalTrainingImage.srcSet,
-              )}
-              loading="lazy"
-              className="image"
-            />
+            <picture>
+              <source
+                sizes={professionalTrainingImage.sizes}
+                srcSet={useGenerateImageCandidates(
+                  professionalTrainingImage.srcSetWebp,
+                )}
+                type="image/webp"
+              />
+
+              <img
+                src={professionalTrainingImage.mainImage}
+                alt={t(professionalTrainingImage.alt)}
+                width={professionalTrainingImage.width}
+                height={professionalTrainingImage.height}
+                sizes={professionalTrainingImage.sizes}
+                srcSet={useGenerateImageCandidates(
+                  professionalTrainingImage.srcSet,
+                )}
+                loading="lazy"
+                className="image"
+              />
+            </picture>
             <p className="p">{t('courses:description')}</p>
             <Button
               isLink

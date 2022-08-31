@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useMemo } from 'react'
+import { useEffect, useRef, useMemo } from 'react'
 
 import CourseIntro from '../../components/sections/course/CourseIntro'
 import CourseTitle from '../../components/sections/course/CourseTitle'
