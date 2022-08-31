@@ -15,10 +15,7 @@ const CourseSection = ({ number, text, title }) => {
           <h3 className="h1" aria-hidden="true">
             {number}
           </h3>
-          <Paragraphs
-            text={formatMessage(text)}
-            extraClass="courseSection-text"
-          />
+          <p className="courseSection-text">{formatMessage(text)}</p>
         </Cell>
       </Row>
       <Row type="full" extraClass="courseSection-title">

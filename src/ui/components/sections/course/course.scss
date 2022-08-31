@@ -64,13 +64,11 @@
   }
 
   &-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.625rem;
-    margin-top: 5.125rem;
-    @include mq(md) {
-      margin-top: 3vh;
+    &.has-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.625rem;
     }
   }
   &-data {
@@ -83,12 +81,17 @@
         margin-top: 0;
       }
 
-      .cell-description {
-        flex-grow: 1;
-      }
       > .is-column {
         display: flex;
         flex-direction: column;
+      }
+    }
+    .cell-description {
+      display: FLEX;
+      flex-direction: column;
+      gap: 24px;
+      @include mq(md) {
+        flex-grow: 1;
       }
     }
   }
@@ -153,19 +156,19 @@
       display: flex;
       flex-direction: column;
       height: 100%;
-      justify-content: space-between;
+      gap: 1.5rem;
       //TODO: Create a media query for very large screens with "justify-content: end"
       //and give a margin-top to the number.
+      @include mq(md) {
+        justify-content: space-between;
+      }
     }
   }
 
   &-text {
-    .sectionWrapper & {
-      margin-top: 6.25rem;
-      margin-top: auto;
-    }
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
-
   &-title {
     height: 40%;
 
@@ -192,9 +195,11 @@
   }
 
   &-glypBottom {
-    position: absolute;
-    bottom: 1.5rem;
-    right: 3rem;
+    @include mq(md) {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 3rem;
+    }
   }
 
   &-glypTop {
