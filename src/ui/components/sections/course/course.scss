@@ -113,6 +113,10 @@
   &-nameText {
     font-weight: inherit;
     font-size: 6rem;
+    @include mq($until: md) {
+      word-break: break-all;
+      line-height: 5rem;
+    }
   }
 
   &-cell {
