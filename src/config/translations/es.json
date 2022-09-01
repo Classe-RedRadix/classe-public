@@ -59,6 +59,7 @@
   "schema-breadcrumb-list:cookies-policy-name": "Cookies",
 
   "general:conditions-check": "Acepto los términos y condiciones",
+  "general:conditions-anchgor": "/terminos-legales/",
   "general:go-to-home": "Ir a la home",
   "general:newsletter-check": "Suscribirme a la newsletter",
   "general:placeholder": "Introduce tu email",
