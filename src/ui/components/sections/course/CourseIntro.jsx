@@ -9,6 +9,7 @@ import TabIcon from './../../../../assets/icons/TabIcon'
 import DatePicker from '../../date-picker/DatePicker'
 import { useTranslations, useGenerateImageCandidates } from '../../../../hooks'
 import { DatesPropType } from './../../../sharedProptypes'
+import cx from 'classnames'
 
 const Course = React.forwardRef(
   (
@@ -102,7 +103,12 @@ const Course = React.forwardRef(
                 <div className="courseIntro-description">
                   <Paragraphs text={formatMessage(description)} />
                 </div>
-                <div className="courseIntro-actions">
+                <div
+                  className={cx(
+                    'courseIntro-actions',
+                    `${course.isPublic ? 'has-button' : ''}`,
+                  )}
+                >
                   {/**
                    * TODO: add the `href` attribute to provide the link the course
                    * route to the contact page (e.g. `/contact/interested-in=js-pro`,

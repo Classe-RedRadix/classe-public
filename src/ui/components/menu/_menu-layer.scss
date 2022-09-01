@@ -14,7 +14,12 @@
   pointer-events: none;
   z-index: $index-menu-layer;
   .row + .row {
-    margin-top: 0;
+    margin-top: -1px;
+  }
+  @include mq(md) {
+    .cell + .cell {
+      margin-left: -1px;
+    }
   }
   .image {
     @include mq(xl) {
@@ -68,10 +73,10 @@
 
   &-content {
     display: flex;
-    align-items: flex-start;
+    // align-items: flex-start;
     flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
+    // justify-content: flex-start;
+    // position: relative;
     width: 100%;
     min-height: 100%;
 
@@ -109,19 +114,19 @@
     &.row {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
 
       .cell:first-child {
         display: none;
 
-        & + .cell {
-          margin-top: 0;
-        }
+        // & + .cell {
+        //   margin-top: 0;
+        // }
       }
 
-      .cell:last-child {
-        flex: 1;
-      }
+      // .cell:last-child {
+      //   flex: 1;
+      // }
     }
   }
 
@@ -253,15 +258,15 @@
     }
 
     &-courses.row {
-      flex-direction: row;
+      // flex-direction: row;
 
       .cell:first-child {
         display: block;
       }
 
-      .cell:last-child {
-        flex: none;
-      }
+      // .cell:last-child {
+      //   flex: none;
+      // }
     }
 
     &-contact.row {

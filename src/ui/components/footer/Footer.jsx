@@ -8,6 +8,7 @@ import Input from '../forms/Input'
 import Checkbox from '../forms/Checkbox'
 import { CoursePropType } from '../../sharedProptypes'
 import Button from '../button/Button'
+import Header from '../header/Header'
 
 const Footer = ({
   courses,
@@ -32,6 +33,8 @@ const Footer = ({
       extraClass="footer"
       container="footer"
     >
+      <Header title={formatMessage('footer:header')} number={10} />
+
       <Row type="quarter">
         <Cell isNegative={isBlack}>
           <div className="scrambleTextWrapper">
