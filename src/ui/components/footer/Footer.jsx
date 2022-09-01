@@ -82,6 +82,7 @@ const Footer = ({
             <div className="footer-formBlock">
               <Checkbox
                 hasMessage
+                hasAnchor={`${formatMessage('general:conditions-anchgor')}`}
                 handleChange={contactFormParams.toggleTermsAndConditions}
                 label={formatMessage('general:conditions-check')}
                 name="conditions"
@@ -172,6 +173,7 @@ const Footer = ({
                 <a
                   className="button"
                   href={`${formatMessage('footer:legal-terms-route')}`}
+                  target="_blank"
                 >
                   {formatMessage('footer:legal-terms')}
                 </a>
@@ -180,6 +182,7 @@ const Footer = ({
                 <a
                   className="button"
                   href={`${formatMessage('footer:cookies-route')}`}
+                  target="_blank"
                 >
                   {formatMessage('footer:cookies')}
                 </a>
