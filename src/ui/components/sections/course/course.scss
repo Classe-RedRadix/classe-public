@@ -113,7 +113,7 @@
   &-nameText {
     font-weight: inherit;
     font-size: 3.8rem;
-    @include mq($until: md) {
+    @include mq(md) {
       font-size: 6rem;
     }
   }
