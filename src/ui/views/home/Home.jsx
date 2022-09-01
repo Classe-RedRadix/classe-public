@@ -157,7 +157,6 @@ const Home = ({
             contactFormParams={contactFormParams}
             openCourse={openCourse}
           />
-          <Header isClose title={formatMessage('footer:header')} />
         </div>
       </MainWrapper>
     </>
