@@ -315,4 +315,19 @@
       line-height: 1.25rem;
     }
   }
+
+  &-courses {
+    + .menuLayer-menu {
+      [aria-label='Cursos'] {
+        pointer-events: none;
+      }
+    }
+  }
+  &-contact {
+    + .menuLayer-menu {
+      [aria-label='Contacta'] {
+        pointer-events: none;
+      }
+    }
+  }
 }
