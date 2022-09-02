@@ -131,14 +131,14 @@ const MenuLayer = ({
                 >
                   {t('menu:claim')}
                 </a>
-                <span
+                <button
                   onClick={openCourses}
                   className="menuDesktop-button menu"
                   aria-label={t('menu:courses')}
                 >
                   [{courses.length < 10 ? `0${courses.length}` : courses.length}
                   ] {t('menu:courses')}
-                </span>
+                </button>
                 <button
                   onClick={openContact}
                   className="menuDesktop-link menu"
