@@ -199,7 +199,7 @@ const Footer = ({
       <div className="footer-closed">
         <p className="tiny">{`</${formatMessage('footer:header')}>`}</p>
         <p className="tiny">
-          ${formatMessage('footer:brand')}
+          {formatMessage('footer:brand')}
           {new Date().getFullYear()}
         </p>
       </div>
