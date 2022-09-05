@@ -720,7 +720,7 @@ import uiDevelopmentCourseImageWebp750 from '/public/images/curso-maqueta-750.we
 import uiDevelopmentCourseImageWebp640 from '/public/images/curso-maqueta-640.webp'
 const UI_DEVELOPMENT_COURSE_IMAGE = {
   mainImage: uiDevelopmentCourseMainImage,
-  alt: 'course:front-react-alt-image',
+  alt: 'course:ui-dev-alt-image',
   width: 3480,
   height: 2320,
   sizes: '(max-width: 3480px) 100vw, 3480px',
@@ -808,7 +808,7 @@ import frontCourseImageWebp750 from '/public/images/curso-front-750.webp'
 import frontCourseImageWebp640 from '/public/images/curso-front-640.webp'
 const FRONT_COURSE_IMAGE = {
   mainImage: frontCourseMainImage,
-  alt: 'course:js-alt-image',
+  alt: 'course:front-react-alt-image',
   width: 3480,
   height: 2688,
   sizes: '(max-width: 3480px) 100vw, 3480px',
