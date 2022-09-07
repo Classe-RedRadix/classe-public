@@ -14,6 +14,7 @@ import CoursePdf from '../sections/course/CoursePdf'
 import { MEDIA_QUERIES } from '../../../constants'
 
 import useWindowSize from '../../../hooks/useWindowSize'
+//TODO: to make the content dimanic
 const dates = [
   {
     day: '01',
@@ -21,8 +22,8 @@ const dates = [
     courses: [
       {
         title: 'Próxima convocatoria',
-        start: '16.01.21',
-        finish: '27.02.21',
+        start: '21.11.22',
+        finish: '09.12.22',
         to: '/',
       },
     ],
