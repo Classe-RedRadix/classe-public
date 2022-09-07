@@ -99,11 +99,6 @@ const UI_DEV = {
       name: 'course:ui-dev-04-title',
       description: 'course:ui-dev-04-description',
     },
-    {
-      number: '05',
-      name: 'course:ui-dev-05-title',
-      description: 'course:ui-dev-05-description',
-    },
   ],
   objectives: {
     learn: 'course:ui-dev-learn',

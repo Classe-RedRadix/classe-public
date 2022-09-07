@@ -6,14 +6,12 @@ import Cell from '../../cell/Cell'
 import Button from '../../button/Button'
 import Paragraphs from '../../paragraphs/Paragraphs'
 import TabIcon from './../../../../assets/icons/TabIcon'
-import DatePicker from '../../date-picker/DatePicker'
 import { useTranslations, useGenerateImageCandidates } from '../../../../hooks'
-import { DatesPropType } from './../../../sharedProptypes'
 import cx from 'classnames'
 
 const Course = React.forwardRef(
   (
-    { dates, name, image, description, openContact, course },
+    { name, image, description, openContact, course, dateStart, dateFinish },
     refCourseIntro,
   ) => {
     const formatMessage = useTranslations()
@@ -85,7 +83,25 @@ const Course = React.forwardRef(
             <Cell isColumn isNegative>
               {course.isPublic ? (
                 <Cell isNegative>
-                  <DatePicker dates={dates} isCourse />
+                  <div className="datePicker--course">
+                    <div className="datePicker-courseWrapper">
+                      <div className="datePicker-course h3">
+                        {`{`}
+                        <span className="datePicker-courseTitle">
+                          {formatMessage('course:convocation')}
+                        </span>
+                        <div className="datePicker-courseDates">
+                          <span className="notes">
+                            {formatMessage('calendar:start')}: {dateStart};
+                          </span>
+                          <span className="notes">
+                            {formatMessage('calendar:finish')}: {dateFinish};
+                          </span>
+                        </div>
+                        {`}`}
+                      </div>
+                    </div>
+                  </div>
                 </Cell>
               ) : (
                 <Cell isNegative>
@@ -137,7 +153,8 @@ const Course = React.forwardRef(
 )
 
 Course.propTypes = {
-  dates: DatesPropType,
+  dateStart: PropTypes.string,
+  dateFinish: PropTypes.string,
   name: PropTypes.string.isRequired,
   openContact: PropTypes.func,
 }

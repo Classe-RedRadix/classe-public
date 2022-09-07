@@ -14,21 +14,6 @@ import CoursePdf from '../sections/course/CoursePdf'
 import { MEDIA_QUERIES } from '../../../constants'
 
 import useWindowSize from '../../../hooks/useWindowSize'
-//TODO: to make the content dimanic
-const dates = [
-  {
-    day: '01',
-    month: 'Enero',
-    courses: [
-      {
-        title: 'Próxima convocatoria',
-        start: '21.11.22',
-        finish: '09.12.22',
-        to: '/',
-      },
-    ],
-  },
-]
 
 const MenuCourse = ({ course, openContact, isCourseOpen }) => {
   const formatMessage = useTranslations()
@@ -96,7 +81,8 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
       </p>
       <div className="courseSections" ref={container}>
         <CourseIntro
-          dates={dates}
+          dateStart={information.start}
+          dateFinish={information.finish}
           name={information.titleModal}
           image={information.image}
           openContact={openContact}
