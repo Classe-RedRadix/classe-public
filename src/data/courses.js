@@ -116,7 +116,7 @@ const UI_DEV = {
 const FRONT_END = {
   id: 'front-end',
   isFeatured: false,
-  isPublic: true,
+  isPublic: false,
   href: '/cursos/front-end',
   information: {
     title: 'course:front-react-title',
