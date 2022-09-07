@@ -188,6 +188,11 @@
   .footer-legal {
     margin-top: 2rem;
   }
+  .footer-closed {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+  }
 
   a {
     transition: color $fade-short;

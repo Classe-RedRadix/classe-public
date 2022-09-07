@@ -196,6 +196,13 @@ const Footer = ({
           <p className="logo">Class(e)</p>
         </Cell>
       </Row>
+      <div className="footer-closed">
+        <p className="tiny">{`</${formatMessage('footer:header')}>`}</p>
+        <p className="tiny">
+          {formatMessage('footer:brand')}
+          {new Date().getFullYear()}
+        </p>
+      </div>
     </SectionWrapper>
   )
 }
