@@ -1,17 +1,22 @@
 import { saveContactRequest } from '../../../firebase/client'
 
-export default (req, res) => {
+export default async (req, res) => {
   try {
-    saveContactRequest(req.body)
+    const result = await saveContactRequest(req.body)
 
-    res.status(200).json({
-      error: false,
-      message: 'Contact request saved successfully',
+    if (result.success) {
+      res.status(204).send()
+      return
+    }
+
+    res.status(500).json({
+      success: false,
+      error: result.error,
     })
   } catch (error) {
     res.status(500).json({
-      error: true,
-      message: error.message,
+      success: false,
+      error: error,
     })
   }
 }

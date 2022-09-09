@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app'
 import { getAuth, signInAnonymously } from 'firebase/auth'
-import { getFirestore, collection, doc, setDoc } from 'firebase/firestore'
+import { getFirestore, collection, doc, addDoc } from 'firebase/firestore'
 
 const config = {
   apiKey: process.env.API_KEY,
@@ -35,8 +35,6 @@ const firestore = getFirestore()
  * @returns a promise with the contact request result
  */
 const saveContactRequest = async details => {
-  const contactRequestRef = doc(collection(firestore, 'contactRequests'))
-
   // We only sign in the user anonymously if there's no user
   // The anonymous authentication token never expires:
   //  https://stackoverflow.com/questions/41733137/firebase-auth-anonymous-login#comment70661655_41733137
@@ -47,7 +45,22 @@ const saveContactRequest = async details => {
     await signInAnonymously(auth)
   }
 
-  setDoc(contactRequestRef, details)
+  try {
+    const docRef = await addDoc(
+      collection(firestore, 'contactRequests'),
+      details,
+    )
+
+    if (docRef.id) {
+      return Promise.resolve({ success: true })
+    }
+
+    const error = new Error('Something unexpected happened')
+
+    return Promise.reject({ success: false, error })
+  } catch (error) {
+    return Promise.reject({ success: false, error })
+  }
 }
 
 export { saveContactRequest }
