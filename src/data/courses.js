@@ -67,8 +67,8 @@ const UI_DEV = {
   information: {
     title: 'course:ui-dev-title',
     titleModal: 'course:ui-title-modal',
-    start: '21.08.22',
-    finish: '25.08.22',
+    start: '21.11.22',
+    finish: '09.12.22',
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,
