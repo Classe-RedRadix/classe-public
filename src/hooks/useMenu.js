@@ -43,6 +43,17 @@ const useMenu = ({
   }
 
   const handleClose = () => {
+    const prevPage = sessionStorage.getItem('prev-page')
+
+    if (isCourseOpen && prevPage === '/cursos') {
+      setIsContactOpen(false)
+      setAreCoursesOpen(true)
+      setIsCourseOpen(false)
+
+      router.back()
+      return
+    }
+
     setIsContactOpen(false)
     setAreCoursesOpen(false)
     setIsCourseOpen(false)

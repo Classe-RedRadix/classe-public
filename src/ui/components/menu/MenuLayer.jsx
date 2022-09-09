@@ -90,7 +90,7 @@ const MenuLayer = ({
               course={course}
               openContact={openContact}
             />
-          ) : (
+          ) : areCoursesOpen ? (
             <Row type="quarter" extraClass="menuLayer-courses">
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>
                 <picture>
@@ -120,7 +120,7 @@ const MenuLayer = ({
                 />
               </Cell>
             </Row>
-          )}
+          ) : null}
           {!isCourseOpen ? (
             <Row type="full" extraClass="menuLayer-menu">
               <Cell hasLinesHidden={linesHidden} isAnimated isNegative>

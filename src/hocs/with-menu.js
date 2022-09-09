@@ -46,8 +46,11 @@ const withMenu = (pageName, config) => {
     config?.useContactFormConfig?.interestedIn || course?.id,
   )
 
-  const actionText =
-    config?.actionText ?? isCourseOpen ? 'menu:close' : 'general:go-to-home'
+  const actionText = config?.actionText
+    ? config.actionText
+    : isCourseOpen
+    ? 'menu:close'
+    : 'general:go-to-home'
 
   const coursesHandleTextClick = () => {
     if (isCourseOpen) {
