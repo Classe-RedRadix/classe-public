@@ -8,13 +8,13 @@ const uiDevelopmentCourseImage = IMAGES.UI_DEVELOPMENT_COURSE_IMAGE
 const DESARROLLO = {
   id: 'desarrollo',
   isFeatured: false,
-  isPublic: false,
+  isPublic: true,
   href: '/cursos/desarrollo',
   information: {
     title: 'course:js-title',
     titleModal: 'course:js-title-modal',
-    start: '21.08.22',
-    finish: '25.08.22',
+    start: '24.10.22',
+    finish: '11.11.22',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
     image: javascriptCourseImage,
