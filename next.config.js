@@ -10,5 +10,6 @@ module.exports = withTM(
     future: {
       webpack5: true,
     },
+    pageExtensions: ['page.jsx', 'page.js'],
   }),
 )

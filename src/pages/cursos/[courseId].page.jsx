@@ -50,6 +50,7 @@ const Course = withKonami(({ course }) => {
   return withMenu(COURSE_PAGE, {
     course,
     infoHead,
+    actionText: 'general:go-to-home',
     useMenuConfig: {
       defaultIsCourseOpen: true,
     },
