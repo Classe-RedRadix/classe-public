@@ -4,6 +4,7 @@ const withTM = require('next-transpile-modules')(['gsap'])
 module.exports = withTM(
   withImages({
     images: { disableStaticImages: true },
+    swcMinify: true,
     i18n: {
       locales: ['es'],
       defaultLocale: 'es',
