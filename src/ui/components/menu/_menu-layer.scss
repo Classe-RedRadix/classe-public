@@ -75,7 +75,9 @@
     // position: relative;
     width: 100%;
     min-height: 100%;
-
+    @include mq($until: md) {
+      margin-top: 2px;
+    }
     .row {
       width: 100%;
     }
@@ -110,6 +112,9 @@
     &.row {
       flex: 1;
       display: flex;
+      @include mq($until: md) {
+        margin-top: 2px;
+      }
       // flex-direction: column;
 
       .cell:first-child {
