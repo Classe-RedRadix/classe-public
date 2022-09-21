@@ -14,13 +14,9 @@
   pointer-events: none;
   z-index: $index-menu-layer;
   .row + .row {
-    margin-top: -1px;
+    margin-top: 0;
   }
-  @include mq(md) {
-    .cell + .cell {
-      margin-left: -1px;
-    }
-  }
+
   .image {
     @include mq(xl) {
       max-height: calc(100vh - 18.125rem);
@@ -79,7 +75,9 @@
     // position: relative;
     width: 100%;
     min-height: 100%;
-
+    @include mq($until: md) {
+      margin-top: 2px;
+    }
     .row {
       width: 100%;
     }
@@ -114,6 +112,9 @@
     &.row {
       flex: 1;
       display: flex;
+      @include mq($until: md) {
+        margin-top: 2px;
+      }
       // flex-direction: column;
 
       .cell:first-child {
