@@ -15,7 +15,12 @@
   "config": {
     "storybookDomain": "https://classe-storybook.ophion.studio/"
   },
-  "browserslist":  [">0.3%", "not ie 11", "not dead", "not op_mini all"],
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "firebase": "^9.6.5",
