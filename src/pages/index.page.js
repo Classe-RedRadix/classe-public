@@ -124,6 +124,14 @@ const Home = () => {
       title: formatMessage('faqs:faq9-title'),
       description: formatMessage('faqs:faq9-description'),
     },
+    {
+      title: formatMessage('faqs:faq10-title'),
+      description: formatMessage('faqs:faq10-description'),
+    },
+    {
+      title: formatMessage('faqs:faq11-title'),
+      description: formatMessage('faqs:faq11-description'),
+    },
   ]
 
   const dates = [
