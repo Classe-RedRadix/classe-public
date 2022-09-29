@@ -115,7 +115,7 @@ const Footer = ({
             <li>
               <a
                 className="h4"
-                href="https://www.linkedin.com/company/redradix"
+                href="https://www.linkedin.com/company/classe-by-redradix/ "
                 target="_blank"
               >
                 LinkedIn
@@ -124,7 +124,7 @@ const Footer = ({
             <li>
               <a
                 className="h4"
-                href="https://twitter.com/redradix"
+                href="https://twitter.com/Classe_dev"
                 target="_blank"
               >
                 Twitter

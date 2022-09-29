@@ -50,6 +50,11 @@ const DESARROLLO = {
       name: 'course:js-05-title',
       description: 'course:js-05-description',
     },
+    {
+      number: '',
+      name: 'course:js-06-title',
+      description: 'course:js-06-description',
+    },
   ],
   objectives: {
     learn: 'course:js-learn',
@@ -99,6 +104,11 @@ const UI_DEV = {
       name: 'course:ui-dev-04-title',
       description: 'course:ui-dev-04-description',
     },
+    {
+      number: '',
+      name: 'course:ui-dev-05-title',
+      description: 'course:ui-dev-05-description',
+    },
   ],
   objectives: {
     learn: 'course:ui-dev-learn',
@@ -147,6 +157,11 @@ const FRONT_END = {
       number: '',
       name: 'course:front-react-04-title',
       description: 'course:front-react-04-description',
+    },
+    {
+      number: '',
+      name: 'course:front-react-05-title',
+      description: 'course:front-react-05-description',
     },
   ],
   objectives: {
@@ -206,6 +221,11 @@ const BACK_END = {
       number: '',
       name: 'course:back-node-06-title',
       description: 'course:back-node-06-description',
+    },
+    {
+      number: '',
+      name: 'course:back-node-07-title',
+      description: 'course:back-node-07-description',
     },
   ],
   objectives: {
