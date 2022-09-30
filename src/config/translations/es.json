@@ -11,7 +11,7 @@
   "url:favicon-144": "https://classe.dev/favicon-144.png",
 
   "info-head-home:title": "Classe | Formación para desarrolladores por desarrolladores",
-  "info-head-home:description": "Cursos de programación presenciales y online pensados para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
+  "info-head-home:description": "Cursos de programación online pensados para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
 
   "info-head-courses:title": "Nuestros cursos | Classe",
   "info-head-courses:description": "Actualmente realizamos cursos para profundizar al máximo en JavaScript, Maquetación (UI Development), Desarrollo Front-end y Back-end.",
@@ -33,7 +33,7 @@
 
   "schema-website:headline": "Classe, programación para profesionales por profesionales",
   "schema-website:name": "Classe, programación para profesionales por profesionales",
-  "schema-website:description": "Cursos de programación presenciales y online pensados para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
+  "schema-website:description": "Cursos de programación online pensados para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
 
   "schema-contact-page:name": "Classe",
   "schema-contact-page:headline": "Classe, cursos de programación y producto digital por y para desarrolladores.",
@@ -112,6 +112,8 @@
   "course:js-04-description": "Está por todas partes y es necesario entender todas sus implicaciones sin que te explote la cabeza. De callback hell a generadores, pasando por la creación de una implementación de promesas y async/await.",
   "course:js-05-title": "<line>Módulos</line><line> opcionales</line>",
   "course:js-05-description": "Podemos complementar el curso con distintos módulos de 4 horas sobre lenguaje tipado con typescript, estrategias de testing, graphQL y las mejoras propuestas para ECMAScript.",
+  "course:js-06-title": "<line>PREWORK Y</line><line> TRABAJO FINAL</line>",
+  "course:js-06-description": "Además de las 30 horas de clases, el curso incluye un trabajo inicial y otro final para preparar por tu cuenta. El equipo docente te dará toda la información para realizarlos y comentará contigo dudas y resultados.",
   "course:js-learn": "<lineAriaHidden>Con este</lineAriaHidden><screenReadOnly>Con este</screenReadOnly> <line>curso</line> <line>aprenderás:</line>",
   "course:js-learn-description": "Básicamente: JavaScript en profundidad. Los cimientos sobre los que apoyar conocimientos futuros. Verás que se puede pasar de Angular a React en horas si las bases son sólidas. No solo eso, tus compañeros te agradecerán que tu código sea robusto, escalable y, sobre todo, legible.",
   "course:js-objectives": "<lineAriaHidden>Es para</lineAriaHidden><screenReadOnly>¿Es para</screenReadOnly> <line>mí?</line>",
@@ -130,13 +132,15 @@
   "course:ui-dev-03-description": "Dada la relevancia que han cogido en los últimos tiempos, tanto Flexbox como Grid merecen un reservado donde ver todos sus entresijos y cómo pueden simplificar nuestras vidas.",
   "course:ui-dev-04-title": "<line>HERRAMIENTAS </line>",
   "course:ui-dev-04-description": "Haremos un repaso por las tecnologías más usadas hoy en día y los recursos más importantes para estar actualizado y seguir aprendiendo.",
+  "course:ui-dev-05-title": "<line>PREWORK Y</line><line> TRABAJO FINAL</line>",
+  "course:ui-dev-05-description": "Además de las 30 horas de clases, el curso incluye un trabajo inicial y otro final para preparar por tu cuenta. El equipo docente te dará toda la información para realizarlos y comentará contigo dudas y resultados.",
   "course:ui-dev-learn": "<lineAriaHidden>Con este</lineAriaHidden><screenReadOnly>Con este</screenReadOnly> <line>curso</line> <line>aprenderás:</line>",
   "course:ui-dev-learn-description": "Estamos hartos de ver comportamientos responsive defectuosos, transiciones que no fluyen o scrolls que dan ganas de tirar el ordenador por la ventana. Basta ya! Este curso te ayudará a crear interfaces que respeten los estándares y, sobre todo, a los usuarios.",
   "course:ui-dev-objectives": "<lineAriaHidden>Es para</lineAriaHidden><screenReadOnly>¿Es para</screenReadOnly> <line>mí?</line>",
   "course:ui-dev-objetives-description": "Este es un curso avanzado para profesionales que han trabajado en desarrollo web al menos durante un año. Está centrado en learn by doing con ejercicios divertidos para hacer y corregir en vivo. Live programming al poder!",
 
   "course:front-react-title": "Front-end",
-  "course:front-react-title-modal": "Front end con ReactJS",
+  "course:front-react-title-modal": "Front-end con ReactJS",
 
   "course:front-react-alt-image": "Una mujer de perfil trabajando con su portátil y un grupo de personas en el fondo desenfocadas",
   "course:front-react-schema-description": "El mejor curso para aprender no solo React, sino más importante: por qué React.",
@@ -149,13 +153,15 @@
   "course:front-react-03-description": "Nos centraremos en la librería que se ha ganado el derecho a ser el referente del desarrollo front. Profundizaremos en JSX, ciclo de vida, flujo unidireccional, renderizado condicional y tocaremos temas controvertidos como sus efectos secundarios o React Suspense.",
   "course:front-react-04-title": "<line>Módulos</line> <line>opcionales</line>",
   "course:front-react-04-description": "Este curso tiene un montón de módulos opcionales con los que complementar una asignatura tan compleja como el desarrollo front. Algunos relacionados con React como ReactRouter, ReactQuery o Redux, y otros  como testing en front, webextensions o i18n.",
+  "course:front-react-05-title": "<line>PREWORK Y</line><line> TRABAJO FINAL</line>",
+  "course:front-react-05-description": "Además de las 30 horas de clases, el curso incluye un trabajo inicial y otro final para preparar por tu cuenta. El equipo docente te dará toda la información para realizarlos y comentará contigo dudas y resultados.",
   "course:front-react-learn": "<lineAriaHidden>Con este</lineAriaHidden><screenReadOnly>Con este</screenReadOnly> <line>curso</line> <line>aprenderás:</line>",
   "course:front-react-learn-description": "No solo React, sino más importante: por qué React, cómo funciona, cuándo aplicarlo, patrones y antipatrones y en qué elementos del navegador se apoya. La versatilidad de React es muy amplia, como demuestran los proyectos de nuestro a día a día en Redradix. Queremos contarte cómo lo hacemos.",
   "course:front-react-objectives": "<lineAriaHidden>Es para</lineAriaHidden><screenReadOnly>¿Es para</screenReadOnly> <line>mí?</line>",
   "course:front-react-objetives-description": "Este es un curso avanzado para profesionales que han trabajado en desarrollo front al menos durante un año. Está centrado en learn by doing con ejercicios divertidos para hacer y corregir en vivo. Live programming al poder!",
 
   "course:back-node-title": "Back-end",
-  "course:back-node-title-modal": "Back end con NodeJS",
+  "course:back-node-title-modal": "Back-end con NodeJS",
   "course:back-node-alt-image": "Un hombre trabajando con su ordenador mirando fijamente la pantalla",
   "course:back-node-schema-description": "En Redradix hemos hecho tantos backends como frontends hemos integrado con backends externos. Tenemos las dos visiones: cómo debería ser un backend desde el punto de vista de su consumo por un cliente y también desde dentro para que sea robusto, pero a la vez flexible y escalable. En este curso vamos a navegar por diferentes ejemplos reales de problemas a los que en algún momento nos hemos enfrentado. Desde la creación de APIs hasta patrón repositorio o arquitectura hexagonal, siempre desde el punto de vista práctico.",
   "course:back-node-description": "En Redradix hemos hecho tantos backends como frontends hemos integrado con backends externos. Tenemos las dos visiones: cómo debería ser un backend desde el punto de vista de su consumo por un cliente y también desde dentro para que sea robusto, pero a la vez flexible y escalable. En este curso vamos a navegar por diferentes ejemplos reales de problemas a los que en algún momento nos hemos enfrentado. Desde la creación de APIs hasta patrón repositorio o arquitectura hexagonal, siempre desde el punto de vista práctico.",
@@ -171,6 +177,8 @@
   "course:back-node-05-description": "Relacionales, documentales, clave valor y también una ligera pincelada sobre las bases de datos de grafos para entender sus pros y contras. Y, sobre todo, cuándo es bueno utilizar cada una.",
   "course:back-node-06-title": "<line>Módulos</line> <line>opcionales</line>",
   "course:back-node-06-description": "Podemos complementar con pequeños módulos de 4 horas sobre server side rendering, SMTP o, incluso, procesamiento y almacenamiento en la nube.",
+  "course:back-node-07-title": "<line>PREWORK Y</line><line> TRABAJO FINAL</line>",
+  "course:back-node-07-description": "Además de las 30 horas de clases, el curso incluye un trabajo inicial y otro final para preparar por tu cuenta. El equipo docente te dará toda la información para realizarlos y comentará contigo dudas y resultados.",
   "course:back-node-learn": "<lineAriaHidden>Con este</lineAriaHidden><screenReadOnly>Con este</screenReadOnly> <line>curso</line> <line>aprenderás:</line>",
   "course:back-node-learn-description": "El 80% de los proyectos que hacemos en Redradix tienen APIs, programación asíncrona o persistencia de datos. Queremos contarte cómo lo hacemos utilizando Node.js, para que tú puedas aplicar estos conocimientos desde el primer día, creando servicios robustos y escalables de los que estar orgulloso.",
   "course:back-node-objectives": "<lineAriaHidden>Es para</lineAriaHidden><screenReadOnly>¿Es para </screenReadOnly> <line>mí?</line>",
@@ -192,7 +200,7 @@
 
   "custom:header": "Personaliza",
   "custom:title": "<line>Nuestros</line> <lineTabAriaHidden>cursos=</lineTabAriaHidden> <screenReadOnly>cursos</screenReadOnly> <lineTab>a tu</lineTab> <lineTab>medida</lineTab> <screenReadOnly>¿Quieres saber cómo?</screenReadOnly>",
-  "custom:description": "Una misma formación, por muy buena que sea, no tiene por qué valerle a todo el mundo. Por eso, con los cursos que hacemos en Classe puedes hacerte un bundle con lo que más se adapte a ti.\n Además, para las empresas el temario se adapta dependiendo de lo que necesite el equipo que va a recibir la formación.\n Todos nuestros cursos están pensados para ser presenciales (en nuestra oficina o en la tuya, si lo que quieres es un curso para empresas), pero si no puedes venir, no te preocupes porque está todo preparado para que te conectes en remoto (incluso se graban las sesiones para poder repasar algún contenido que no te haya quedado claro). Eso sí, las clases son en directo para poder sacar el máximo partido de todos los que participan en ella. Las preguntas en vivo se responden mejor y nuestro equipo está dispuesto a hacer de patito de goma si en algún momento te hace falta.",
+  "custom:description": "Una misma formación, por muy buena que sea, no tiene por qué valerle a todo el mundo. Por eso, con los cursos que hacemos en Classe puedes hacerte un bundle con lo que más se adapte a ti.\n Sabemos lo complicado que es planificarse y contar con un rato fuera de la jornada para seguir formándose. Por eso te lo ponemos fácil y hacemos nuestros cursos en remoto. Eso sí, manteniendo el trato personalizado y la cercanía del profesor, que para algo llevamos años remoteando y haciendo pair programming, entre nosotros y con otros equipos.\n Y aunque se graban por si algún día te pierdes una sesión, todas las clases son  en directo para poder sacar el máximo partido de todos los que participan en ella. Las preguntas en vivo se responden mejor y nuestro equipo está dispuesto a hacer de patito de goma si en algún momento te hace falta.",
   "custom:claim": "<lineTab>¿Quieres</lineTab> <line>saber</line> <line>cómo?</line>",
   "custom:button": "Ver cursos",
 
@@ -211,7 +219,7 @@
 
   "calendar:header": "Calendario",
   "calendar:title": "<line>Haz</line> <line>hueco</line> <lineTab>(en tu</lineTab> <lineTab>agenda)</lineTab>",
-  "calendar:description": "De forma general, las clases se impartirán de lunes a viernes de 18:00h a 20:00h. Será en nuestras oficinas de la C/ Calatrava 27, en pleno barrio de La Latina.\n Si no puedes asistir de forma presencial, podrás conectarte en remoto.",
+  "calendar:description": "De forma general, las clases se impartirán de lunes a jueves de 18:00h a 20:30h.",
   "calendar:no-courses": "Escríbenos para enterarte antes que nadie ",
   "calendar:start": "Start",
   "calendar:finish": "Finish",
@@ -237,16 +245,20 @@
   "faqs:faq7-title": "SI HAGO ALGUNO DE LOS CURSOS, ¿PUEDO ACCEDER LUEGO A LOS MATERIALES ONLINE?",
   "faqs:faq7-description": "Sí, las clases son grabadas y podrás acceder a los vídeos y también a los repositorios. Además, mejor aún, podrás asistir como oyente en las siguientes convocatorias del curso. ",
   "faqs:faq8-title": "¿NECESITO ALGÚN EQUIPO O PROGRAMA ESPECIAL?",
-  "faqs:faq8-description": "Todo el mundo debe utilizar su ordenador porque se trabaja más cómodamente. Nos da igual la herramienta que uses, con la que más a gusto estés, aunque te pediremos unos requisitos mínimos como un editor de código y que te instales NodeJS. Más allá de eso, y de tener conexión a Internet si algún día te conectas en remoto, proveemos de todo, incluidas chucherías en la oficina para que tu cerebro funcione.",
+  "faqs:faq8-description": "Todo el mundo debe utilizar su ordenador porque se trabaja más cómodamente. Nos da igual la herramienta que uses, con la que más a gusto estés, aunque te pediremos unos requisitos mínimos como un editor de código y que te instales NodeJS. Más allá de eso, y de tener buena conexión a Internet para poder conectarte, lo único que te pedimos es que llegues con ganas de seguir aprendiendo cada día.",
   "faqs:faq9-title": "¿CUÁLES SON LAS FORMAS DE PAGO?",
   "faqs:faq9-description": "El pago se realiza mediante tarjeta bancaria. Una vez realices tu inscripción, te enviaremos un enlace para poder hacerlo de forma segura. ",
 
   "faqs:faq10-title": "¿QUÉ PASA SI HAY ALGÚN FESTIVO DURANTE MI CURSO?",
   "faqs:faq10-description": "Si te coincide alguno, disfrútalo. Y no te preocupes, porque se recuperarán las horas pendientes el resto de días, buscando el mayor consenso entre todos.",
 
+  "faqs:faq11-title": "¿NO SE PIERDE CALIDAD AL NO SER PRESENCIAL?",
+  "faqs:faq11-description": "Creemos que no y la experiencia trabajando en remoto desde antes de la pandemia nos da la razón. En Redradix aprendemos cada día y no nos hace falta estar físicamente al lado para ello. Confía en nosotros, aunque sea de forma virtual podrás acercarte a la mesa del profesor para preguntarle tus dudas en un ejercicio.",
+
+
   "find:header": "Encuéntranos",
   "find:title": "<lineAriaHidden>Encuéntra</lineAriaHidden><lineAriaHidden>nos en la</lineAriaHidden><screenReadOnly>Encuéntranos en la</screenReadOnly> <lineTab>Latina</lineTab> <screenReadOnly>y detrás pantalla</screenReadOnly>",
-  "find:description": "Estamos en pleno centro de Madrid, en la calle Calatrava 27, al lado del Metro de La Latina (y cerca también de las estaciones de Puerta de Toledo o Tirso de Molina).",
+  "find:description": "Aunque el curso sea en remoto, si algún día te apetece pasar a saludar al equipo de Redradix, estamos en pleno centro de Madrid, en la calle Calatrava 27, al lado del Metro de La Latina (y cerca también de las estaciones de Puerta de Toledo o Tirso de Molina).",
   "find:description2": "INFO<ariaHidden>[at]</ariaHidden><screenReader>@</screenReader>classe.dev",
   "find:claim": "<line>Y detrás</line> <lineTab>de la</lineTab> <lineTab>pantalla</lineTab>",
 

@@ -13,12 +13,12 @@ const DESARROLLO = {
   information: {
     title: 'course:js-title',
     titleModal: 'course:js-title-modal',
-    start: '24.10.22',
-    finish: '11.11.22',
+    start: '02.11.22',
+    finish: '23.11.22',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
     image: javascriptCourseImage,
-    price: 600,
+    price: 700,
     hours: 30,
     places: 15,
     practical: 80,
@@ -50,6 +50,11 @@ const DESARROLLO = {
       name: 'course:js-05-title',
       description: 'course:js-05-description',
     },
+    {
+      number: '',
+      name: 'course:js-06-title',
+      description: 'course:js-06-description',
+    },
   ],
   objectives: {
     learn: 'course:js-learn',
@@ -62,7 +67,7 @@ const DESARROLLO = {
 const UI_DEV = {
   id: 'maqueta',
   isFeatured: false,
-  isPublic: true,
+  isPublic: false,
   href: '/cursos/maqueta',
   information: {
     title: 'course:ui-dev-title',
@@ -72,7 +77,7 @@ const UI_DEV = {
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,
-    price: 600,
+    price: 700,
     hours: 30,
     places: 15,
     practical: 80,
@@ -99,6 +104,11 @@ const UI_DEV = {
       name: 'course:ui-dev-04-title',
       description: 'course:ui-dev-04-description',
     },
+    {
+      number: '',
+      name: 'course:ui-dev-05-title',
+      description: 'course:ui-dev-05-description',
+    },
   ],
   objectives: {
     learn: 'course:ui-dev-learn',
@@ -121,7 +131,7 @@ const FRONT_END = {
     metaDescription: 'course:front-react-schema-description',
     description: 'course:front-react-description',
     image: frontCourseImage,
-    price: 1200,
+    price: 700,
     hours: 30,
     places: 20,
     practical: 80,
@@ -148,6 +158,11 @@ const FRONT_END = {
       name: 'course:front-react-04-title',
       description: 'course:front-react-04-description',
     },
+    {
+      number: '',
+      name: 'course:front-react-05-title',
+      description: 'course:front-react-05-description',
+    },
   ],
   objectives: {
     learn: 'course:front-react-learn',
@@ -170,7 +185,7 @@ const BACK_END = {
     metaDescription: 'course:back-node-schema-description',
     description: 'course:back-node-description',
     image: backCourseImage,
-    price: 600,
+    price: 700,
     hours: 30,
     places: 15,
     practical: 80,
@@ -206,6 +221,11 @@ const BACK_END = {
       number: '',
       name: 'course:back-node-06-title',
       description: 'course:back-node-06-description',
+    },
+    {
+      number: '',
+      name: 'course:back-node-07-title',
+      description: 'course:back-node-07-description',
     },
   ],
   objectives: {
