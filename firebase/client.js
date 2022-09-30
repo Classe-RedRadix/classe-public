@@ -46,13 +46,8 @@ const saveContactRequest = async details => {
   }
 
   try {
-    const docRef = await addDoc(
-      collection(firestore, 'contactRequests'),
-      details,
-    )
-
     // TODO Hot-implementation due to time, review it
-    await addDoc(collection(firestore, 'contactRequests'), {
+    const emailTrigger = {
       to: ['javier@redradix.com'],
       message: {
         subject: 'Nuevo formulario',
@@ -61,6 +56,10 @@ const saveContactRequest = async details => {
             <li><b>Intereses</b>: ${details.interestedIn.join(', ')}</li>
           </ul>`,
       },
+    }
+    const docRef = await addDoc(collection(firestore, 'contactRequests'), {
+      ...details,
+      ...emailTrigger,
     })
 
     if (docRef.id) {
