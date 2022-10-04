@@ -24,20 +24,20 @@ const Courses = () => {
   const size = useWindowSize()
   const isDesktop = size.width >= MEDIA_QUERIES.desktop
 
-  const infoHead = (
-    <InfoHead
-      title={formatMessage('info-head-courses:title')}
-      description={formatMessage('info-head-courses:description')}
-      url={formatMessage('url:courses')}
-    >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `${breadcrumbListSchema}`,
-        }}
-      />
-    </InfoHead>
-  )
+  // const infoHead = (
+  //   <InfoHead
+  //     title={formatMessage('info-head-courses:title')}
+  //     description={formatMessage('info-head-courses:description')}
+  //     url={formatMessage('url:courses')}
+  //   >
+  //     <script
+  //       type="application/ld+json"
+  //       dangerouslySetInnerHTML={{
+  //         __html: `${breadcrumbListSchema}`,
+  //       }}
+  //     />
+  //   </InfoHead>
+  // )
 
   const hiddenTitle = isDesktop ? (
     <h1 className="sr-only">{formatMessage('courses:header')}</h1>
@@ -45,12 +45,12 @@ const Courses = () => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Cursos</title>
-      </Head>
+      </Head> */}
       {withMenu(COURSES_PAGE, {
         hiddenTitle,
-        infoHead,
+        // infoHead,
         useMenuConfig: { defaultAreCoursesOpen: true },
       })}
     </>

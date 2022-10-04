@@ -30,26 +30,26 @@ const Course = withKonami(({ course }) => {
     },
   ])
 
-  const infoHead = (
-    <InfoHead
-      title={formatMessage('info-head-course:title', {
-        course: formatMessage(course.information.title),
-      })}
-      description={formatMessage(course.information.metaDescription)}
-      url={`${formatMessage('url:root')}${course.href}`}
-    >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `[${courseSchema}, ${educationalEventSchema}, ${breadcrumbListSchema}]`,
-        }}
-      />
-    </InfoHead>
-  )
+  // const infoHead = (
+  //   <InfoHead
+  //     title={formatMessage('info-head-course:title', {
+  //       course: formatMessage(course.information.title),
+  //     })}
+  //     description={formatMessage(course.information.metaDescription)}
+  //     url={`${formatMessage('url:root')}${course.href}`}
+  //   >
+  //     <script
+  //       type="application/ld+json"
+  //       dangerouslySetInnerHTML={{
+  //         __html: `[${courseSchema}, ${educationalEventSchema}, ${breadcrumbListSchema}]`,
+  //       }}
+  //     />
+  //   </InfoHead>
+  // )
 
   return withMenu(COURSE_PAGE, {
     course,
-    infoHead,
+    // infoHead,
     actionText: 'general:go-to-home',
     useMenuConfig: {
       defaultIsCourseOpen: true,

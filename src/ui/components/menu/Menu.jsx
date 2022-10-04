@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
@@ -13,6 +14,7 @@ import {
   CoursePropType,
   ContactFormParamsPropType,
 } from '../../sharedProptypes'
+import Head from 'next/head'
 
 const Menu = ({
   isBlack,
@@ -32,6 +34,9 @@ const Menu = ({
   isCourseOpen = false,
   openCourse,
 }) => {
+  const router = useRouter()
+  const pathName = router.pathname
+
   const size = useWindowSize()
 
   useEffect(() => {
@@ -42,6 +47,19 @@ const Menu = ({
 
   return (
     <>
+      <Head>
+        <title>
+          {areCoursesOpen
+            ? 'cursos'
+            : isContactOpen
+            ? 'contacto'
+            : isCourseOpen
+            ? 'curso'
+            : pathName === '/terminos-legales'
+            ? 'terminos legales'
+            : 'home'}
+        </title>
+      </Head>
       <MenuLayer
         hasPageTitle={hasPageTitle}
         actionText={actionText}
