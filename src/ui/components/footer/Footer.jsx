@@ -161,7 +161,6 @@ const Footer = ({
             <a
               className="button"
               href={`mailto:${formatMessage('schema-contact-page:email')}`}
-              target="_blank"
             >
               info[at]classe.dev
             </a>
@@ -173,7 +172,6 @@ const Footer = ({
                 <a
                   className="button"
                   href={`${formatMessage('footer:legal-terms-route')}`}
-                  target="_blank"
                 >
                   {formatMessage('footer:legal-terms')}
                 </a>
@@ -182,7 +180,6 @@ const Footer = ({
                 <a
                   className="button"
                   href={`${formatMessage('footer:cookies-route')}`}
-                  target="_blank"
                 >
                   {formatMessage('footer:cookies')}
                 </a>
