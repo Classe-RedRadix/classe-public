@@ -21,6 +21,7 @@ import {
   ContactFormParamsPropType,
   FaqsListPropType,
 } from './../../sharedProptypes'
+import Head from 'next/head'
 
 const Home = ({
   isBlack,
@@ -71,6 +72,9 @@ const Home = ({
 
   return (
     <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <MainWrapper isBlack={isBlack} isFluor={isFluor} isLock={isLock}>
         {visible && <Hero text="loader:text" loaded={loaded} />}
 

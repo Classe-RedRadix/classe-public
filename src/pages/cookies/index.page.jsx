@@ -79,7 +79,7 @@ const CookiesView = () => {
 
   return (
     <>
-      <InfoHead
+      {/* <InfoHead
         title={formatMessage('info-head-cookies-policy:title')}
         description={formatMessage('info-head-cookies-policy:description')}
         url={formatMessage('url:root')}
@@ -91,7 +91,7 @@ const CookiesView = () => {
             __html: `${breadcrumbListSchema}`,
           }}
         />
-      </InfoHead>
+      </InfoHead> */}
       <Cookies
         isBlack={isBlack}
         isFluor={isFluor}

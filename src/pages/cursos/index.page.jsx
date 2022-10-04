@@ -6,6 +6,7 @@ import {
   useBreadcrumbListSchema,
 } from '../../hooks'
 import InfoHead from '../../InfoHead'
+import Head from 'next/head'
 
 const Courses = () => {
   const formatMessage = useTranslations()
@@ -42,11 +43,18 @@ const Courses = () => {
     <h1 className="sr-only">{formatMessage('courses:header')}</h1>
   ) : null
 
-  return withMenu(COURSES_PAGE, {
-    hiddenTitle,
-    infoHead,
-    useMenuConfig: { defaultAreCoursesOpen: true },
-  })
+  return (
+    <>
+      <Head>
+        <title>Cursos</title>
+      </Head>
+      {withMenu(COURSES_PAGE, {
+        hiddenTitle,
+        infoHead,
+        useMenuConfig: { defaultAreCoursesOpen: true },
+      })}
+    </>
+  )
 }
 
 export default withKonami(Courses)

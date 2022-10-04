@@ -79,7 +79,7 @@ const LegalTermsView = () => {
 
   return (
     <>
-      <InfoHead
+      {/* <InfoHead
         title={formatMessage('info-head-legal-terms:title')}
         description={formatMessage('info-head-legal-terms:description')}
         url={formatMessage('url:root')}
@@ -91,7 +91,7 @@ const LegalTermsView = () => {
             __html: `${breadcrumbListSchema}`,
           }}
         />
-      </InfoHead>
+      </InfoHead> */}
       <LegalTerms
         isBlack={isBlack}
         isFluor={isFluor}

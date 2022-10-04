@@ -18,7 +18,7 @@ import Solera from '/public/images/logos/solera.svg'
 import Vivanta from '/public/images/logos/vivanta.svg'
 
 import { COURSES } from '../data'
-import InfoHead from '../InfoHead'
+// import InfoHead from '../InfoHead'
 
 import {
   useViewportHeight,
@@ -210,7 +210,7 @@ const Home = () => {
 
   return (
     <>
-      <InfoHead
+      {/* <InfoHead
         title={formatMessage('info-head-home:title')}
         description={formatMessage('info-head-home:description')}
         url={formatMessage('url:root')}
@@ -221,7 +221,7 @@ const Home = () => {
             __html: `[${educationalOrganizationSchema}, ${webSiteSchema}, ${breadcrumbListSchema}]`,
           }}
         />
-      </InfoHead>
+      </InfoHead> */}
 
       <HomeUI
         isBlack={isBlack}

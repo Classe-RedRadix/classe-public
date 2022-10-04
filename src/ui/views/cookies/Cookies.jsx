@@ -51,6 +51,9 @@ const Cookies = ({
 
   return (
     <>
+      <Head>
+        <title>Cookies</title>
+      </Head>
       <MainWrapper
         isBlack={isBlack}
         isFluor={isFluor}
