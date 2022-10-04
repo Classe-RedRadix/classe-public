@@ -205,7 +205,7 @@
   "custom:button": "Ver cursos",
 
   "featured:header": "Curso destacado",
-  "featured:title": "<lineTabAriaHidden>Progra</lineTabAriaHidden><lineTabAriaHidden>mación</lineTabAriaHidden><screenReadOnly>Programación</screenReadOnly> <line>con</line> <line>JavaScript</line>",
+  "featured:title": "<lineTabAriaHidden>Progra-</lineTabAriaHidden><lineTabAriaHidden>mación</lineTabAriaHidden><screenReadOnly>Programación</screenReadOnly> <line>con</line> <line>JavaScript</line>",
   "featured:button": "¿Quieres saber más? Echa un ojo al curso",
 
   "facts:header": "Facts",
@@ -255,9 +255,8 @@
   "faqs:faq11-title": "¿NO SE PIERDE CALIDAD AL NO SER PRESENCIAL?",
   "faqs:faq11-description": "Creemos que no y la experiencia trabajando en remoto desde antes de la pandemia nos da la razón. En Redradix aprendemos cada día y no nos hace falta estar físicamente al lado para ello. Confía en nosotros, aunque sea de forma virtual podrás acercarte a la mesa del profesor para preguntarle tus dudas en un ejercicio.",
 
-
   "find:header": "Encuéntranos",
-  "find:title": "<lineAriaHidden>Encuéntra</lineAriaHidden><lineAriaHidden>nos en la</lineAriaHidden><screenReadOnly>Encuéntranos en la</screenReadOnly> <lineTab>Latina</lineTab> <screenReadOnly>y detrás pantalla</screenReadOnly>",
+  "find:title": "<lineAriaHidden>Encuéntra-</lineAriaHidden><lineAriaHidden>nos en la</lineAriaHidden><screenReadOnly>Encuéntranos en la</screenReadOnly> <lineTab>Latina</lineTab> <screenReadOnly>y detrás de la pantalla</screenReadOnly>",
   "find:description": "Aunque el curso sea en remoto, si algún día te apetece pasar a saludar al equipo de Redradix, estamos en pleno centro de Madrid, en la calle Calatrava 27, al lado del Metro de La Latina (y cerca también de las estaciones de Puerta de Toledo o Tirso de Molina).",
   "find:description2": "INFO<ariaHidden>[at]</ariaHidden><screenReader>@</screenReader>classe.dev",
   "find:claim": "<line>Y detrás</line> <lineTab>de la</lineTab> <lineTab>pantalla</lineTab>",
