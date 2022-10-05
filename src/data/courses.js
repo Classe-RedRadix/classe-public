@@ -67,13 +67,13 @@ const DESARROLLO = {
 const UI_DEV = {
   id: 'maqueta',
   isFeatured: false,
-  isPublic: false,
+  isPublic: true,
   href: '/cursos/maqueta',
   information: {
     title: 'course:ui-dev-title',
     titleModal: 'course:ui-title-modal',
     start: '21.11.22',
-    finish: '09.12.22',
+    finish: '16.12.22',
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,
