@@ -189,11 +189,6 @@
   "course:back-node-objetives-description": "Este es un curso avanzado para profesionales que han trabajado en desarrollo back-end al menos durante un año. Está centrado en learn by doing con ejercicios divertidos para hacer y corregir en vivo. Live programming al poder.",
 
   "course:objectives-title": "Objetivos",
-  "course:fundamentals": "<line>Fundame</line><line>ntos</line>",
-  "course:functional-programming": "<line>Program</line><line>ación\u00a0</line><line>funciona</line><line>l</line>",
-  "course:object-oriented-programming": "<line>Program</line><line>ación\u00a0</line><line>orientad</line><line>a a</line><line>objetos</line>",
-  "course:asynchronous-programming": "<line>Program</line><line>ación</line><line>asíncro</line><line>na</line>",
-  "course:promises": "<line>Promesa</line><line>s</line>",
 
   "course:euros": "<line>euros</line>",
   "course:hours": "<line>horas</line>",
