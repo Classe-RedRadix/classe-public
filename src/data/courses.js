@@ -46,14 +46,24 @@ const DESARROLLO = {
       description: 'course:js-04-description',
     },
     {
-      number: '',
+      number: '05',
       name: 'course:js-05-title',
       description: 'course:js-05-description',
     },
     {
-      number: '',
+      number: '06',
       name: 'course:js-06-title',
       description: 'course:js-06-description',
+    },
+    {
+      number: '',
+      name: 'course:js-optional-title',
+      description: 'course:js-optional-description',
+    },
+    {
+      number: '',
+      name: 'course:js-prework-title',
+      description: 'course:js-prework-description',
     },
   ],
   objectives: {
