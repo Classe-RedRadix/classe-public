@@ -13,8 +13,8 @@ const DESARROLLO = {
   information: {
     title: 'course:js-title',
     titleModal: 'course:js-title-modal',
-    start: '02.11.22',
-    finish: '23.11.22',
+    start: '21.11.22',
+    finish: '16.12.22',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
     image: javascriptCourseImage,
