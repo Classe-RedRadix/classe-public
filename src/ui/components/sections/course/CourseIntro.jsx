@@ -139,7 +139,7 @@ const Course = React.forwardRef(
                     />
                   ) : null}
                   <div className="arrow-container">
-                    <span className="p uppercase">Scroll o drag</span>
+                    <span className="p uppercase">Scroll or drag</span>
                     <span className="arrow-icon"></span>
                   </div>
                 </div>
