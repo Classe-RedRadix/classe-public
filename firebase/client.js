@@ -46,10 +46,22 @@ const saveContactRequest = async details => {
   }
 
   try {
-    const docRef = await addDoc(
-      collection(firestore, 'contactRequests'),
-      details,
-    )
+    // TODO Hot-implementation due to time, review it
+    const emailTrigger = {
+      to: ['info@classe.dev'],
+      message: {
+        subject: 'Nueva solicitud de información Cursos Classe',
+        html: `<ul>
+            <li><b>Nombre</b>: ${details.name}</li>
+            <li><b>E-mail</b>: ${details.email}</li>
+            <li><b>Intereses</b>: ${details.interestedIn.join(', ')}</li>
+          </ul>`,
+      },
+    }
+    const docRef = await addDoc(collection(firestore, 'contactRequests'), {
+      ...details,
+      ...emailTrigger,
+    })
 
     if (docRef.id) {
       return Promise.resolve({ success: true })
