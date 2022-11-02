@@ -6,7 +6,12 @@ import Cell from '../../cell/Cell'
 import Button from '../../button/Button'
 import Paragraphs from '../../paragraphs/Paragraphs'
 import TabIcon from './../../../../assets/icons/TabIcon'
-import { useTranslations, useGenerateImageCandidates } from '../../../../hooks'
+import { MEDIA_QUERIES } from '../../../../constants'
+import {
+  useTranslations,
+  useGenerateImageCandidates,
+  useWindowSize,
+} from '../../../../hooks'
 import cx from 'classnames'
 
 const Course = React.forwardRef(
@@ -16,6 +21,8 @@ const Course = React.forwardRef(
   ) => {
     const formatMessage = useTranslations()
     const refTitle = useRef(null)
+    const size = useWindowSize()
+    const isDesktop = size.width >= MEDIA_QUERIES.desktop
 
     const marquee = (selector, speed) => {
       const clone = selector.innerHTML
@@ -138,10 +145,12 @@ const Course = React.forwardRef(
                       text={formatMessage('course:button')}
                     />
                   ) : null}
-                  <div className="arrow-container">
-                    <span className="p uppercase">Scroll or drag</span>
-                    <span className="arrow-icon"></span>
-                  </div>
+                  {isDesktop ? (
+                    <div className="arrow-container">
+                      <span className="p uppercase">Scroll or drag</span>
+                      <span className="arrow-icon"></span>
+                    </div>
+                  ) : null}
                 </div>
               </Cell>
             </Cell>
