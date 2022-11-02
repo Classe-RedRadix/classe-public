@@ -35,7 +35,7 @@ const CookiesLayer = () => {
   useEffect(() => {
     if (isAcceptedCookies) {
       TagManager.initialize({
-        gtmId: 'GTM-KT8VSSB',
+        gtmId: 'GTM-NJ9F4NB',
       })
     }
   }, [isAcceptedCookies])
