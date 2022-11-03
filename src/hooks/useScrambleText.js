@@ -3,7 +3,11 @@ import { gsap } from 'gsap/dist/gsap'
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import usePrefersReducedMotion from './usePrefersReducedMotion'
+
 const useScrambleText = () => {
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   gsap.registerPlugin(ScrambleTextPlugin)
   gsap.registerPlugin(ScrollTrigger)
 
@@ -28,7 +32,7 @@ const useScrambleText = () => {
       const lines = cloned.querySelectorAll('.line')
       lines.forEach(line =>
         gsap.to(line, {
-          duration: 1.2,
+          duration: prefersReducedMotion ? 0 : 1.2,
           scrambleText: {
             text: line.innerHTML,
             chars: '!@#$%&/=*',
@@ -43,7 +47,7 @@ const useScrambleText = () => {
 
       gsap.to(lines, {
         opacity: 1,
-        duration: 0.6,
+        duration: prefersReducedMotion ? 0 : 0.6,
         stagger: 0.2,
         scrollTrigger: {
           scroller: '.mainWrapper',

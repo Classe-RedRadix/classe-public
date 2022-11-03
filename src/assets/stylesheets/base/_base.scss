@@ -192,6 +192,9 @@ button {
     @include mq(md) {
       white-space: nowrap;
     }
+    @media (prefers-reduced-motion: reduce) {
+      opacity: 1;
+    }
   }
 
   .line.has-wrap {
