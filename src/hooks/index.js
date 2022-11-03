@@ -9,6 +9,7 @@ import useGenerateImageCandidates from './useGenerateImageCandidates'
 import useInput from './useInput'
 import useKonami from './useKonami'
 import useMenu from './useMenu'
+import usePrefersReducedMotion from './usePrefersReducedMotion'
 import useQueryParams from './useQueryParams'
 import useRadio from './useRadio'
 import useSchema from './useSchema'
@@ -29,6 +30,7 @@ export {
   useInput,
   useKonami,
   useMenu,
+  usePrefersReducedMotion,
   useQueryParams,
   useRadio,
   useSchema,
