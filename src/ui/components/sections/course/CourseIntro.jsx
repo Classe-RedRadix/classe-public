@@ -11,6 +11,7 @@ import {
   useTranslations,
   useGenerateImageCandidates,
   useWindowSize,
+  usePrefersReducedMotion,
 } from '../../../../hooks'
 import cx from 'classnames'
 
@@ -23,6 +24,7 @@ const Course = React.forwardRef(
     const refTitle = useRef(null)
     const size = useWindowSize()
     const isDesktop = size.width >= MEDIA_QUERIES.desktop
+    const prefersReducedMotion = usePrefersReducedMotion()
 
     const marquee = (selector, speed) => {
       const clone = selector.innerHTML
@@ -45,7 +47,9 @@ const Course = React.forwardRef(
     }
 
     useEffect(() => {
-      const interval = marquee(refTitle.current, 0.3)
+      const interval = !prefersReducedMotion
+        ? marquee(refTitle.current, 0.3)
+        : null
       return () => clearInterval(interval)
     }, [])
 
