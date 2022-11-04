@@ -66,7 +66,9 @@
       height: 2.125rem;
       opacity: 0;
       transform: translateX(-100%);
-      transition: opacity $fade-short, transform $transform-short;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: opacity $fade-short, transform $transform-short;
+      }
       color: $fluor;
     }
   }
@@ -75,7 +77,9 @@
     display: block;
     position: relative;
     transform: translateX(0);
-    transition: transform $transform-short;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform $transform-short;
+    }
   }
 
   @include mq(md) {

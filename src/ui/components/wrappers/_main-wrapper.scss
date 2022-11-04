@@ -9,7 +9,9 @@
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
-  transition: background-color $fade-simple;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: background-color $fade-simple;
+  }
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
