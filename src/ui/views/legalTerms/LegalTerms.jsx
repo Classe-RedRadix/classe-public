@@ -92,6 +92,10 @@ const LegalTerms = ({
           <Row type="full">
             <Cell isColumn>
               <Cell hasGap isNegative={isBlack}>
+                <p className="p">
+                  <strong>{formatMessage('legal-terms:modify-note')}</strong>
+                </p>
+
                 <h2 className="h3 ">
                   {formatMessage('legal-terms:section01-title')}
                 </h2>
@@ -131,25 +135,183 @@ const LegalTerms = ({
                 <p className="p">
                   {formatMessage('legal-terms:section02-block-5')}
                 </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section03-title')}
+                </h2>
+
                 <p className="p">
-                  {formatMessage('legal-terms:section02-block-6')}
+                  {formatMessage('legal-terms:section03-block-1')}
+                </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section04-title')}
+                </h2>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section04-sub01')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section04-sub01-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section04-sub02')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section04-sub02-block-1')}
                 </p>
                 <p className="p">
-                  {formatMessage('legal-terms:section02-block-7')}
+                  {formatMessage('legal-terms:section04-sub02-block-2')}
                 </p>
                 <p className="p">
-                  {formatMessage('legal-terms:section02-block-8')}
+                  {formatMessage('legal-terms:section04-sub02-block-3')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section04-sub03')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section04-sub03-block-1')}
                 </p>
                 <p className="p">
-                  {formatMessage('legal-terms:section02-block-9')}
+                  {formatMessage('legal-terms:section04-sub03-block-2')}
                 </p>
                 <p className="p">
+                  {formatMessage('legal-terms:section04-sub03-block-3')}
+                </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section05-title')}
+                </h2>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section05-sub01')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section05-sub01-block-1')}
+                </p>
+                <p className="p">
+                  {formatMessage('legal-terms:section05-sub01-block-2')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section05-sub02')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section05-sub02-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section05-sub03')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section05-sub03-block-1')}
+                </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section06-title')}
+                </h2>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section06-block-1')}
+                </p>
+                <p className="p">
+                  {formatMessage('legal-terms:section06-block-2')}
+                </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section07-title')}
+                </h2>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section07-block-1')}
+                </p>
+
+                <h2 className="h3">
+                  {formatMessage('legal-terms:section08-title')}
+                </h2>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub01')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub01-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub02')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub02-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub03')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub03-block-1')}
+                </p>
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub03-block-2')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub04')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub04-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub05')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub05-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub06')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub06-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub07')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub07-block-1')}
+                </p>
+
+                <h3 className="h4">
+                  {formatMessage('legal-terms:section08-sub08')}
+                </h3>
+
+                <p className="p">
+                  {formatMessage('legal-terms:section08-sub08-block-1')}
+                </p>
+
+                {/* <p className="p">
                   {formatMessage('legal-terms:section02-block-10', {
                     mailto: text => (
                       <a href="mailto:info@redradix.com">{text}</a>
                     ),
                   })}
-                </p>
+                </p> */}
               </Cell>
             </Cell>
           </Row>
