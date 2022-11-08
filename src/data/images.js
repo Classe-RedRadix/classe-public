@@ -104,7 +104,7 @@ import coursesImageWebp750 from '/public/images/cursos-750.webp'
 import coursesImageWebp640 from '/public/images/cursos-640.webp'
 const COURSES_IMAGE = {
   mainImage: coursesMainImage,
-  alt: 'alt-image:hands-keyboard-mouse',
+  alt: 'alt-image:programming-students-attending',
   width: 3456,
   height: 5184,
   sizes: '(max-width: 3456px) 100vw, 3456px',
@@ -192,7 +192,7 @@ import tailorMadeCoursesImageWebp750 from '/public/images/nuestros-cursos-a-tu-m
 import tailorMadeCoursesImageWebp640 from '/public/images/nuestros-cursos-a-tu-medida-640.webp'
 const TAILOR_MADE_COURSES_IMAGE = {
   mainImage: tailorMadeCoursesMainImage,
-  alt: 'alt-image:developers-working',
+  alt: 'alt-image:man-working-remotely',
   width: 3480,
   height: 2688,
   sizes: '(max-width: 3480px) 100vw, 3480px',
@@ -280,7 +280,7 @@ import agendaSlotImageWebp750 from '/public/images/haz-hueco-en-tu-agenda-750.we
 import agendaSlotImageWebp640 from '/public/images/haz-hueco-en-tu-agenda-640.webp'
 const AGENDA_SLOT_IMAGE = {
   mainImage: agendaSlotMainImage,
-  alt: 'alt-image:programming-students-attending',
+  alt: 'alt-image:developers-working',
   width: 3480,
   height: 2688,
   sizes: '(max-width: 3480px) 100vw, 3480px',
@@ -438,89 +438,89 @@ const PROFESSIONAL_TRAINING_IMAGE = {
   ],
 }
 
-import remoteOnSiteTrainingMainImage from '/public/images/formacion-remoto-presencial.jpg'
-import remoteOnSiteTrainingImage2048 from '/public/images/formacion-remoto-presencial-2048.jpg'
-import remoteOnSiteTrainingImage1920 from '/public/images/formacion-remoto-presencial-1920.jpg'
-import remoteOnSiteTrainingImage1200 from '/public/images/formacion-remoto-presencial-1200.jpg'
-import remoteOnSiteTrainingImage1080 from '/public/images/formacion-remoto-presencial-1080.jpg'
-import remoteOnSiteTrainingImage828 from '/public/images/formacion-remoto-presencial-828.jpg'
-import remoteOnSiteTrainingImage750 from '/public/images/formacion-remoto-presencial-750.jpg'
-import remoteOnSiteTrainingImage640 from '/public/images/formacion-remoto-presencial-640.jpg'
-import remoteOnSiteTrainingMainImageWebp from '/public/images/formacion-remoto-presencial.webp'
-import remoteOnSiteTrainingImageWebp2048 from '/public/images/formacion-remoto-presencial-2048.webp'
-import remoteOnSiteTrainingImageWebp1920 from '/public/images/formacion-remoto-presencial-1920.webp'
-import remoteOnSiteTrainingImageWebp1200 from '/public/images/formacion-remoto-presencial-1200.webp'
-import remoteOnSiteTrainingImageWebp1080 from '/public/images/formacion-remoto-presencial-1080.webp'
-import remoteOnSiteTrainingImageWebp828 from '/public/images/formacion-remoto-presencial-828.webp'
-import remoteOnSiteTrainingImageWebp750 from '/public/images/formacion-remoto-presencial-750.webp'
-import remoteOnSiteTrainingImageWebp640 from '/public/images/formacion-remoto-presencial-640.webp'
+import faqsMainImage from '/public/images/faqs.jpg'
+import faqsImage2048 from '/public/images/faqs-2048.jpg'
+import faqsImage1920 from '/public/images/faqs-1920.jpg'
+import faqsImage1200 from '/public/images/faqs-1200.jpg'
+import faqsImage1080 from '/public/images/faqs-1080.jpg'
+import faqsImage828 from '/public/images/faqs-828.jpg'
+import faqsImage750 from '/public/images/faqs-750.jpg'
+import faqsImage640 from '/public/images/faqs-640.jpg'
+import faqsMainImageWebp from '/public/images/faqs.webp'
+import faqsImageWebp2048 from '/public/images/faqs-2048.webp'
+import faqsImageWebp1920 from '/public/images/faqs-1920.webp'
+import faqsImageWebp1200 from '/public/images/faqs-1200.webp'
+import faqsImageWebp1080 from '/public/images/faqs-1080.webp'
+import faqsImageWebp828 from '/public/images/faqs-828.webp'
+import faqsImageWebp750 from '/public/images/faqs-750.webp'
+import faqsImageWebp640 from '/public/images/faqs-640.webp'
 const REMOTE_ON_SITE_TRAINING_IMAGE = {
-  mainImage: remoteOnSiteTrainingMainImage,
-  alt: 'alt-image:man-working-remotely',
+  mainImage: faqsMainImage,
+  alt: 'alt-image:hands-keyboard-mouse',
   width: 3264,
   height: 2448,
   sizes: '(max-width: 3264px) 100vw, 3264px',
   srcSet: [
     {
-      src: remoteOnSiteTrainingImage2048,
+      src: faqsImage2048,
       width: 2048,
     },
     {
-      src: remoteOnSiteTrainingImage1920,
+      src: faqsImage1920,
       width: 1920,
     },
     {
-      src: remoteOnSiteTrainingImage1200,
+      src: faqsImage1200,
       width: 1200,
     },
     {
-      src: remoteOnSiteTrainingImage1080,
+      src: faqsImage1080,
       width: 1080,
     },
     {
-      src: remoteOnSiteTrainingImage828,
+      src: faqsImage828,
       width: 828,
     },
     {
-      src: remoteOnSiteTrainingImage750,
+      src: faqsImage750,
       width: 750,
     },
     {
-      src: remoteOnSiteTrainingImage640,
+      src: faqsImage640,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: remoteOnSiteTrainingMainImageWebp,
+      src: faqsMainImageWebp,
       width: 3264,
     },
     {
-      src: remoteOnSiteTrainingImageWebp2048,
+      src: faqsImageWebp2048,
       width: 2048,
     },
     {
-      src: remoteOnSiteTrainingImageWebp1920,
+      src: faqsImageWebp1920,
       width: 1920,
     },
     {
-      src: remoteOnSiteTrainingImageWebp1200,
+      src: faqsImageWebp1200,
       width: 1200,
     },
     {
-      src: remoteOnSiteTrainingImageWebp1080,
+      src: faqsImageWebp1080,
       width: 1080,
     },
     {
-      src: remoteOnSiteTrainingImageWebp828,
+      src: faqsImageWebp828,
       width: 828,
     },
     {
-      src: remoteOnSiteTrainingImageWebp750,
+      src: faqsImageWebp750,
       width: 750,
     },
     {
-      src: remoteOnSiteTrainingImageWebp640,
+      src: faqsImageWebp640,
       width: 640,
     },
   ],
