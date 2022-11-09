@@ -23,6 +23,8 @@ const useCoursechema = courseData => {
         '@type': 'CourseInstance',
         startDate: `${formatDate(courseData.information.start)}`,
         endDate: `${formatDate(courseData.information.finish)}`,
+        startTime: `${formatDate(courseData.information.startTime)}`,
+        endTime: `${formatDate(courseData.information.endTime)}`,
         offers: {
           '@type': 'Offer',
           price: courseData.information.price,

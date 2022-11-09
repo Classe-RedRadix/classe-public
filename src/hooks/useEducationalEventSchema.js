@@ -20,6 +20,8 @@ const useEducationalEventchema = courseData => {
     description: formatMessage(courseData.information.metaDescription),
     startDate: `${formatDate(courseData.information.start)}`,
     endDate: `${formatDate(courseData.information.finish)}`,
+    startTime: `${formatDate(courseData.information.startTime)}`,
+    endTime: `${formatDate(courseData.information.endTime)}`,
     location: {
       '@type': 'Place',
       name: formatMessage('schema-educational-event:location-name'),
