@@ -17,7 +17,16 @@ import cx from 'classnames'
 
 const Course = React.forwardRef(
   (
-    { name, image, description, openContact, course, dateStart, dateFinish },
+    {
+      name,
+      image,
+      description,
+      openContact,
+      course,
+      dateStart,
+      dateFinish,
+      schedule,
+    },
     refCourseIntro,
   ) => {
     const formatMessage = useTranslations()
@@ -107,6 +116,9 @@ const Course = React.forwardRef(
                           </span>
                           <span className="notes">
                             {formatMessage('calendar:finish')}: {dateFinish};
+                          </span>
+                          <span className="notes">
+                            {formatMessage('calendar:schedule')}: {schedule};
                           </span>
                         </div>
                         {`}`}

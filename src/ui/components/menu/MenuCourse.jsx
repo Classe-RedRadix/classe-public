@@ -83,6 +83,7 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
         <CourseIntro
           dateStart={information.start}
           dateFinish={information.finish}
+          schedule={information.schedule}
           name={information.titleModal}
           image={information.image}
           openContact={openContact}
