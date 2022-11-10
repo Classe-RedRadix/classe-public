@@ -18,7 +18,7 @@ const DESARROLLO = {
     // startTime & endTime are created for validate schema.org, see useCourseSchema.js
     startTime: '18:00:00',
     endTime: '20:30:00',
-    schedule: '18 - 20:30 LMXJ',
+    schedule: '18:00 - 20:30',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
     image: javascriptCourseImage,
@@ -91,7 +91,7 @@ const UI_DEV = {
     // startTime & endTime are created for validate schema.org, see useCourseSchema.js
     startTime: '18:00:00',
     endTime: '20:30:00',
-    schedule: '18 - 20:30 LMXJ',
+    schedule: '18:00 - 20:30',
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,

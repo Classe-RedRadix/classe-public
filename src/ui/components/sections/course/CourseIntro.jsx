@@ -118,7 +118,7 @@ const Course = React.forwardRef(
                             {formatMessage('calendar:finish')}: {dateFinish};
                           </span>
                           <span className="notes">
-                            {formatMessage('calendar:schedule')}: {schedule};
+                            {formatMessage('calendar:schedule')} {schedule};
                           </span>
                         </div>
                         {`}`}
