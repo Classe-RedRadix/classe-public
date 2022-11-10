@@ -5,11 +5,13 @@ import Row from '../row/Row'
 import Cell from '../cell/Cell'
 import FaqsContainer from '../faqs/FaqsContainer'
 import { IMAGES } from '../../../data'
+import { MEDIA_QUERIES } from '../../../constants'
+import useWindowSize from '../../../hooks/useWindowSize'
 
 const Faqs = ({ list, isBlack, isFluor }) => {
   const t = useTranslations()
-
-  const remoteOnSiteTrainingImage = IMAGES.REMOTE_ON_SITE_TRAINING_IMAGE
+  const size = useWindowSize()
+  const faqsImage = IMAGES.REMOTE_ON_SITE_TRAINING_IMAGE
 
   return (
     <SectionWrapper isBlack={isBlack} isFluor={isFluor} extraClass="faqs">
@@ -31,26 +33,22 @@ const Faqs = ({ list, isBlack, isFluor }) => {
           </div>
         </Cell>
       </Row>
-      <Row type="half">
+      <Row type={size.width <= MEDIA_QUERIES.desktop ? 'full' : 'half'}>
         <Cell>
           <picture>
             <source
-              sizes={remoteOnSiteTrainingImage.sizes}
-              srcSet={useGenerateImageCandidates(
-                remoteOnSiteTrainingImage.srcSetWebp,
-              )}
+              sizes={faqsImage.sizes}
+              srcSet={useGenerateImageCandidates(faqsImage.srcSetWebp)}
               type="image/webp"
             />
 
             <img
-              src={remoteOnSiteTrainingImage.mainImage}
-              alt={t(remoteOnSiteTrainingImage.alt)}
-              width={remoteOnSiteTrainingImage.width}
-              height={remoteOnSiteTrainingImage.height}
-              sizes={remoteOnSiteTrainingImage.sizes}
-              srcSet={useGenerateImageCandidates(
-                remoteOnSiteTrainingImage.srcSet,
-              )}
+              src={faqsImage.mainImage}
+              alt={t(faqsImage.alt)}
+              width={faqsImage.width}
+              height={faqsImage.height}
+              sizes={faqsImage.sizes}
+              srcSet={useGenerateImageCandidates(faqsImage.srcSet)}
               loading="lazy"
               className="image"
             />

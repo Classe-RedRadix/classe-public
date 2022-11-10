@@ -10,7 +10,9 @@
   color: $white;
   background-color: $black;
   opacity: 0;
-  transition: opacity $fade-simple;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity $fade-simple;
+  }
   pointer-events: none;
   z-index: $index-menu-layer;
   .row + .row {
@@ -36,7 +38,9 @@
   }
 
   &:not(.is-open) .cell-line {
-    transition: transform 0s $fade-simple;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 0s $fade-simple;
+    }
   }
 
   &-wrapper {

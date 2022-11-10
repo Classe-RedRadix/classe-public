@@ -13,8 +13,9 @@ const DESARROLLO = {
   information: {
     title: 'course:js-title',
     titleModal: 'course:js-title-modal',
-    start: '02.11.22',
-    finish: '23.11.22',
+    start: '21.11.22',
+    finish: '16.12.22',
+    schedule: '18 - 20:30 LMXJ',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
     image: javascriptCourseImage,
@@ -46,14 +47,24 @@ const DESARROLLO = {
       description: 'course:js-04-description',
     },
     {
-      number: '',
+      number: '05',
       name: 'course:js-05-title',
       description: 'course:js-05-description',
     },
     {
-      number: '',
+      number: '06',
       name: 'course:js-06-title',
       description: 'course:js-06-description',
+    },
+    {
+      number: '',
+      name: 'course:js-optional-title',
+      description: 'course:js-optional-description',
+    },
+    {
+      number: '',
+      name: 'course:js-prework-title',
+      description: 'course:js-prework-description',
     },
   ],
   objectives: {
@@ -67,13 +78,14 @@ const DESARROLLO = {
 const UI_DEV = {
   id: 'maqueta',
   isFeatured: false,
-  isPublic: false,
+  isPublic: true,
   href: '/cursos/maqueta',
   information: {
     title: 'course:ui-dev-title',
     titleModal: 'course:ui-title-modal',
     start: '21.11.22',
-    finish: '09.12.22',
+    finish: '16.12.22',
+    schedule: '18 - 20:30 LMXJ',
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,

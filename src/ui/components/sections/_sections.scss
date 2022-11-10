@@ -3,7 +3,19 @@
   height: 100%;
   @include mq($until: md) {
     max-height: 18.75rem;
+
+    .faqs & {
+      max-height: 28.75rem;
+      object-position: 50% 80%;
+    }
   }
+  @include mq(md) {
+    .faqs & {
+      max-height: 75rem;
+      object-position: initial;
+    }
+  }
+
   @include mq(xl) {
     max-height: 50rem;
   }

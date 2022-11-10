@@ -6,16 +6,34 @@ import Cell from '../../cell/Cell'
 import Button from '../../button/Button'
 import Paragraphs from '../../paragraphs/Paragraphs'
 import TabIcon from './../../../../assets/icons/TabIcon'
-import { useTranslations, useGenerateImageCandidates } from '../../../../hooks'
+import { MEDIA_QUERIES } from '../../../../constants'
+import {
+  useTranslations,
+  useGenerateImageCandidates,
+  useWindowSize,
+  usePrefersReducedMotion,
+} from '../../../../hooks'
 import cx from 'classnames'
 
 const Course = React.forwardRef(
   (
-    { name, image, description, openContact, course, dateStart, dateFinish },
+    {
+      name,
+      image,
+      description,
+      openContact,
+      course,
+      dateStart,
+      dateFinish,
+      schedule,
+    },
     refCourseIntro,
   ) => {
     const formatMessage = useTranslations()
     const refTitle = useRef(null)
+    const size = useWindowSize()
+    const isDesktop = size.width >= MEDIA_QUERIES.desktop
+    const prefersReducedMotion = usePrefersReducedMotion()
 
     const marquee = (selector, speed) => {
       const clone = selector.innerHTML
@@ -38,7 +56,9 @@ const Course = React.forwardRef(
     }
 
     useEffect(() => {
-      const interval = marquee(refTitle.current, 0.3)
+      const interval = !prefersReducedMotion
+        ? marquee(refTitle.current, 0.3)
+        : null
       return () => clearInterval(interval)
     }, [])
 
@@ -97,6 +117,9 @@ const Course = React.forwardRef(
                           <span className="notes">
                             {formatMessage('calendar:finish')}: {dateFinish};
                           </span>
+                          <span className="notes">
+                            {formatMessage('calendar:schedule')}: {schedule};
+                          </span>
                         </div>
                         {`}`}
                       </div>
@@ -138,10 +161,12 @@ const Course = React.forwardRef(
                       text={formatMessage('course:button')}
                     />
                   ) : null}
-                  <div className="arrow-container">
-                    <span className="p uppercase">Scroll o drag</span>
-                    <span className="arrow-icon"></span>
-                  </div>
+                  {isDesktop ? (
+                    <div className="arrow-container">
+                      <span className="p uppercase">Scroll or drag</span>
+                      <span className="arrow-icon"></span>
+                    </div>
+                  ) : null}
                 </div>
               </Cell>
             </Cell>
