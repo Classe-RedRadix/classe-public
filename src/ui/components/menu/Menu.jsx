@@ -14,7 +14,7 @@ import {
   CoursePropType,
   ContactFormParamsPropType,
 } from '../../sharedProptypes'
-import Head from 'next/head'
+import InfoHead from 'InfoHead'
 
 const Menu = ({
   isBlack,
@@ -47,19 +47,34 @@ const Menu = ({
 
   return (
     <>
-      <Head>
-        <title>
-          {areCoursesOpen
-            ? 'cursos'
+      <InfoHead
+        title={
+          areCoursesOpen
+            ? 'Cursos'
             : isContactOpen
-            ? 'contacto'
+            ? 'Contacto'
             : isCourseOpen
-            ? 'curso'
+            ? 'Curso'
             : pathName === '/terminos-legales'
             ? 'terminos legales'
-            : 'home'}
-        </title>
-      </Head>
+            : pathName === '/cookies'
+            ? 'Cookies'
+            : 'Home'
+        }
+        description={
+          areCoursesOpen
+            ? 'Cursos'
+            : isContactOpen
+            ? 'Contacto'
+            : isCourseOpen
+            ? 'Curso'
+            : pathName === '/terminos-legales'
+            ? 'Terminos legales'
+            : pathName === '/cookies'
+            ? 'Cookies'
+            : 'Home'
+        }
+      ></InfoHead>
       <MenuLayer
         hasPageTitle={hasPageTitle}
         actionText={actionText}

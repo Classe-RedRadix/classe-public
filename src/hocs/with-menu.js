@@ -87,7 +87,7 @@ const withMenu = (pageName, config) => {
 
   return (
     <>
-      {config?.infoHead}
+      {/* {config?.infoHead} */}
       <MainWrapper isBlack={true}>
         {/* {config?.hiddenTitle} */}
         <Menu
