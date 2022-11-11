@@ -105,7 +105,11 @@ const Course = React.forwardRef(
                 <Cell isNegative>
                   <div className="datePicker--course">
                     <div className="datePicker-courseWrapper">
-                      <div className="datePicker-course h3">
+                      <div
+                        className={`datePicker-course ${
+                          isDesktop ? 'h2' : 'h1'
+                        }`}
+                      >
                         {`{`}
                         <span className="datePicker-courseTitle">
                           {formatMessage('course:convocation')}
