@@ -5,8 +5,8 @@ import {
   useTranslations,
   useBreadcrumbListSchema,
 } from '../../hooks'
-import InfoHead from '../../InfoHead'
-import Head from 'next/head'
+// import InfoHead from '../../InfoHead'
+// import Head from 'next/head'
 
 const Courses = () => {
   const formatMessage = useTranslations()

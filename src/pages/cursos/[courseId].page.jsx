@@ -7,7 +7,7 @@ import {
   useEducationalEventchema,
   useTranslations,
 } from '../../hooks'
-import InfoHead from '../../InfoHead'
+// import InfoHead from '../../InfoHead'
 
 const Course = withKonami(({ course }) => {
   const formatMessage = useTranslations()

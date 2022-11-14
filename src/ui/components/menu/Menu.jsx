@@ -10,6 +10,7 @@ import MenuLayer from './MenuLayer'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 
+import { useTranslations } from 'hooks'
 import {
   CoursePropType,
   ContactFormParamsPropType,
@@ -38,6 +39,7 @@ const Menu = ({
   const pathName = router.pathname
 
   const size = useWindowSize()
+  const formatMessage = useTranslations()
 
   useEffect(() => {
     if (!isContactOpen) {
@@ -50,28 +52,39 @@ const Menu = ({
       <InfoHead
         title={
           areCoursesOpen
-            ? 'Cursos'
+            ? `${formatMessage('info-head-courses:title')}`
             : isContactOpen
-            ? 'Contacto'
+            ? `${formatMessage('info-head-contact:title')}`
             : isCourseOpen
-            ? 'Curso'
+            ? `${formatMessage(course.information.title).replace(',', '')},`
             : pathName === '/terminos-legales'
-            ? 'terminos legales'
+            ? `${formatMessage('info-head-legal-terms:title')}`
             : pathName === '/cookies'
-            ? 'Cookies'
+            ? `${formatMessage('info-head-cookies-policy:title')}`
             : 'Home'
         }
         description={
           areCoursesOpen
-            ? 'Cursos'
+            ? `${formatMessage('info-head-courses:description')}`
             : isContactOpen
-            ? 'Contacto'
+            ? `${formatMessage('info-head-contact:description')}`
             : isCourseOpen
-            ? 'Curso'
+            ? `${formatMessage(course.information.metaDescription)},`
             : pathName === '/terminos-legales'
-            ? 'Terminos legales'
+            ? `${formatMessage('info-head-legal-terms:description')}`
             : pathName === '/cookies'
-            ? 'Cookies'
+            ? `${formatMessage('info-head-cookies-policy:description')}`
+            : 'Home'
+        }
+        url={
+          areCoursesOpen
+            ? `${formatMessage('url:courses')}`
+            : isContactOpen
+            ? `${formatMessage('url:contact')}`
+            : isCourseOpen
+            ? `${formatMessage('url:root')}${course.href}`
+            : pathName === '/terminos-legales' || pathName === '/cookies'
+            ? `${formatMessage('url:root')}`
             : 'Home'
         }
       ></InfoHead>

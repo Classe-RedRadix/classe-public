@@ -1,7 +1,7 @@
 import { CONTACT_PAGE } from '../constants'
 import { withKonami, withMenu } from '../hocs'
 import { useBreadcrumbListSchema, useSchema, useTranslations } from '../hooks'
-import InfoHead from '../InfoHead'
+// import InfoHead from '../InfoHead'
 
 const Contact = withKonami(({ interestedIn }) => {
   const formatMessage = useTranslations()
@@ -17,23 +17,23 @@ const Contact = withKonami(({ interestedIn }) => {
     },
   ])
 
-  const infoHead = (
-    <InfoHead
-      title={formatMessage('info-head-contact:title')}
-      description={formatMessage('info-head-contact:description')}
-      url={formatMessage('url:contact')}
-    >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `[${contactPageSchema}, ${breadcrumbListSchema}]`,
-        }}
-      />
-    </InfoHead>
-  )
+  // const infoHead = (
+  //   <InfoHead
+  //     title={formatMessage('info-head-contact:title')}
+  //     description={formatMessage('info-head-contact:description')}
+  //     url={formatMessage('url:contact')}
+  //   >
+  //     <script
+  //       type="application/ld+json"
+  //       dangerouslySetInnerHTML={{
+  //         __html: `[${contactPageSchema}, ${breadcrumbListSchema}]`,
+  //       }}
+  //     />
+  //   </InfoHead>
+  // )
 
   return withMenu(CONTACT_PAGE, {
-    infoHead,
+    // infoHead,
     useMenuConfig: { defaultIsContactOpen: true },
     useContactFormConfig: { interestedIn },
   })
