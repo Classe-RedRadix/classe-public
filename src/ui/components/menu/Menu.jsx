@@ -47,47 +47,44 @@ const Menu = ({
     }
   }, [isContactOpen])
 
-  const infoHeadData = { title: '' }
+  const infoHeadData = { title: '', description: '', url: '' }
 
   if (pathName === '/') {
     infoHeadData.title = formatMessage('info-head-home:title')
+    infoHeadData.description = formatMessage('info-head-home:description')
   }
   if (areCoursesOpen) {
     infoHeadData.title = formatMessage('info-head-courses:title')
+    infoHeadData.description = formatMessage('info-head-courses:description')
   }
   if (isCourseOpen) {
-    infoHeadData.title = formatMessage(course.information.title).replace(
-      ',',
-      '',
-    )
+    infoHeadData.title = formatMessage('info-head-course:title', {
+      course: formatMessage(course.information.title),
+    })
+    infoHeadData.description = formatMessage(course.information.metaDescription)
   }
   if (isContactOpen) {
     infoHeadData.title = formatMessage('info-head-contact:title')
+    infoHeadData.description = formatMessage('info-head-contact:description')
   }
   if (pathName === '/terminos-legales') {
     infoHeadData.title = formatMessage('info-head-legal-terms:title')
+    infoHeadData.description = formatMessage(
+      'info-head-legal-terms:description',
+    )
   }
   if (pathName === '/cookies') {
     infoHeadData.title = formatMessage('info-head-cookies-policy:title')
+    infoHeadData.description = formatMessage(
+      'info-head-cookies-policy:description',
+    )
   }
 
   return (
     <>
       <InfoHead
         title={infoHeadData.title}
-        description={
-          areCoursesOpen
-            ? `${formatMessage('info-head-courses:description')}`
-            : isContactOpen
-            ? `${formatMessage('info-head-contact:description')}`
-            : isCourseOpen
-            ? `${formatMessage(course.information.metaDescription)},`
-            : pathName === '/terminos-legales'
-            ? `${formatMessage('info-head-legal-terms:description')}`
-            : pathName === '/cookies'
-            ? `${formatMessage('info-head-cookies-policy:description')}`
-            : 'Home'
-        }
+        description={infoHeadData.description}
         url={
           areCoursesOpen
             ? `${formatMessage('url:courses')}`
