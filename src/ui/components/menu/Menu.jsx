@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import { MEDIA_QUERIES } from '../../../constants'
@@ -47,22 +47,34 @@ const Menu = ({
     }
   }, [isContactOpen])
 
+  const infoHeadData = { title: '' }
+
+  if (pathName === '/') {
+    infoHeadData.title = formatMessage('info-head-home:title')
+  }
+  if (areCoursesOpen) {
+    infoHeadData.title = formatMessage('info-head-courses:title')
+  }
+  if (isCourseOpen) {
+    infoHeadData.title = formatMessage(course.information.title).replace(
+      ',',
+      '',
+    )
+  }
+  if (isContactOpen) {
+    infoHeadData.title = formatMessage('info-head-contact:title')
+  }
+  if (pathName === '/terminos-legales') {
+    infoHeadData.title = formatMessage('info-head-legal-terms:title')
+  }
+  if (pathName === '/cookies') {
+    infoHeadData.title = formatMessage('info-head-cookies-policy:title')
+  }
+
   return (
     <>
       <InfoHead
-        title={
-          areCoursesOpen
-            ? `${formatMessage('info-head-courses:title')}`
-            : isContactOpen
-            ? `${formatMessage('info-head-contact:title')}`
-            : isCourseOpen
-            ? `${formatMessage(course.information.title).replace(',', '')},`
-            : pathName === '/terminos-legales'
-            ? `${formatMessage('info-head-legal-terms:title')}`
-            : pathName === '/cookies'
-            ? `${formatMessage('info-head-cookies-policy:title')}`
-            : 'Home'
-        }
+        title={infoHeadData.title}
         description={
           areCoursesOpen
             ? `${formatMessage('info-head-courses:description')}`
