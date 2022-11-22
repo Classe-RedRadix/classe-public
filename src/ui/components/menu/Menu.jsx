@@ -52,32 +52,38 @@ const Menu = ({
   if (pathName === '/') {
     infoHeadData.title = formatMessage('info-head-home:title')
     infoHeadData.description = formatMessage('info-head-home:description')
+    infoHeadData.url = formatMessage('url:root')
   }
   if (areCoursesOpen) {
     infoHeadData.title = formatMessage('info-head-courses:title')
     infoHeadData.description = formatMessage('info-head-courses:description')
+    infoHeadData.url = formatMessage('url:courses')
   }
   if (isCourseOpen) {
     infoHeadData.title = formatMessage('info-head-course:title', {
       course: formatMessage(course.information.title),
     })
     infoHeadData.description = formatMessage(course.information.metaDescription)
+    infoHeadData.url = `${formatMessage('url:root')}${course.href}`
   }
   if (isContactOpen) {
     infoHeadData.title = formatMessage('info-head-contact:title')
     infoHeadData.description = formatMessage('info-head-contact:description')
+    infoHeadData.url = formatMessage('url:contact')
   }
   if (pathName === '/terminos-legales') {
     infoHeadData.title = formatMessage('info-head-legal-terms:title')
     infoHeadData.description = formatMessage(
       'info-head-legal-terms:description',
     )
+    infoHeadData.url = formatMessage('url:legal-terms')
   }
   if (pathName === '/cookies') {
     infoHeadData.title = formatMessage('info-head-cookies-policy:title')
     infoHeadData.description = formatMessage(
       'info-head-cookies-policy:description',
     )
+    infoHeadData.url = formatMessage('url:cookies')
   }
 
   return (
@@ -85,17 +91,7 @@ const Menu = ({
       <InfoHead
         title={infoHeadData.title}
         description={infoHeadData.description}
-        url={
-          areCoursesOpen
-            ? `${formatMessage('url:courses')}`
-            : isContactOpen
-            ? `${formatMessage('url:contact')}`
-            : isCourseOpen
-            ? `${formatMessage('url:root')}${course.href}`
-            : pathName === '/terminos-legales' || pathName === '/cookies'
-            ? `${formatMessage('url:root')}`
-            : 'Home'
-        }
+        url={infoHeadData.url}
       ></InfoHead>
       <MenuLayer
         hasPageTitle={hasPageTitle}
