@@ -10,7 +10,12 @@ import MenuLayer from './MenuLayer'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 
-import { useTranslations } from 'hooks'
+import {
+  useBreadcrumbListSchema,
+  useCoursechema,
+  useEducationalEventchema,
+  useTranslations,
+} from 'hooks'
 import {
   CoursePropType,
   ContactFormParamsPropType,
@@ -47,7 +52,8 @@ const Menu = ({
     }
   }, [isContactOpen])
 
-  const infoHeadData = { title: '', description: '', url: '' }
+  const infoHeadData = {}
+  let infoHeadSchemaContent = null
 
   if (pathName === '/') {
     infoHeadData.title = formatMessage('info-head-home:title')
@@ -65,6 +71,31 @@ const Menu = ({
     })
     infoHeadData.description = formatMessage(course.information.metaDescription)
     infoHeadData.url = `${formatMessage('url:root')}${course.href}`
+
+    const { courseSchema } = useCoursechema(course)
+    const { educationalEventSchema } = useEducationalEventchema(course)
+    const { breadcrumbListSchema } = useBreadcrumbListSchema([
+      {
+        name: formatMessage('schema-breadcrumb-list:home-name'),
+        url: formatMessage('url:root'),
+      },
+      {
+        name: formatMessage('schema-breadcrumb-list:courses-name'),
+        url: formatMessage('url:courses'),
+      },
+      {
+        name: formatMessage(course.information.title),
+        url: formatMessage('url:course', {
+          course: course.href,
+        }),
+      },
+    ])
+
+    infoHeadSchemaContent = [
+      { courseSchema },
+      { educationalEventSchema },
+      { breadcrumbListSchema },
+    ]
   }
   if (isContactOpen) {
     infoHeadData.title = formatMessage('info-head-contact:title')
@@ -77,6 +108,7 @@ const Menu = ({
       'info-head-legal-terms:description',
     )
     infoHeadData.url = formatMessage('url:legal-terms')
+    infoHeadData.noIndex = true
   }
   if (pathName === '/cookies') {
     infoHeadData.title = formatMessage('info-head-cookies-policy:title')
@@ -84,6 +116,7 @@ const Menu = ({
       'info-head-cookies-policy:description',
     )
     infoHeadData.url = formatMessage('url:cookies')
+    infoHeadData.noIndex = true
   }
 
   return (
@@ -92,7 +125,15 @@ const Menu = ({
         title={infoHeadData.title}
         description={infoHeadData.description}
         url={infoHeadData.url}
-      ></InfoHead>
+        noindex={infoHeadData.noIndex}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `${infoHeadSchemaContent}`,
+          }}
+        />
+      </InfoHead>
       <MenuLayer
         hasPageTitle={hasPageTitle}
         actionText={actionText}
