@@ -1,16 +1,12 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-import InfoHead from '../../InfoHead'
-
 import { LegalTerms } from '../../ui/views'
 import { COURSES } from '../../data'
 import {
   useBackgroundChange,
   useScrambleText,
   useContactForm,
-  useTranslations,
-  useBreadcrumbListSchema,
 } from '../../hooks'
 
 const LegalTermsView = () => {
@@ -38,15 +34,6 @@ const LegalTermsView = () => {
 
   useBackgroundChange(setIsBlack, setIsFluor)
   useScrambleText()
-
-  const formatMessage = useTranslations()
-
-  const { breadcrumbListSchema } = useBreadcrumbListSchema([
-    {
-      name: formatMessage('schema-breadcrumb-list:legal-terms-name'),
-      url: formatMessage('url:root'),
-    },
-  ])
 
   const onContactFormSuccess = () => {
     // TODO: handle success contact saving into Firebase
@@ -78,28 +65,13 @@ const LegalTermsView = () => {
   }
 
   return (
-    <>
-      {/* <InfoHead
-        title={formatMessage('info-head-legal-terms:title')}
-        description={formatMessage('info-head-legal-terms:description')}
-        url={formatMessage('url:root')}
-        noindex
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `${breadcrumbListSchema}`,
-          }}
-        />
-      </InfoHead> */}
-      <LegalTerms
-        isBlack={isBlack}
-        isFluor={isFluor}
-        onContactFormSubmit={handleContactFormSubmit}
-        contactFormParams={contactFormParams}
-        courses={COURSES}
-      />
-    </>
+    <LegalTerms
+      isBlack={isBlack}
+      isFluor={isFluor}
+      onContactFormSubmit={handleContactFormSubmit}
+      contactFormParams={contactFormParams}
+      courses={COURSES}
+    />
   )
 }
 

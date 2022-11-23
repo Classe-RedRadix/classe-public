@@ -1,16 +1,12 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-import InfoHead from '../../InfoHead'
-
 import { Cookies } from '../../ui/views'
 import { COURSES } from '../../data'
 import {
   useBackgroundChange,
   useScrambleText,
   useContactForm,
-  useTranslations,
-  useBreadcrumbListSchema,
 } from '../../hooks'
 
 const CookiesView = () => {
@@ -38,15 +34,6 @@ const CookiesView = () => {
 
   useBackgroundChange(setIsBlack, setIsFluor)
   useScrambleText()
-
-  const formatMessage = useTranslations()
-
-  const { breadcrumbListSchema } = useBreadcrumbListSchema([
-    {
-      name: formatMessage('schema-breadcrumb-list:cookies-policy-name'),
-      url: formatMessage('url:root'),
-    },
-  ])
 
   const onContactFormSuccess = () => {
     // TODO: handle success contact saving into Firebase
@@ -78,28 +65,13 @@ const CookiesView = () => {
   }
 
   return (
-    <>
-      {/* <InfoHead
-        title={formatMessage('info-head-cookies-policy:title')}
-        description={formatMessage('info-head-cookies-policy:description')}
-        url={formatMessage('url:root')}
-        noindex
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `${breadcrumbListSchema}`,
-          }}
-        />
-      </InfoHead> */}
-      <Cookies
-        isBlack={isBlack}
-        isFluor={isFluor}
-        onContactFormSubmit={handleContactFormSubmit}
-        contactFormParams={contactFormParams}
-        courses={COURSES}
-      />
-    </>
+    <Cookies
+      isBlack={isBlack}
+      isFluor={isFluor}
+      onContactFormSubmit={handleContactFormSubmit}
+      contactFormParams={contactFormParams}
+      courses={COURSES}
+    />
   )
 }
 
