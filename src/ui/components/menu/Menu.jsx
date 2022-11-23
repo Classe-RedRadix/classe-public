@@ -11,6 +11,7 @@ import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 
 import {
+  useSchema,
   useBreadcrumbListSchema,
   useCoursechema,
   useEducationalEventchema,
@@ -101,6 +102,20 @@ const Menu = ({
     infoHeadData.title = formatMessage('info-head-contact:title')
     infoHeadData.description = formatMessage('info-head-contact:description')
     infoHeadData.url = formatMessage('url:contact')
+
+    const { contactPageSchema } = useSchema()
+    const { breadcrumbListSchema } = useBreadcrumbListSchema([
+      {
+        name: formatMessage('schema-breadcrumb-list:home-name'),
+        url: formatMessage('url:root'),
+      },
+      {
+        name: formatMessage('schema-breadcrumb-list:courses-name'),
+        url: formatMessage('url:courses'),
+      },
+    ])
+
+    infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
   }
   if (pathName === '/terminos-legales') {
     infoHeadData.title = formatMessage('info-head-legal-terms:title')
