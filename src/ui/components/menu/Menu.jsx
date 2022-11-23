@@ -62,6 +62,20 @@ const Menu = ({
       infoHeadData.title = formatMessage('info-head-home:title')
       infoHeadData.description = formatMessage('info-head-home:description')
       infoHeadData.url = formatMessage('url:root')
+
+      const { educationalOrganizationSchema, webSiteSchema } = useSchema()
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+      ])
+
+      infoHeadSchemaContent = [
+        educationalOrganizationSchema,
+        webSiteSchema,
+        breadcrumbListSchema,
+      ]
     }
 
     // Courses
@@ -158,7 +172,7 @@ const Menu = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: infoHeadSchemaContent,
+            __html: `[${infoHeadSchemaContent.map(schema => schema)}]`,
           }}
         />
       </InfoHead>

@@ -86,27 +86,24 @@ const withMenu = (pageName, config) => {
       : openContact
 
   return (
-    <>
-      {/* {config?.infoHead} */}
-      <MainWrapper isBlack={true}>
-        {config?.hiddenTitle}
-        <Menu
-          actionText={actionText}
-          contactFormParams={contactFormParams}
-          handleText={handleTextClick}
-          openCourses={openCourses}
-          openContact={openContactView}
-          course={pageName === COURSE_PAGE ? config.course : course}
-          goToHome={goToHome}
-          openCourse={openCourse}
-          isBlack={true}
-          isContactOpen={isContactOpen}
-          areCoursesOpen={areCoursesOpen}
-          isCourseOpen={isCourseOpen}
-          courses={COURSES}
-        />
-      </MainWrapper>
-    </>
+    <MainWrapper isBlack={true}>
+      {config?.hiddenTitle}
+      <Menu
+        actionText={actionText}
+        contactFormParams={contactFormParams}
+        handleText={handleTextClick}
+        openCourses={openCourses}
+        openContact={openContactView}
+        course={pageName === COURSE_PAGE ? config.course : course}
+        goToHome={goToHome}
+        openCourse={openCourse}
+        isBlack={true}
+        isContactOpen={isContactOpen}
+        areCoursesOpen={areCoursesOpen}
+        isCourseOpen={isCourseOpen}
+        courses={COURSES}
+      />
+    </MainWrapper>
   )
 }
 
