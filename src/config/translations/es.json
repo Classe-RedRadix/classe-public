@@ -147,7 +147,6 @@
 
   "course:front-react-title": "Front-end",
   "course:front-react-title-modal": "Front-end con ReactJS",
-
   "course:front-react-alt-image": "Una mujer de perfil trabajando con su portátil y un grupo de personas en el fondo desenfocadas",
   "course:front-react-schema-description": "El mejor curso para aprender no solo React, sino más importante: por qué React.",
   "course:front-react-description": "El mundo front cambia rápidamente y nosotros con él. Nos adaptamos y evolucionamos según lo hacen las necesidades del desarrollo. Abrazamos los nuevos paradigmas y ponemos en tela de juicio las tendencias. Con los años hemos aprendido a diferenciar las modas pasajeras de los patrones que ayudan a crear mejor código. Y eso es lo que queremos enseñarte. Desde exprimir las APIs del navegador para no depender de librerías externas hasta diseccionar React para interiorizar las implicaciones del flujo unidireccional de datos. Principios de diseño y buenas prácticas que mejoren la legibilidad de tu código hasta el punto de que volver a él sea una experiencia placentera. Para quienes les guste el desarrollo front y quieran profundizar en él.",
@@ -191,7 +190,6 @@
   "course:back-node-objetives-description": "Este es un curso avanzado para profesionales que han trabajado en desarrollo back-end al menos durante un año. Está centrado en learn by doing con ejercicios divertidos para hacer y corregir en vivo. Live programming al poder.",
 
   "course:objectives-title": "Objetivos",
-
   "course:euros": "<line>euros</line>",
   "course:hours": "<line>horas</line>",
   "course:places": "<line>plazas</line>",
@@ -250,10 +248,8 @@
   "faqs:faq8-description": "Todo el mundo debe utilizar su ordenador porque se trabaja más cómodamente. Nos da igual la herramienta que uses, con la que más a gusto estés, aunque te pediremos unos requisitos mínimos como un editor de código y que te instales NodeJS. Más allá de eso, y de tener buena conexión a Internet para poder conectarte, lo único que te pedimos es que llegues con ganas de seguir aprendiendo cada día.",
   "faqs:faq9-title": "¿CUÁLES SON LAS FORMAS DE PAGO?",
   "faqs:faq9-description": "El pago se realiza mediante tarjeta bancaria. Una vez realices tu inscripción, te enviaremos un enlace para poder hacerlo de forma segura. ",
-
   "faqs:faq10-title": "¿QUÉ PASA SI HAY ALGÚN FESTIVO DURANTE MI CURSO?",
   "faqs:faq10-description": "Si te coincide alguno, disfrútalo. Y no te preocupes, porque se recuperarán las horas pendientes el resto de días, buscando el mayor consenso entre todos.",
-
   "faqs:faq11-title": "¿NO SE PIERDE CALIDAD AL NO SER PRESENCIAL?",
   "faqs:faq11-description": "Creemos que no y la experiencia trabajando en remoto desde antes de la pandemia nos da la razón. En Redradix aprendemos cada día y no nos hace falta estar físicamente al lado para ello. Confía en nosotros, aunque sea de forma virtual podrás acercarte a la mesa del profesor para preguntarle tus dudas en un ejercicio.",
 

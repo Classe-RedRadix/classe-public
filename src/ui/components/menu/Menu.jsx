@@ -55,7 +55,7 @@ const Menu = ({
 
   const InfoHeadFilled = () => {
     const infoHeadData = {}
-    let infoHeadSchemaContent = ''
+    let infoHeadSchemaContent = []
 
     // Home
     if (pathName === '/') {
@@ -150,6 +150,19 @@ const Menu = ({
       )
       infoHeadData.url = formatMessage('url:legal-terms')
       infoHeadData.noIndex = true
+
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+        {
+          name: formatMessage('schema-breadcrumb-list:legal-terms-name'),
+          url: formatMessage('url:legal-terms'),
+        },
+      ])
+
+      infoHeadSchemaContent = [breadcrumbListSchema]
     }
 
     // Cookies
@@ -160,6 +173,19 @@ const Menu = ({
       )
       infoHeadData.url = formatMessage('url:cookies')
       infoHeadData.noIndex = true
+
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+        {
+          name: formatMessage('schema-breadcrumb-list:cookies-name'),
+          url: formatMessage('url:cookies'),
+        },
+      ])
+
+      infoHeadSchemaContent = [breadcrumbListSchema]
     }
 
     return (
