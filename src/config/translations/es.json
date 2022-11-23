@@ -58,7 +58,7 @@
   "schema-breadcrumb-list:courses-name": "Cursos",
   "schema-breadcrumb-list:contact-name": "Contacto",
   "schema-breadcrumb-list:legal-terms-name": "Términos legales",
-  "schema-breadcrumb-list:cookies-policy-name": "Cookies",
+  "schema-breadcrumb-list:cookies-name": "Cookies",
 
   "general:conditions-check": "Acepto los términos y condiciones",
   "general:conditions-anchgor": "/terminos-legales/",
