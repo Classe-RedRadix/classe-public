@@ -89,7 +89,7 @@ const withMenu = (pageName, config) => {
     <>
       {/* {config?.infoHead} */}
       <MainWrapper isBlack={true}>
-        {/* {config?.hiddenTitle} */}
+        {config?.hiddenTitle}
         <Menu
           actionText={actionText}
           contactFormParams={contactFormParams}
