@@ -53,89 +53,102 @@ const Menu = ({
     }
   }, [isContactOpen])
 
-  const infoHeadData = {}
-  let infoHeadSchemaContent = null
+  const InfoHeadFilled = () => {
+    const infoHeadData = {}
+    let infoHeadSchemaContent = ''
 
-  if (pathName === '/') {
-    infoHeadData.title = formatMessage('info-head-home:title')
-    infoHeadData.description = formatMessage('info-head-home:description')
-    infoHeadData.url = formatMessage('url:root')
-  }
-  if (areCoursesOpen) {
-    infoHeadData.title = formatMessage('info-head-courses:title')
-    infoHeadData.description = formatMessage('info-head-courses:description')
-    infoHeadData.url = formatMessage('url:courses')
-  }
-  if (isCourseOpen) {
-    infoHeadData.title = formatMessage('info-head-course:title', {
-      course: formatMessage(course.information.title),
-    })
-    infoHeadData.description = formatMessage(course.information.metaDescription)
-    infoHeadData.url = `${formatMessage('url:root')}${course.href}`
+    // Home
+    if (pathName === '/') {
+      infoHeadData.title = formatMessage('info-head-home:title')
+      infoHeadData.description = formatMessage('info-head-home:description')
+      infoHeadData.url = formatMessage('url:root')
+    }
 
-    const { courseSchema } = useCoursechema(course)
-    const { educationalEventSchema } = useEducationalEventchema(course)
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:courses-name'),
-        url: formatMessage('url:courses'),
-      },
-      {
-        name: formatMessage(course.information.title),
-        url: formatMessage('url:course', {
-          course: course.href,
-        }),
-      },
-    ])
+    // Courses
+    if (areCoursesOpen) {
+      infoHeadData.title = formatMessage('info-head-courses:title')
+      infoHeadData.description = formatMessage('info-head-courses:description')
+      infoHeadData.url = formatMessage('url:courses')
+    }
 
-    infoHeadSchemaContent = [
-      { courseSchema },
-      { educationalEventSchema },
-      { breadcrumbListSchema },
-    ]
-  }
-  if (isContactOpen) {
-    infoHeadData.title = formatMessage('info-head-contact:title')
-    infoHeadData.description = formatMessage('info-head-contact:description')
-    infoHeadData.url = formatMessage('url:contact')
+    // Course
+    if (isCourseOpen) {
+      infoHeadData.title = formatMessage('info-head-course:title', {
+        course: formatMessage(course.information.title),
+      })
+      infoHeadData.description = formatMessage(
+        course.information.metaDescription,
+      )
+      infoHeadData.url = `${formatMessage('url:root')}${course.href}`
 
-    const { contactPageSchema } = useSchema()
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:courses-name'),
-        url: formatMessage('url:courses'),
-      },
-    ])
+      const { courseSchema } = useCoursechema(course)
+      const { educationalEventSchema } = useEducationalEventchema(course)
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+        {
+          name: formatMessage('schema-breadcrumb-list:courses-name'),
+          url: formatMessage('url:courses'),
+        },
+        {
+          name: formatMessage(course.information.title),
+          url: formatMessage('url:course', {
+            course: course.href,
+          }),
+        },
+      ])
 
-    infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
-  }
-  if (pathName === '/terminos-legales') {
-    infoHeadData.title = formatMessage('info-head-legal-terms:title')
-    infoHeadData.description = formatMessage(
-      'info-head-legal-terms:description',
-    )
-    infoHeadData.url = formatMessage('url:legal-terms')
-    infoHeadData.noIndex = true
-  }
-  if (pathName === '/cookies') {
-    infoHeadData.title = formatMessage('info-head-cookies-policy:title')
-    infoHeadData.description = formatMessage(
-      'info-head-cookies-policy:description',
-    )
-    infoHeadData.url = formatMessage('url:cookies')
-    infoHeadData.noIndex = true
-  }
+      infoHeadSchemaContent = [
+        courseSchema,
+        educationalEventSchema,
+        breadcrumbListSchema,
+      ]
+    }
 
-  return (
-    <>
+    // Contact
+    if (isContactOpen) {
+      infoHeadData.title = formatMessage('info-head-contact:title')
+      infoHeadData.description = formatMessage('info-head-contact:description')
+      infoHeadData.url = formatMessage('url:contact')
+
+      const { contactPageSchema } = useSchema()
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+        {
+          name: formatMessage('schema-breadcrumb-list:courses-name'),
+          url: formatMessage('url:courses'),
+        },
+      ])
+
+      infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
+    }
+
+    // Legal terms
+    if (pathName === '/terminos-legales') {
+      infoHeadData.title = formatMessage('info-head-legal-terms:title')
+      infoHeadData.description = formatMessage(
+        'info-head-legal-terms:description',
+      )
+      infoHeadData.url = formatMessage('url:legal-terms')
+      infoHeadData.noIndex = true
+    }
+
+    // Cookies
+    if (pathName === '/cookies') {
+      infoHeadData.title = formatMessage('info-head-cookies-policy:title')
+      infoHeadData.description = formatMessage(
+        'info-head-cookies-policy:description',
+      )
+      infoHeadData.url = formatMessage('url:cookies')
+      infoHeadData.noIndex = true
+    }
+
+    return (
       <InfoHead
         title={infoHeadData.title}
         description={infoHeadData.description}
@@ -145,10 +158,16 @@ const Menu = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `${infoHeadSchemaContent}`,
+            __html: infoHeadSchemaContent,
           }}
         />
       </InfoHead>
+    )
+  }
+
+  return (
+    <>
+      <InfoHeadFilled />
       <MenuLayer
         hasPageTitle={hasPageTitle}
         actionText={actionText}
