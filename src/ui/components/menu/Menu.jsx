@@ -42,7 +42,7 @@ const Menu = ({
   openCourse,
 }) => {
   const router = useRouter()
-  const pathName = router.pathname
+  const routerAsPath = router.asPath
 
   const size = useWindowSize()
   const formatMessage = useTranslations()
@@ -57,8 +57,7 @@ const Menu = ({
     const infoHeadData = {}
     let infoHeadSchemaContent = []
 
-    // Home
-    if (pathName === '/') {
+    if (routerAsPath === '/') {
       infoHeadData.title = formatMessage('info-head-home:title')
       infoHeadData.description = formatMessage('info-head-home:description')
       infoHeadData.url = formatMessage('url:root')
@@ -78,14 +77,25 @@ const Menu = ({
       ]
     }
 
-    // Courses
-    if (areCoursesOpen) {
+    if (routerAsPath === '/cursos') {
       infoHeadData.title = formatMessage('info-head-courses:title')
       infoHeadData.description = formatMessage('info-head-courses:description')
       infoHeadData.url = formatMessage('url:courses')
+
+      const { breadcrumbListSchema } = useBreadcrumbListSchema([
+        {
+          name: formatMessage('schema-breadcrumb-list:home-name'),
+          url: formatMessage('url:root'),
+        },
+        {
+          name: formatMessage('schema-breadcrumb-list:courses-name'),
+          url: formatMessage('url:legal-terms'),
+        },
+      ])
+
+      infoHeadSchemaContent = [breadcrumbListSchema]
     }
 
-    // Course
     if (isCourseOpen) {
       infoHeadData.title = formatMessage('info-head-course:title', {
         course: formatMessage(course.information.title),
@@ -121,8 +131,7 @@ const Menu = ({
       ]
     }
 
-    // Contact
-    if (isContactOpen) {
+    if (routerAsPath.includes('/contacto')) {
       infoHeadData.title = formatMessage('info-head-contact:title')
       infoHeadData.description = formatMessage('info-head-contact:description')
       infoHeadData.url = formatMessage('url:contact')
@@ -142,8 +151,7 @@ const Menu = ({
       infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
     }
 
-    // Legal terms
-    if (pathName === '/terminos-legales') {
+    if (routerAsPath === '/terminos-legales') {
       infoHeadData.title = formatMessage('info-head-legal-terms:title')
       infoHeadData.description = formatMessage(
         'info-head-legal-terms:description',
@@ -165,8 +173,7 @@ const Menu = ({
       infoHeadSchemaContent = [breadcrumbListSchema]
     }
 
-    // Cookies
-    if (pathName === '/cookies') {
+    if (routerAsPath === '/cookies') {
       infoHeadData.title = formatMessage('info-head-cookies-policy:title')
       infoHeadData.description = formatMessage(
         'info-head-cookies-policy:description',
