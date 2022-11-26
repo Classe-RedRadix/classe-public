@@ -16,8 +16,8 @@ const DESARROLLO = {
     start: '21.11.22',
     finish: '16.12.22',
     // startTime & endTime are created for validate schema.org, see useCourseSchema.js
-    startTime: '18:00:00',
-    endTime: '20:30:00',
+    // startTime: '18:00:00',
+    // endTime: '20:30:00',
     schedule: '18:00 - 20:30',
     metaDescription: 'course:js-schema-description',
     description: 'course:js-description',
@@ -89,8 +89,8 @@ const UI_DEV = {
     start: '21.11.22',
     finish: '16.12.22',
     // startTime & endTime are created for validate schema.org, see useCourseSchema.js
-    startTime: '18:00:00',
-    endTime: '20:30:00',
+    // startTime: '18:00:00',
+    // endTime: '20:30:00',
     schedule: '18:00 - 20:30',
     metaDescription: 'course:ui-dev-meta-description',
     description: 'course:ui-dev-description',

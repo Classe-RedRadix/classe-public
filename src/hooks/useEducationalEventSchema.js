@@ -20,31 +20,31 @@ const useEducationalEventchema = courseData => {
     description: formatMessage(courseData.information.metaDescription),
     startDate: `${formatDate(courseData.information.start)}`,
     endDate: `${formatDate(courseData.information.finish)}`,
-    startTime: `${formatDate(courseData.information.startTime)}`,
-    endTime: `${formatDate(courseData.information.endTime)}`,
+    // startTime: formatMessage(courseData.information.startTime),
+    // endTime: formatMessage(courseData.information.endTime),
+    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventMovedOnline',
     location: {
-      '@type': 'Place',
-      name: formatMessage('schema-educational-event:location-name'),
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: formatMessage('schema-contact-page:address'),
-        postalCode: formatMessage('schema-contact-page:postal-code'),
-        addressLocality: formatMessage('schema-contact-page:locality'),
-        addressCountry: {
-          '@type': 'Country',
-          name: formatMessage('schema-contact-page:country'),
-        },
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: formatMessage('schema-contact-page:latitude'),
-        longitude: formatMessage('schema-contact-page:longitude'),
-      },
+      '@type': 'VirtualLocation',
+      url: formatMessage('url:root'),
     },
     organizer: {
       '@type': 'Organization',
       name: formatMessage('schema-educational-event:organitation-name'),
       url: formatMessage('url:root'),
+    },
+    performer: {
+      '@type': 'Organization',
+      name: formatMessage('schema-educational-event:organitation-name'),
+      url: formatMessage('url:root'),
+    },
+    offers: {
+      '@type': 'Offer',
+      url: `${formatMessage('url:root')}${courseData.href}`,
+      price: courseData.information.price,
+      priceCurrency: formatMessage('schema-course:price-currency'),
+      availability: 'https://schema.org/OnlineOnly',
+      validFrom: `${formatDate(courseData.information.start)}`,
     },
   }
 
