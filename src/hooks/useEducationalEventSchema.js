@@ -22,6 +22,7 @@ const useEducationalEventchema = courseData => {
     endDate: `${formatDate(courseData.information.finish)}`,
     // startTime: formatMessage(courseData.information.startTime),
     // endTime: formatMessage(courseData.information.endTime),
+    image: formatMessage(courseData.information.schemaImage),
     eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventMovedOnline',
     location: {
