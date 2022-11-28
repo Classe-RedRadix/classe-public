@@ -18,10 +18,8 @@ const useEducationalEventchema = courseData => {
     url: `${formatMessage('url:root')}${courseData.href}`,
     name: formatMessage(courseData.information.title),
     description: formatMessage(courseData.information.metaDescription),
-    startDate: `${formatDate(courseData.information.start)}`,
-    endDate: `${formatDate(courseData.information.finish)}`,
-    // startTime: formatMessage(courseData.information.startTime),
-    // endTime: formatMessage(courseData.information.endTime),
+    startDate: formatDate(courseData.information.start),
+    endDate: formatDate(courseData.information.finish),
     image: formatMessage(courseData.information.schemaImage),
     eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventMovedOnline',
@@ -46,6 +44,14 @@ const useEducationalEventchema = courseData => {
       priceCurrency: formatMessage('schema-course:price-currency'),
       availability: 'https://schema.org/OnlineOnly',
       validFrom: `${formatDate(courseData.information.start)}`,
+    },
+    eventSchedule: {
+      '@type': 'Schedule',
+      startDate: formatDate(courseData.information.start),
+      endDate: formatDate(courseData.information.finish),
+      startTime: courseData.information.schemaStartTime,
+      endTime: courseData.information.schemaEndTime,
+      scheduleTimezone: 'Europe/London',
     },
   }
 

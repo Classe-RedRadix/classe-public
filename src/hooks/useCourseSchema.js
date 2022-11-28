@@ -26,10 +26,8 @@ const useCoursechema = courseData => {
     hasCourseInstance: [
       {
         '@type': 'CourseInstance',
-        startDate: `${formatDate(courseData.information.start)}`,
-        endDate: `${formatDate(courseData.information.finish)}`,
-        // startTime: formatMessage(courseData.information.startTime),
-        // endTime: formatMessage(courseData.information.endTime),
+        startDate: formatDate(courseData.information.start),
+        endDate: formatDate(courseData.information.finish),
         eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
         eventStatus: 'https://schema.org/EventMovedOnline',
         offers: {
