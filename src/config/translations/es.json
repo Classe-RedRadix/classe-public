@@ -127,7 +127,7 @@
   "course:js-objetives-description": "Este es un curso avanzado para profesionales que han trabajado en desarrollo web al menos durante un año. Está centrado en learn by doing con ejercicios divertidos para hacer y corregir en vivo. Live programming al poder!",
 
   "course:ui-dev-title": "Maqueta",
-  "course:ui-title-modal": "Maqueta",
+  "course:ui-dev-title-modal": "Maqueta",
   "course:ui-dev-alt-image": "Un hombre de perfil trabajando en su portátil",
   "course:ui-dev-schema-url-image": "https://www.classe.dev/images/curso-maqueta-640.jpg",
   "course:ui-dev-meta-description": "El mejor curso para profundizar en la maquetación para crear plataformas accesibles, dinámicas, escalables y usables.",
