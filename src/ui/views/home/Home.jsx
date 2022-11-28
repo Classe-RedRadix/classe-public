@@ -21,7 +21,6 @@ import {
   ContactFormParamsPropType,
   FaqsListPropType,
 } from './../../sharedProptypes'
-import Head from 'next/head'
 
 const Home = ({
   isBlack,
