@@ -12,14 +12,10 @@ const Courses = () => {
     <h1 className="sr-only">{formatMessage('courses:header')}</h1>
   ) : null
 
-  return (
-    <>
-      {withMenu(COURSES_PAGE, {
-        hiddenTitle,
-        useMenuConfig: { defaultAreCoursesOpen: true },
-      })}
-    </>
-  )
+  return withMenu(COURSES_PAGE, {
+    hiddenTitle,
+    useMenuConfig: { defaultAreCoursesOpen: true },
+  })
 }
 
 export default withKonami(Courses)
