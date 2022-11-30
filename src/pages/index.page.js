@@ -1,21 +1,21 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-import Abertis from '/public/images/logos/abertis.svg'
-import Alantra from '/public/images/logos/alantra.svg'
-import Anaya from '/public/images/logos/anaya.svg'
-import Esa from '/public/images/logos/esa.svg'
-import Gmv from '/public/images/logos/gmv.svg'
-import HugoBoss from '/public/images/logos/hugo-boss.svg'
-import Idealista from '/public/images/logos/idealista.svg'
-import Iqvia from '/public/images/logos/iqvia.svg'
-import Indra from '/public/images/logos/indra.svg'
-import LifullConnect from '/public/images/logos/lifull-connect.svg'
-import Masmovil from '/public/images/logos/masmovil.svg'
-import Movistar from '/public/images/logos/movistar.svg'
-import Santander from '/public/images/logos/santander.svg'
+import BME from '/public/images/logos/bme.svg'
+import Coches from '/public/images/logos/coches.svg'
+import EDreams from '/public/images/logos/edreams.svg'
+import ElConfidencial from '/public/images/logos/el-confidencial.svg'
+import GrupoSM from '/public/images/logos/grupo-sm.svg'
+import ING from '/public/images/logos/ing.svg'
+import LastMinute from '/public/images/logos/last-minute.svg'
+import LibertySeguros from '/public/images/logos/liberty-seguros.svg'
+import OxfordUniversity from '/public/images/logos/oxford-university.svg'
+import PharmaAdvisors from '/public/images/logos/pharma-advisors.svg'
+import SecuritasDirect from '/public/images/logos/securitas-direct.svg'
 import Solera from '/public/images/logos/solera.svg'
-import Vivanta from '/public/images/logos/vivanta.svg'
+import Telefonica from '/public/images/logos/telefonica.svg'
+import Ticketea from '/public/images/logos/ticketea.svg'
+import UnidadEditorial from '/public/images/logos/unidad-editorial.svg'
 
 import { COURSES } from '../data'
 
@@ -67,21 +67,36 @@ const Home = () => {
   }))
 
   const logos = [
-    Santander,
-    Movistar,
+    // Santander,
+    // Movistar,
+    // Solera,
+    // HugoBoss,
+    // Gmv,
+    // Idealista,
+    // LifullConnect,
+    // Iqvia,
+    // Alantra,
+    // Vivanta,
+    // Anaya,
+    // Indra,
+    // Masmovil,
+    // Abertis,
+    // Esa,
+    BME,
+    UnidadEditorial,
+    ING,
     Solera,
-    HugoBoss,
-    Gmv,
-    Idealista,
-    LifullConnect,
-    Iqvia,
-    Alantra,
-    Vivanta,
-    Anaya,
-    Indra,
-    Masmovil,
-    Abertis,
-    Esa,
+    EDreams,
+    PharmaAdvisors,
+    LastMinute,
+    LibertySeguros,
+    Coches,
+    SecuritasDirect,
+    GrupoSM,
+    Telefonica,
+    Ticketea,
+    ElConfidencial,
+    OxfordUniversity,
   ]
 
   const faqsList = [
