@@ -205,7 +205,7 @@ const Menu = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `[${infoHeadSchemaContent.map(schema => schema)}]`,
+            __html: `[${infoHeadSchemaContent}]`,
           }}
         />
       </InfoHead>
