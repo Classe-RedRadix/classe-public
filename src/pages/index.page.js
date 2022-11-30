@@ -18,7 +18,6 @@ import Ticketea from '/public/images/logos/ticketea.svg'
 import UnidadEditorial from '/public/images/logos/unidad-editorial.svg'
 
 import { COURSES } from '../data'
-import InfoHead from '../InfoHead'
 
 import {
   useViewportHeight,
@@ -27,8 +26,6 @@ import {
   useScrambleText,
   useContactForm,
   useTranslations,
-  useSchema,
-  useBreadcrumbListSchema,
 } from '../hooks'
 import { withKonami } from '../hocs'
 import { Home as HomeUI } from '../ui/views'
@@ -185,14 +182,6 @@ const Home = () => {
     },
   ]
 
-  const { educationalOrganizationSchema, webSiteSchema } = useSchema()
-  const { breadcrumbListSchema } = useBreadcrumbListSchema([
-    {
-      name: formatMessage('schema-breadcrumb-list:home-name'),
-      url: formatMessage('url:root'),
-    },
-  ])
-
   const onContactFormSuccess = () => {
     // TODO: handle success contact saving into Firebase
   }
@@ -224,32 +213,17 @@ const Home = () => {
   }
 
   return (
-    <>
-      <InfoHead
-        title={formatMessage('info-head-home:title')}
-        description={formatMessage('info-head-home:description')}
-        url={formatMessage('url:root')}
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `[${educationalOrganizationSchema}, ${webSiteSchema}, ${breadcrumbListSchema}]`,
-          }}
-        />
-      </InfoHead>
-
-      <HomeUI
-        isBlack={isBlack}
-        isFluor={isFluor}
-        isLock={isLock}
-        courses={COURSES}
-        dates={dates}
-        logos={logos}
-        faqsList={faqsList}
-        onContactFormSubmit={handleContactFormSubmit}
-        contactFormParams={contactFormParams}
-      />
-    </>
+    <HomeUI
+      isBlack={isBlack}
+      isFluor={isFluor}
+      isLock={isLock}
+      courses={COURSES}
+      dates={dates}
+      logos={logos}
+      faqsList={faqsList}
+      onContactFormSubmit={handleContactFormSubmit}
+      contactFormParams={contactFormParams}
+    />
   )
 }
 
