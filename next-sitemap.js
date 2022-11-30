@@ -1,4 +1,4 @@
-const urlRoot = 'https://classe.dev'
+const urlRoot = 'https://www.classe.dev'
 
 module.exports = {
   siteUrl: urlRoot,

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://classe.dev
+Host: https://www.classe.dev
 
 # Sitemaps
-Sitemap: https://classe.dev/sitemap.xml
+Sitemap: https://www.classe.dev/sitemap.xml
