@@ -8,7 +8,7 @@ const uiDevelopmentCourseImage = IMAGES.UI_DEVELOPMENT_COURSE_IMAGE
 const DESARROLLO = {
   id: 'desarrollo',
   isFeatured: true,
-  isPublic: true,
+  isPublic: false,
   href: '/cursos/desarrollo',
   information: {
     title: 'course:js-title',
@@ -22,7 +22,7 @@ const DESARROLLO = {
     description: 'course:js-description',
     image: javascriptCourseImage,
     schemaImage: 'course:js-schema-url-image',
-    price: 700,
+    price: 600,
     hours: 30,
     places: 15,
     practical: 80,
@@ -81,7 +81,7 @@ const DESARROLLO = {
 const UI_DEV = {
   id: 'maqueta',
   isFeatured: false,
-  isPublic: true,
+  isPublic: false,
   href: '/cursos/maqueta',
   information: {
     title: 'course:ui-dev-title',
@@ -95,7 +95,7 @@ const UI_DEV = {
     description: 'course:ui-dev-description',
     image: uiDevelopmentCourseImage,
     schemaImage: 'course:ui-dev-schema-url-image',
-    price: 700,
+    price: 600,
     hours: 30,
     places: 15,
     practical: 80,
@@ -152,7 +152,7 @@ const FRONT_END = {
     description: 'course:front-react-description',
     image: frontCourseImage,
     schemaImage: 'course:front-react-schema-url-image',
-    price: 700,
+    price: 600,
     hours: 30,
     places: 20,
     practical: 80,
@@ -209,7 +209,7 @@ const BACK_END = {
     description: 'course:back-node-description',
     image: backCourseImage,
     schemaImage: 'course:back-node-schema-url-image',
-    price: 700,
+    price: 600,
     hours: 30,
     places: 15,
     practical: 80,
