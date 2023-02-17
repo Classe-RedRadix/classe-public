@@ -15,7 +15,7 @@ import { MEDIA_QUERIES } from '../../../constants'
 
 import useWindowSize from '../../../hooks/useWindowSize'
 
-const MenuCourse = ({ course, openContact, isCourseOpen }) => {
+const MenuCourse = ({ course, openContact }) => {
   const formatMessage = useTranslations()
   useScrambleText()
 
@@ -122,6 +122,8 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
           hours={information.hours}
           places={information.places}
           practical={information.practical}
+          isPublic={course.isPublic}
+          openContact={openContact}
         />
         <CourseTitle title={formatMessage('footer:contact')} />
         <CourseContact openContact={openContact} />
