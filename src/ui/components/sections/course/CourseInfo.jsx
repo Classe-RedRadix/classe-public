@@ -5,8 +5,17 @@ import Row from '../../row/Row'
 import Cell from '../../cell/Cell'
 import useTranslations from '../../../../hooks/useTranslations'
 import ExclamationIcon from './../../../../assets/icons/ExclamationIcon'
+import Button from '../../button/Button'
+import cx from 'classnames'
 
-const CourseInfo = ({ price, hours, places, practical }) => {
+const CourseInfo = ({
+  price,
+  hours,
+  places,
+  practical,
+  isPublic,
+  openContact,
+}) => {
   const formatMessage = useTranslations()
 
   return (
@@ -59,6 +68,20 @@ const CourseInfo = ({ price, hours, places, practical }) => {
             color={'#fff'}
             className="icon courseSection-glypBottom"
           />
+          <div
+            className={cx(
+              'courseIntro-actions',
+              `${isPublic ? 'has-button' : ''}`,
+            )}
+          >
+            {isPublic ? (
+              <Button
+                isNegative
+                onClick={openContact}
+                text={formatMessage('course:button')}
+              />
+            ) : null}
+          </div>
         </Cell>
       </Row>
     </SectionWrapper>

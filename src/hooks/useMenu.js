@@ -45,7 +45,10 @@ const useMenu = ({
   const handleClose = () => {
     const prevPage = sessionStorage.getItem('prev-page')
 
-    if (isCourseOpen && prevPage === '/cursos') {
+    if (
+      (isCourseOpen && prevPage === '/cursos') ||
+      prevPage.includes('cursos')
+    ) {
       setIsContactOpen(false)
       setAreCoursesOpen(true)
       setIsCourseOpen(false)
