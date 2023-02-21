@@ -195,7 +195,7 @@ const MenuContact = ({ linesHidden, contactFormParams }) => {
           <div className="contact-formBlock" ref={itemFormLegal}>
             <Checkbox
               hasMessage
-              hasAnchor={`${formatMessage('general:conditions-anchgor')}`}
+              anchorText={`${formatMessage('general:conditions-anchgor')}`}
               handleChange={contactFormParams.toggleTermsAndConditions}
               label={formatMessage('general:conditions-check')}
               name="conditions"

@@ -82,7 +82,7 @@ const Footer = ({
             <div className="footer-formBlock">
               <Checkbox
                 hasMessage
-                hasAnchor={`${formatMessage('general:conditions-anchgor')}`}
+                anchorText={`${formatMessage('general:conditions-anchgor')}`}
                 handleChange={contactFormParams.toggleTermsAndConditions}
                 label={formatMessage('general:conditions-check')}
                 name="conditions"
