@@ -214,7 +214,6 @@ const Menu = ({
 
   return (
     <>
-      <InfoHeadFilled />
       <MenuLayer
         hasPageTitle={hasPageTitle}
         actionText={actionText}
