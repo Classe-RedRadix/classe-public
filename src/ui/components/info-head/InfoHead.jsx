@@ -88,8 +88,8 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
         url: formatMessage('url:root'),
       },
       {
-        name: formatMessage('schema-breadcrumb-list:courses-name'),
-        url: formatMessage('url:courses'),
+        name: formatMessage('schema-breadcrumb-list:contact-name'),
+        url: formatMessage('url:contact'),
       },
     ])
 
