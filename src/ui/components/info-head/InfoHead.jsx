@@ -17,12 +17,7 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   const { courseSchema } = useCoursechema(course)
   const { educationalEventSchema } = useEducationalEventchema(course)
 
-  let infoHeadData = {}
-  let infoHeadSchemaContent = []
-
   if (routerAsPath === '/') {
-    infoHeadData = formatInfoHeadData('home', formatMessage)
-
     const { breadcrumbListSchema } = useBreadcrumbListSchema([
       {
         name: formatMessage('schema-breadcrumb-list:home-name'),
@@ -30,29 +25,18 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
       },
     ])
 
-    infoHeadSchemaContent = [
-      educationalOrganizationSchema,
-      webSiteSchema,
-      breadcrumbListSchema,
-    ]
-  } else if (routerAsPath.includes('/cursos')) {
-    infoHeadData = formatInfoHeadData('courses', formatMessage)
+    return {
+      infoHeadData: formatInfoHeadData('home', formatMessage),
+      infoHeadSchemaContent: [
+        educationalOrganizationSchema,
+        webSiteSchema,
+        breadcrumbListSchema,
+      ],
+    }
+  }
 
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:courses-name'),
-        url: formatMessage('url:legal-terms'),
-      },
-    ])
-
-    infoHeadSchemaContent = [breadcrumbListSchema]
+  if (routerAsPath.includes('/cursos')) {
     if (isCourseOpen) {
-      infoHeadData = formatInfoHeadData('course', formatMessage, course)
-
       const { breadcrumbListSchema } = useBreadcrumbListSchema([
         {
           name: formatMessage('schema-breadcrumb-list:home-name'),
@@ -70,15 +54,34 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
         },
       ])
 
-      infoHeadSchemaContent = [
-        courseSchema,
-        educationalEventSchema,
-        breadcrumbListSchema,
-      ]
+      return {
+        infoHeadData: formatInfoHeadData('course', formatMessage, course),
+        infoHeadSchemaContent: [
+          courseSchema,
+          educationalEventSchema,
+          breadcrumbListSchema,
+        ],
+      }
     }
-  } else if (routerAsPath.includes('/contacto')) {
-    infoHeadData = formatInfoHeadData('contact', formatMessage)
 
+    const { breadcrumbListSchema } = useBreadcrumbListSchema([
+      {
+        name: formatMessage('schema-breadcrumb-list:home-name'),
+        url: formatMessage('url:root'),
+      },
+      {
+        name: formatMessage('schema-breadcrumb-list:courses-name'),
+        url: formatMessage('url:legal-terms'),
+      },
+    ])
+
+    return {
+      infoHeadData: formatInfoHeadData('courses', formatMessage),
+      infoHeadSchemaContent: [breadcrumbListSchema],
+    }
+  }
+
+  if (routerAsPath.includes('/contacto')) {
     const { breadcrumbListSchema } = useBreadcrumbListSchema([
       {
         name: formatMessage('schema-breadcrumb-list:home-name'),
@@ -90,13 +93,13 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
       },
     ])
 
-    infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
-  } else if (routerAsPath === '/terminos-legales') {
-    infoHeadData = {
-      ...formatInfoHeadData('legal-terms', formatMessage),
-      noIndex: true,
+    return {
+      infoHeadData: formatInfoHeadData('contact', formatMessage),
+      infoHeadSchemaContent: [contactPageSchema, breadcrumbListSchema],
     }
+  }
 
+  if (routerAsPath === '/terminos-legales') {
     const { breadcrumbListSchema } = useBreadcrumbListSchema([
       {
         name: formatMessage('schema-breadcrumb-list:home-name'),
@@ -108,13 +111,16 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
       },
     ])
 
-    infoHeadSchemaContent = [breadcrumbListSchema]
-  } else if (routerAsPath === '/cookies') {
-    infoHeadData = {
-      ...formatInfoHeadData('cookies', formatMessage),
-      noIndex: true,
+    return {
+      infoHeadData: {
+        ...formatInfoHeadData('legal-terms', formatMessage),
+        noIndex: true,
+      },
+      infoHeadSchemaContent: [breadcrumbListSchema],
     }
+  }
 
+  if (routerAsPath === '/cookies') {
     const { breadcrumbListSchema } = useBreadcrumbListSchema([
       {
         name: formatMessage('schema-breadcrumb-list:home-name'),
@@ -126,10 +132,16 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
       },
     ])
 
-    infoHeadSchemaContent = [breadcrumbListSchema]
+    return {
+      infoHeadData: {
+        ...formatInfoHeadData('cookies', formatMessage),
+        noIndex: true,
+      },
+      infoHeadSchemaContent: [breadcrumbListSchema],
+    }
   }
 
-  return { infoHeadData, infoHeadSchemaContent }
+  return { infoHeadData: {}, infoHeadSchemaContent: [] }
 }
 
 const formatInfoHeadData = (domain, formatMessage, course = null) => {
