@@ -17,13 +17,15 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   const { courseSchema } = useCoursechema(course)
   const { educationalEventSchema } = useEducationalEventchema(course)
 
+  const breadcrumbItems = [
+    {
+      name: formatMessage('schema-breadcrumb-list:home-name'),
+      url: formatMessage('url:root'),
+    },
+  ]
+
   if (routerAsPath === '/') {
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-    ])
+    const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: formatInfoHeadData('home', formatMessage),
@@ -36,23 +38,20 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   }
 
   if (routerAsPath.includes('/cursos')) {
+    breadcrumbItems.push({
+      name: formatMessage('schema-breadcrumb-list:courses-name'),
+      url: formatMessage('url:courses'),
+    })
+
     if (isCourseOpen) {
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:courses-name'),
-          url: formatMessage('url:courses'),
-        },
-        {
-          name: formatMessage(course.information.title),
-          url: formatMessage('url:course', {
-            course: course.href,
-          }),
-        },
-      ])
+      breadcrumbItems.push({
+        name: formatMessage(course.information.title),
+        url: formatMessage('url:course', {
+          course: course.href,
+        }),
+      })
+
+      const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
       return {
         infoHeadData: formatInfoHeadData('course', formatMessage, course),
@@ -64,16 +63,7 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
       }
     }
 
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:courses-name'),
-        url: formatMessage('url:legal-terms'),
-      },
-    ])
+    const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: formatInfoHeadData('courses', formatMessage),
@@ -82,16 +72,12 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   }
 
   if (routerAsPath.includes('/contacto')) {
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:contact-name'),
-        url: formatMessage('url:contact'),
-      },
-    ])
+    breadcrumbItems.push({
+      name: formatMessage('schema-breadcrumb-list:contact-name'),
+      url: formatMessage('url:contact'),
+    })
+
+    const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: formatInfoHeadData('contact', formatMessage),
@@ -100,16 +86,12 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   }
 
   if (routerAsPath === '/terminos-legales') {
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:legal-terms-name'),
-        url: formatMessage('url:legal-terms'),
-      },
-    ])
+    breadcrumbItems.push({
+      name: formatMessage('schema-breadcrumb-list:legal-terms-name'),
+      url: formatMessage('url:legal-terms'),
+    })
+
+    const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: {
@@ -121,16 +103,11 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   }
 
   if (routerAsPath === '/cookies') {
-    const { breadcrumbListSchema } = useBreadcrumbListSchema([
-      {
-        name: formatMessage('schema-breadcrumb-list:home-name'),
-        url: formatMessage('url:root'),
-      },
-      {
-        name: formatMessage('schema-breadcrumb-list:cookies-name'),
-        url: formatMessage('url:cookies'),
-      },
-    ])
+    breadcrumbItems.push({
+      name: formatMessage('schema-breadcrumb-list:cookies-name'),
+      url: formatMessage('url:cookies'),
+    })
+    const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: {
