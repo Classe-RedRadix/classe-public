@@ -54,6 +54,8 @@ const LegalTerms = ({
       isFluor={isFluor}
       isLock={isLock}
       extraClass="legalView"
+      course={course}
+      isCourseOpen={isCourseOpen}
     >
       <Menu
         hasPageTitle={pageTitle}

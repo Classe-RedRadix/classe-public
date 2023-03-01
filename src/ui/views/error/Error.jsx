@@ -69,7 +69,13 @@ const Error = ({ isBlack, isFluor, isLock, courses, contactFormParams }) => {
   ))
 
   return (
-    <MainWrapper isBlack={isBlack} isFluor={isFluor} isLock={isLock}>
+    <MainWrapper
+      isBlack={isBlack}
+      isFluor={isFluor}
+      isLock={isLock}
+      course={course}
+      isCourseOpen={isCourseOpen}
+    >
       <Menu
         isBlack={isBlack}
         courses={courses}
