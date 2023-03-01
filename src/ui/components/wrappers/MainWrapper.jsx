@@ -10,9 +10,9 @@ const MainWrapper = ({
   isBlack,
   isFluor,
   isLock,
-  children,
   isCourseOpen,
   course,
+  children,
 }) => {
   const classes = cx('mainWrapper', `${extraClass ? extraClass : ''}`, {
     'is-black': isBlack,
@@ -35,9 +35,9 @@ MainWrapper.propTypes = {
   isBlack: PropTypes.bool.isRequired,
   isFluor: PropTypes.bool,
   isLock: PropTypes.bool,
-  children: PropTypes.node.isRequired,
   isCourseOpen: PropTypes.bool,
   course: CoursePropType,
+  children: PropTypes.node.isRequired,
 }
 
 export default MainWrapper
