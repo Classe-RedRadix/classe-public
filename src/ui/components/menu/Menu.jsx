@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
@@ -11,17 +10,9 @@ import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 
 import {
-  useSchema,
-  useBreadcrumbListSchema,
-  useCoursechema,
-  useEducationalEventchema,
-  useTranslations,
-} from 'hooks'
-import {
   CoursePropType,
   ContactFormParamsPropType,
 } from '../../sharedProptypes'
-import InfoHead from 'InfoHead'
 
 const Menu = ({
   isBlack,
@@ -41,176 +32,13 @@ const Menu = ({
   isCourseOpen = false,
   openCourse,
 }) => {
-  const router = useRouter()
-  const routerAsPath = router.asPath
-
   const size = useWindowSize()
-  const formatMessage = useTranslations()
 
   useEffect(() => {
     if (!isContactOpen) {
       contactFormParams.clearForm()
     }
   }, [isContactOpen])
-
-  const InfoHeadFilled = () => {
-    const infoHeadData = {}
-    let infoHeadSchemaContent = []
-
-    if (routerAsPath === '/') {
-      infoHeadData.title = formatMessage('info-head-home:title')
-      infoHeadData.description = formatMessage('info-head-home:description')
-      infoHeadData.url = formatMessage('url:root')
-
-      const { educationalOrganizationSchema, webSiteSchema } = useSchema()
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-      ])
-
-      infoHeadSchemaContent = [
-        educationalOrganizationSchema,
-        webSiteSchema,
-        breadcrumbListSchema,
-      ]
-    }
-
-    if (routerAsPath === '/cursos') {
-      infoHeadData.title = formatMessage('info-head-courses:title')
-      infoHeadData.description = formatMessage('info-head-courses:description')
-      infoHeadData.url = formatMessage('url:courses')
-
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:courses-name'),
-          url: formatMessage('url:legal-terms'),
-        },
-      ])
-
-      infoHeadSchemaContent = [breadcrumbListSchema]
-    }
-
-    if (isCourseOpen) {
-      infoHeadData.title = formatMessage('info-head-course:title', {
-        course: formatMessage(course.information.title),
-      })
-      infoHeadData.description = formatMessage(
-        course.information.metaDescription,
-      )
-      infoHeadData.url = `${formatMessage('url:root')}${course.href}`
-
-      const { courseSchema } = useCoursechema(course)
-      const { educationalEventSchema } = useEducationalEventchema(course)
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:courses-name'),
-          url: formatMessage('url:courses'),
-        },
-        {
-          name: formatMessage(course.information.title),
-          url: formatMessage('url:course', {
-            course: course.href,
-          }),
-        },
-      ])
-
-      infoHeadSchemaContent = [
-        courseSchema,
-        educationalEventSchema,
-        breadcrumbListSchema,
-      ]
-    }
-
-    if (routerAsPath.includes('/contacto')) {
-      infoHeadData.title = formatMessage('info-head-contact:title')
-      infoHeadData.description = formatMessage('info-head-contact:description')
-      infoHeadData.url = formatMessage('url:contact')
-
-      const { contactPageSchema } = useSchema()
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:courses-name'),
-          url: formatMessage('url:courses'),
-        },
-      ])
-
-      infoHeadSchemaContent = [contactPageSchema, breadcrumbListSchema]
-    }
-
-    if (routerAsPath === '/terminos-legales') {
-      infoHeadData.title = formatMessage('info-head-legal-terms:title')
-      infoHeadData.description = formatMessage(
-        'info-head-legal-terms:description',
-      )
-      infoHeadData.url = formatMessage('url:legal-terms')
-      infoHeadData.noIndex = true
-
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:legal-terms-name'),
-          url: formatMessage('url:legal-terms'),
-        },
-      ])
-
-      infoHeadSchemaContent = [breadcrumbListSchema]
-    }
-
-    if (routerAsPath === '/cookies') {
-      infoHeadData.title = formatMessage('info-head-cookies-policy:title')
-      infoHeadData.description = formatMessage(
-        'info-head-cookies-policy:description',
-      )
-      infoHeadData.url = formatMessage('url:cookies')
-      infoHeadData.noIndex = true
-
-      const { breadcrumbListSchema } = useBreadcrumbListSchema([
-        {
-          name: formatMessage('schema-breadcrumb-list:home-name'),
-          url: formatMessage('url:root'),
-        },
-        {
-          name: formatMessage('schema-breadcrumb-list:cookies-name'),
-          url: formatMessage('url:cookies'),
-        },
-      ])
-
-      infoHeadSchemaContent = [breadcrumbListSchema]
-    }
-
-    return (
-      <InfoHead
-        title={infoHeadData.title}
-        description={infoHeadData.description}
-        url={infoHeadData.url}
-        noindex={infoHeadData.noIndex}
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `[${infoHeadSchemaContent}]`,
-          }}
-        />
-      </InfoHead>
-    )
-  }
 
   return (
     <>
