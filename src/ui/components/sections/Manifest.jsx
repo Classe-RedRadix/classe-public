@@ -46,7 +46,6 @@ const Manifest = ({ isBlack, isFluor }) => {
                 height={classeManifestImage.height}
                 sizes={classeManifestImage.sizes}
                 srcSet={useGenerateImageCandidates(classeManifestImage.srcSet)}
-                loading="lazy"
                 className="image"
               />
             </picture>
