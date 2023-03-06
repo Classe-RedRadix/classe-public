@@ -63,7 +63,7 @@ const CourseContact = ({ openContact }) => {
               type="image/webp"
             />
             <img
-              src={contactImage.mainImage}
+              src={contactImage.mainImage.src}
               alt={t(contactImage.alt)}
               width={contactImage.width}
               height={contactImage.height}

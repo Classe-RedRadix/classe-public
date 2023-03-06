@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import useTranslations from '../../../hooks/useTranslations'
 import SectionWrapper from '../wrappers/SectionWrapper'
 import Row from '../row/Row'
@@ -62,7 +62,7 @@ const Companies = ({ logos, isBlack, isFluor, openContact }) => {
           {logos.map((logo, index) => (
             <div className="companies-logoWrapper" key={index}>
               <div className="companies-logoWrapper-container">
-                <img src={logo} alt="" loading="lazy" />
+                <img src={logo.src} alt="" loading="lazy" />
               </div>
             </div>
           ))}

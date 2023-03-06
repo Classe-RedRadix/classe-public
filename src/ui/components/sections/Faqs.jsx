@@ -43,7 +43,7 @@ const Faqs = ({ list, isBlack, isFluor }) => {
             />
 
             <img
-              src={faqsImage.mainImage}
+              src={faqsImage.mainImage.src}
               alt={t(faqsImage.alt)}
               width={faqsImage.width}
               height={faqsImage.height}

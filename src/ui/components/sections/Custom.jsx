@@ -43,7 +43,7 @@ const Custom = ({ isBlack, isFluor, openCourses }) => {
             />
 
             <img
-              src={tailorMadeCoursesImage.mainImage}
+              src={tailorMadeCoursesImage.mainImage.src}
               alt={t(tailorMadeCoursesImage.alt)}
               width={tailorMadeCoursesImage.width}
               height={tailorMadeCoursesImage.height}
