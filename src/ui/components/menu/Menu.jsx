@@ -22,6 +22,7 @@ import {
   ContactFormParamsPropType,
 } from '../../sharedProptypes'
 import InfoHead from 'InfoHead'
+import Script from 'next/script'
 
 const Menu = ({
   isBlack,
@@ -202,7 +203,7 @@ const Menu = ({
         url={infoHeadData.url}
         noindex={infoHeadData.noIndex}
       >
-        <script
+        <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `[${infoHeadSchemaContent}]`,
