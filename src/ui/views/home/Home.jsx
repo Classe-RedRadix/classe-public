@@ -70,7 +70,13 @@ const Home = ({
   }, [loaded])
 
   return (
-    <MainWrapper isBlack={isBlack} isFluor={isFluor} isLock={isLock}>
+    <MainWrapper
+      isBlack={isBlack}
+      isFluor={isFluor}
+      isLock={isLock}
+      course={course}
+      isCourseOpen={isCourseOpen}
+    >
       {visible && <Hero text="loader:text" loaded={loaded} />}
 
       <Menu
