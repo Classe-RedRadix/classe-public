@@ -52,6 +52,7 @@ const Home = () => {
     saveToFirebase: saveContactFormToFirebase,
     errors,
     clearForm,
+    saveToMailChimp,
   } = useContactForm(interestedIn)
 
   useViewportHeight()
@@ -190,7 +191,7 @@ const Home = () => {
     event.preventDefault()
 
     try {
-      saveContactFormToFirebase({ onSuccess: onContactFormSuccess })
+      saveToMailChimp()
     } catch (error) {}
   }
 

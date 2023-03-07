@@ -213,6 +213,19 @@ const useContactForm = interestedInCourseId => {
     )
   }, [interestedInCourseId])
 
+  const saveToMailChimp = async () => {
+    const res = await fetch('/api/newsletter-request', {
+      body: JSON.stringify({
+        email: email,
+        status: 'subscribed',
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'PUT',
+    })
+  }
+
   return {
     isLoading,
     isSaved,
@@ -231,6 +244,7 @@ const useContactForm = interestedInCourseId => {
     termsAndConditions,
     toggleTermsAndConditions,
     clearForm,
+    saveToMailChimp,
   }
 }
 
