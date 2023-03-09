@@ -2,7 +2,7 @@ const useGenerateImageCandidates = imagesMetadata =>
   imagesMetadata
     .map(imageMetaData => {
       const widthDescriptor = `${imageMetaData.width}w`
-      return `${imageMetaData.src} ${widthDescriptor}`
+      return `${imageMetaData.src.src} ${widthDescriptor}`
     })
     .join(', ')
 
