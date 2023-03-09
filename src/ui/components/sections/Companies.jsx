@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import gsap from 'gsap'
+import { gsap } from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import useTranslations from '../../../hooks/useTranslations'
 import SectionWrapper from '../wrappers/SectionWrapper'

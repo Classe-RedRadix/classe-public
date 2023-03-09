@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import gsap from 'gsap'
+import { gsap } from 'gsap/dist/gsap'
 import { ScrambleTextPlugin } from 'gsap/dist/ScrambleTextPlugin'
 import useTranslations from '../../../hooks/useTranslations'
 import Button from '../button/Button'
