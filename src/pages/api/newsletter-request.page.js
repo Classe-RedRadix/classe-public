@@ -14,20 +14,23 @@ export default async (req, res) => {
     const DATACENTER = API_KEY.split('-')[1]
 
     const subscriberHash = crypto.createHash('md5').update(email).digest('hex')
-
     const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members/${subscriberHash}`
 
-    const response = await fetch(url, {
+    const request = {
       body: JSON.stringify({
-        email: email,
-        status_if_new: 'subscribed',
+        email_address: email.toLowerCase(),
+        status_if_new: 'pending',
+        status: 'pending',
       }),
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `apikey ${API_KEY}`,
       },
-    })
+    }
+
+    const response = await fetch(url, request)
+
     if (response.status >= 400) {
       return res.status(response.status).json({
         error: JSON.stringify(response.statusText),
