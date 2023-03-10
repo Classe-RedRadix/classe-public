@@ -12,48 +12,50 @@ const formatDate = str => {
 const useEducationalEventchema = courseData => {
   const formatMessage = useTranslations()
 
-  const course = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationEvent',
-    url: `${formatMessage('url:root')}${courseData.href}`,
-    name: formatMessage(courseData.information.title),
-    description: formatMessage(courseData.information.metaDescription),
-    startDate: formatDate(courseData.information.start),
-    endDate: formatDate(courseData.information.finish),
-    image: formatMessage(courseData.information.schemaImage),
-    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-    eventStatus: 'https://schema.org/EventMovedOnline',
-    location: {
-      '@type': 'VirtualLocation',
-      url: formatMessage('url:root'),
-    },
-    organizer: {
-      '@type': 'Organization',
-      name: formatMessage('schema-educational-event:organitation-name'),
-      url: formatMessage('url:root'),
-    },
-    performer: {
-      '@type': 'Organization',
-      name: formatMessage('schema-educational-event:organitation-name'),
-      url: formatMessage('url:root'),
-    },
-    offers: {
-      '@type': 'Offer',
-      url: `${formatMessage('url:root')}${courseData.href}`,
-      price: courseData.information.price,
-      priceCurrency: formatMessage('schema-course:price-currency'),
-      availability: 'https://schema.org/OnlineOnly',
-      validFrom: `${formatDate(courseData.information.start)}`,
-    },
-    eventSchedule: {
-      '@type': 'Schedule',
-      startDate: formatDate(courseData.information.start),
-      endDate: formatDate(courseData.information.finish),
-      startTime: courseData.information.schemaStartTime,
-      endTime: courseData.information.schemaEndTime,
-      scheduleTimezone: 'Europe/London',
-    },
-  }
+  const course = courseData
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'EducationEvent',
+        url: `${formatMessage('url:root')}${courseData.href}`,
+        name: formatMessage(courseData.information.title),
+        description: formatMessage(courseData.information.metaDescription),
+        startDate: formatDate(courseData.information.start),
+        endDate: formatDate(courseData.information.finish),
+        image: formatMessage(courseData.information.schemaImage),
+        eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+        eventStatus: 'https://schema.org/EventMovedOnline',
+        location: {
+          '@type': 'VirtualLocation',
+          url: formatMessage('url:root'),
+        },
+        organizer: {
+          '@type': 'Organization',
+          name: formatMessage('schema-educational-event:organitation-name'),
+          url: formatMessage('url:root'),
+        },
+        performer: {
+          '@type': 'Organization',
+          name: formatMessage('schema-educational-event:organitation-name'),
+          url: formatMessage('url:root'),
+        },
+        offers: {
+          '@type': 'Offer',
+          url: `${formatMessage('url:root')}${courseData.href}`,
+          price: courseData.information.price,
+          priceCurrency: formatMessage('schema-course:price-currency'),
+          availability: 'https://schema.org/OnlineOnly',
+          validFrom: `${formatDate(courseData.information.start)}`,
+        },
+        eventSchedule: {
+          '@type': 'Schedule',
+          startDate: formatDate(courseData.information.start),
+          endDate: formatDate(courseData.information.finish),
+          startTime: courseData.information.schemaStartTime,
+          endTime: courseData.information.schemaEndTime,
+          scheduleTimezone: 'Europe/London',
+        },
+      }
+    : null
 
   return {
     educationalEventSchema: JSON.stringify(course),
