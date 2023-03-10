@@ -35,7 +35,7 @@ const Calendar = ({ dates, isBlack, isFluor, openContact }) => {
             />
 
             <img
-              src={agendaSlotImage.mainImage}
+              src={agendaSlotImage.mainImage.src}
               alt={formatMessage(agendaSlotImage.alt)}
               width={agendaSlotImage.width}
               height={agendaSlotImage.height}

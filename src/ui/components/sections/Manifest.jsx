@@ -42,7 +42,7 @@ const Manifest = ({ isBlack, isFluor }) => {
               />
 
               <Image
-                src={classeManifestImage.mainImage}
+                src={classeManifestImage.mainImage.src}
                 alt={t(classeManifestImage.alt)}
                 width={classeManifestImage.width}
                 height={classeManifestImage.height}

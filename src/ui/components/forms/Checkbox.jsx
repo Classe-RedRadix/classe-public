@@ -6,8 +6,9 @@ const Checkbox = ({
   isChecked,
   handleChange,
   label,
-  name,
   anchorText,
+  anchorLabel,
+  name,
 }) => {
   const textClasses = cx('checkbox-label', {
     tiny: hasMessage,
@@ -29,9 +30,18 @@ const Checkbox = ({
         [<span className="checkbox-iconCheck">X</span>]
       </span>
       {anchorText ? (
-        <a href={anchorText} target="_blank" className={textClasses}>
-          {label}
-        </a>
+        anchorLabel ? (
+          <>
+            <span className={textClasses}>{label}</span>&nbsp;
+            <a href={anchorText} target="_blank" className={textClasses}>
+              {anchorLabel}
+            </a>
+          </>
+        ) : (
+          <a href={anchorText} target="_blank" className={textClasses}>
+            {label}
+          </a>
+        )
       ) : (
         <span className={textClasses}>{label}</span>
       )}

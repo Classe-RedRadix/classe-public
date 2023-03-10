@@ -22,65 +22,65 @@ const CONTACT_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: contactImage2048,
+      src: contactImage2048.src,
       width: 2048,
     },
     {
-      src: contactImage1920,
+      src: contactImage1920.src,
       width: 1920,
     },
     {
-      src: contactImage1200,
+      src: contactImage1200.src,
       width: 1200,
     },
     {
-      src: contactImage1080,
+      src: contactImage1080.src,
       width: 1080,
     },
     {
-      src: contactImage828,
+      src: contactImage828.src,
       width: 828,
     },
     {
-      src: contactImage750,
+      src: contactImage750.src,
       width: 750,
     },
     {
-      src: contactImage640,
+      src: contactImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: contactMainImageWebp,
+      src: contactMainImageWebp.src,
       width: 3480,
     },
     {
-      src: contactImageWebp2048,
+      src: contactImageWebp2048.src,
       width: 2048,
     },
     {
-      src: contactImageWebp1920,
+      src: contactImageWebp1920.src,
       width: 1920,
     },
     {
-      src: contactImageWebp1200,
+      src: contactImageWebp1200.src,
       width: 1200,
     },
     {
-      src: contactImageWebp1080,
+      src: contactImageWebp1080.src,
       width: 1080,
     },
     {
-      src: contactImageWebp828,
+      src: contactImageWebp828.src,
       width: 828,
     },
     {
-      src: contactImageWebp750,
+      src: contactImageWebp750.src,
       width: 750,
     },
     {
-      src: contactImageWebp640,
+      src: contactImageWebp640.src,
       width: 640,
     },
   ],
@@ -110,65 +110,65 @@ const COURSES_IMAGE = {
   sizes: '(max-width: 3456px) 100vw, 3456px',
   srcSet: [
     {
-      src: coursesImage2048,
+      src: coursesImage2048.src,
       width: 2048,
     },
     {
-      src: coursesImage1920,
+      src: coursesImage1920.src,
       width: 1920,
     },
     {
-      src: coursesImage1200,
+      src: coursesImage1200.src,
       width: 1200,
     },
     {
-      src: coursesImage1080,
+      src: coursesImage1080.src,
       width: 1080,
     },
     {
-      src: coursesImage828,
+      src: coursesImage828.src,
       width: 828,
     },
     {
-      src: coursesImage750,
+      src: coursesImage750.src,
       width: 750,
     },
     {
-      src: coursesImage640,
+      src: coursesImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: coursesMainImageWebp,
+      src: coursesMainImageWebp.src,
       width: 3456,
     },
     {
-      src: coursesImageWebp2048,
+      src: coursesImageWebp2048.src,
       width: 2048,
     },
     {
-      src: coursesImageWebp1920,
+      src: coursesImageWebp1920.src,
       width: 1920,
     },
     {
-      src: coursesImageWebp1200,
+      src: coursesImageWebp1200.src,
       width: 1200,
     },
     {
-      src: coursesImageWebp1080,
+      src: coursesImageWebp1080.src,
       width: 1080,
     },
     {
-      src: coursesImageWebp828,
+      src: coursesImageWebp828.src,
       width: 828,
     },
     {
-      src: coursesImageWebp750,
+      src: coursesImageWebp750.src,
       width: 750,
     },
     {
-      src: coursesImageWebp640,
+      src: coursesImageWebp640.src,
       width: 640,
     },
   ],
@@ -198,65 +198,65 @@ const TAILOR_MADE_COURSES_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: tailorMadeCoursesImage2048,
+      src: tailorMadeCoursesImage2048.src,
       width: 2048,
     },
     {
-      src: tailorMadeCoursesImage1920,
+      src: tailorMadeCoursesImage1920.src,
       width: 1920,
     },
     {
-      src: tailorMadeCoursesImage1200,
+      src: tailorMadeCoursesImage1200.src,
       width: 1200,
     },
     {
-      src: tailorMadeCoursesImage1080,
+      src: tailorMadeCoursesImage1080.src,
       width: 1080,
     },
     {
-      src: tailorMadeCoursesImage828,
+      src: tailorMadeCoursesImage828.src,
       width: 828,
     },
     {
-      src: tailorMadeCoursesImage750,
+      src: tailorMadeCoursesImage750.src,
       width: 750,
     },
     {
-      src: tailorMadeCoursesImage640,
+      src: tailorMadeCoursesImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: tailorMadeCoursesMainImageWebp,
+      src: tailorMadeCoursesMainImageWebp.src,
       width: 3480,
     },
     {
-      src: tailorMadeCoursesImageWebp2048,
+      src: tailorMadeCoursesImageWebp2048.src,
       width: 2048,
     },
     {
-      src: tailorMadeCoursesImageWebp1920,
+      src: tailorMadeCoursesImageWebp1920.src,
       width: 1920,
     },
     {
-      src: tailorMadeCoursesImageWebp1200,
+      src: tailorMadeCoursesImageWebp1200.src,
       width: 1200,
     },
     {
-      src: tailorMadeCoursesImageWebp1080,
+      src: tailorMadeCoursesImageWebp1080.src,
       width: 1080,
     },
     {
-      src: tailorMadeCoursesImageWebp828,
+      src: tailorMadeCoursesImageWebp828.src,
       width: 828,
     },
     {
-      src: tailorMadeCoursesImageWebp750,
+      src: tailorMadeCoursesImageWebp750.src,
       width: 750,
     },
     {
-      src: tailorMadeCoursesImageWebp640,
+      src: tailorMadeCoursesImageWebp640.src,
       width: 640,
     },
   ],
@@ -286,65 +286,65 @@ const AGENDA_SLOT_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: agendaSlotImage2048,
+      src: agendaSlotImage2048.src,
       width: 2048,
     },
     {
-      src: agendaSlotImage1920,
+      src: agendaSlotImage1920.src,
       width: 1920,
     },
     {
-      src: agendaSlotImage1200,
+      src: agendaSlotImage1200.src,
       width: 1200,
     },
     {
-      src: agendaSlotImage1080,
+      src: agendaSlotImage1080.src,
       width: 1080,
     },
     {
-      src: agendaSlotImage828,
+      src: agendaSlotImage828.src,
       width: 828,
     },
     {
-      src: agendaSlotImage750,
+      src: agendaSlotImage750.src,
       width: 750,
     },
     {
-      src: agendaSlotImage640,
+      src: agendaSlotImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: agendaSlotMainImageWebp,
+      src: agendaSlotMainImageWebp.src,
       width: 3480,
     },
     {
-      src: agendaSlotImageWebp2048,
+      src: agendaSlotImageWebp2048.src,
       width: 2048,
     },
     {
-      src: agendaSlotImageWebp1920,
+      src: agendaSlotImageWebp1920.src,
       width: 1920,
     },
     {
-      src: agendaSlotImageWebp1200,
+      src: agendaSlotImageWebp1200.src,
       width: 1200,
     },
     {
-      src: agendaSlotImageWebp1080,
+      src: agendaSlotImageWebp1080.src,
       width: 1080,
     },
     {
-      src: agendaSlotImageWebp828,
+      src: agendaSlotImageWebp828.src,
       width: 828,
     },
     {
-      src: agendaSlotImageWebp750,
+      src: agendaSlotImageWebp750.src,
       width: 750,
     },
     {
-      src: agendaSlotImageWebp640,
+      src: agendaSlotImageWebp640.src,
       width: 640,
     },
   ],
@@ -374,65 +374,65 @@ const PROFESSIONAL_TRAINING_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: professionalTrainingImage2048,
+      src: professionalTrainingImage2048.src,
       width: 2048,
     },
     {
-      src: professionalTrainingImage1920,
+      src: professionalTrainingImage1920.src,
       width: 1920,
     },
     {
-      src: professionalTrainingImage1200,
+      src: professionalTrainingImage1200.src,
       width: 1200,
     },
     {
-      src: professionalTrainingImage1080,
+      src: professionalTrainingImage1080.src,
       width: 1080,
     },
     {
-      src: professionalTrainingImage828,
+      src: professionalTrainingImage828.src,
       width: 828,
     },
     {
-      src: professionalTrainingImage750,
+      src: professionalTrainingImage750.src,
       width: 750,
     },
     {
-      src: professionalTrainingImage640,
+      src: professionalTrainingImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: professionalTrainingMainImageWebp,
+      src: professionalTrainingMainImageWebp.src,
       width: 3480,
     },
     {
-      src: professionalTrainingImageWebp2048,
+      src: professionalTrainingImageWebp2048.src,
       width: 2048,
     },
     {
-      src: professionalTrainingImageWebp1920,
+      src: professionalTrainingImageWebp1920.src,
       width: 1920,
     },
     {
-      src: professionalTrainingImageWebp1200,
+      src: professionalTrainingImageWebp1200.src,
       width: 1200,
     },
     {
-      src: professionalTrainingImageWebp1080,
+      src: professionalTrainingImageWebp1080.src,
       width: 1080,
     },
     {
-      src: professionalTrainingImageWebp828,
+      src: professionalTrainingImageWebp828.src,
       width: 828,
     },
     {
-      src: professionalTrainingImageWebp750,
+      src: professionalTrainingImageWebp750.src,
       width: 750,
     },
     {
-      src: professionalTrainingImageWebp640,
+      src: professionalTrainingImageWebp640.src,
       width: 640,
     },
   ],
@@ -462,31 +462,31 @@ const REMOTE_ON_SITE_TRAINING_IMAGE = {
   sizes: '(max-width: 3264px) 100vw, 3264px',
   srcSet: [
     {
-      src: faqsImage2048,
+      src: faqsImage2048.src,
       width: 2048,
     },
     {
-      src: faqsImage1920,
+      src: faqsImage1920.src,
       width: 1920,
     },
     {
-      src: faqsImage1200,
+      src: faqsImage1200.src,
       width: 1200,
     },
     {
-      src: faqsImage1080,
+      src: faqsImage1080.src,
       width: 1080,
     },
     {
-      src: faqsImage828,
+      src: faqsImage828.src,
       width: 828,
     },
     {
-      src: faqsImage750,
+      src: faqsImage750.src,
       width: 750,
     },
     {
-      src: faqsImage640,
+      src: faqsImage640.src,
       width: 640,
     },
   ],
@@ -496,31 +496,31 @@ const REMOTE_ON_SITE_TRAINING_IMAGE = {
       width: 3264,
     },
     {
-      src: faqsImageWebp2048,
+      src: faqsImageWebp2048.src,
       width: 2048,
     },
     {
-      src: faqsImageWebp1920,
+      src: faqsImageWebp1920.src,
       width: 1920,
     },
     {
-      src: faqsImageWebp1200,
+      src: faqsImageWebp1200.src,
       width: 1200,
     },
     {
-      src: faqsImageWebp1080,
+      src: faqsImageWebp1080.src,
       width: 1080,
     },
     {
-      src: faqsImageWebp828,
+      src: faqsImageWebp828.src,
       width: 828,
     },
     {
-      src: faqsImageWebp750,
+      src: faqsImageWebp750.src,
       width: 750,
     },
     {
-      src: faqsImageWebp640,
+      src: faqsImageWebp640.src,
       width: 640,
     },
   ],
@@ -550,31 +550,31 @@ const CLASSE_MANIFEST_IMAGE = {
   sizes: '(max-width: 3456px) 100vw, 3456px',
   srcSet: [
     {
-      src: classeManifestImage2048,
+      src: classeManifestImage2048.src,
       width: 2048,
     },
     {
-      src: classeManifestImage1920,
+      src: classeManifestImage1920.src,
       width: 1920,
     },
     {
-      src: classeManifestImage1200,
+      src: classeManifestImage1200.src,
       width: 1200,
     },
     {
-      src: classeManifestImage1080,
+      src: classeManifestImage1080.src,
       width: 1080,
     },
     {
-      src: classeManifestImage828,
+      src: classeManifestImage828.src,
       width: 828,
     },
     {
-      src: classeManifestImage750,
+      src: classeManifestImage750.src,
       width: 750,
     },
     {
-      src: classeManifestImage640,
+      src: classeManifestImage640.src,
       width: 640,
     },
   ],
@@ -584,31 +584,31 @@ const CLASSE_MANIFEST_IMAGE = {
       width: 3456,
     },
     {
-      src: classeManifestImageWebp2048,
+      src: classeManifestImageWebp2048.src,
       width: 2048,
     },
     {
-      src: classeManifestImageWebp1920,
+      src: classeManifestImageWebp1920.src,
       width: 1920,
     },
     {
-      src: classeManifestImageWebp1200,
+      src: classeManifestImageWebp1200.src,
       width: 1200,
     },
     {
-      src: classeManifestImageWebp1080,
+      src: classeManifestImageWebp1080.src,
       width: 1080,
     },
     {
-      src: classeManifestImageWebp828,
+      src: classeManifestImageWebp828.src,
       width: 828,
     },
     {
-      src: classeManifestImageWebp750,
+      src: classeManifestImageWebp750.src,
       width: 750,
     },
     {
-      src: classeManifestImageWebp640,
+      src: classeManifestImageWebp640.src,
       width: 640,
     },
   ],
@@ -638,31 +638,31 @@ const JAVASCRIPT_COURSE_IMAGE = {
   sizes: '(max-width: 3456px) 100vw, 3456px',
   srcSet: [
     {
-      src: javascriptCourseImage2048,
+      src: javascriptCourseImage2048.src,
       width: 2048,
     },
     {
-      src: javascriptCourseImage1920,
+      src: javascriptCourseImage1920.src,
       width: 1920,
     },
     {
-      src: javascriptCourseImage1200,
+      src: javascriptCourseImage1200.src,
       width: 1200,
     },
     {
-      src: javascriptCourseImage1080,
+      src: javascriptCourseImage1080.src,
       width: 1080,
     },
     {
-      src: javascriptCourseImage828,
+      src: javascriptCourseImage828.src,
       width: 828,
     },
     {
-      src: javascriptCourseImage750,
+      src: javascriptCourseImage750.src,
       width: 750,
     },
     {
-      src: javascriptCourseImage640,
+      src: javascriptCourseImage640.src,
       width: 640,
     },
   ],
@@ -672,31 +672,31 @@ const JAVASCRIPT_COURSE_IMAGE = {
       width: 3456,
     },
     {
-      src: javascriptCourseImageWebp2048,
+      src: javascriptCourseImageWebp2048.src,
       width: 2048,
     },
     {
-      src: javascriptCourseImageWebp1920,
+      src: javascriptCourseImageWebp1920.src,
       width: 1920,
     },
     {
-      src: javascriptCourseImageWebp1200,
+      src: javascriptCourseImageWebp1200.src,
       width: 1200,
     },
     {
-      src: javascriptCourseImageWebp1080,
+      src: javascriptCourseImageWebp1080.src,
       width: 1080,
     },
     {
-      src: javascriptCourseImageWebp828,
+      src: javascriptCourseImageWebp828.src,
       width: 828,
     },
     {
-      src: javascriptCourseImageWebp750,
+      src: javascriptCourseImageWebp750.src,
       width: 750,
     },
     {
-      src: javascriptCourseImageWebp640,
+      src: javascriptCourseImageWebp640.src,
       width: 640,
     },
   ],
@@ -726,31 +726,31 @@ const UI_DEVELOPMENT_COURSE_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: uiDevelopmentCourseImage2048,
+      src: uiDevelopmentCourseImage2048.src,
       width: 2048,
     },
     {
-      src: uiDevelopmentCourseImage1920,
+      src: uiDevelopmentCourseImage1920.src,
       width: 1920,
     },
     {
-      src: uiDevelopmentCourseImage1200,
+      src: uiDevelopmentCourseImage1200.src,
       width: 1200,
     },
     {
-      src: uiDevelopmentCourseImage1080,
+      src: uiDevelopmentCourseImage1080.src,
       width: 1080,
     },
     {
-      src: uiDevelopmentCourseImage828,
+      src: uiDevelopmentCourseImage828.src,
       width: 828,
     },
     {
-      src: uiDevelopmentCourseImage750,
+      src: uiDevelopmentCourseImage750.src,
       width: 750,
     },
     {
-      src: uiDevelopmentCourseImage640,
+      src: uiDevelopmentCourseImage640.src,
       width: 640,
     },
   ],
@@ -760,31 +760,31 @@ const UI_DEVELOPMENT_COURSE_IMAGE = {
       width: 3480,
     },
     {
-      src: uiDevelopmentCourseImageWebp2048,
+      src: uiDevelopmentCourseImageWebp2048.src,
       width: 2048,
     },
     {
-      src: uiDevelopmentCourseImageWebp1920,
+      src: uiDevelopmentCourseImageWebp1920.src,
       width: 1920,
     },
     {
-      src: uiDevelopmentCourseImageWebp1200,
+      src: uiDevelopmentCourseImageWebp1200.src,
       width: 1200,
     },
     {
-      src: uiDevelopmentCourseImageWebp1080,
+      src: uiDevelopmentCourseImageWebp1080.src,
       width: 1080,
     },
     {
-      src: uiDevelopmentCourseImageWebp828,
+      src: uiDevelopmentCourseImageWebp828.src,
       width: 828,
     },
     {
-      src: uiDevelopmentCourseImageWebp750,
+      src: uiDevelopmentCourseImageWebp750.src,
       width: 750,
     },
     {
-      src: uiDevelopmentCourseImageWebp640,
+      src: uiDevelopmentCourseImageWebp640.src,
       width: 640,
     },
   ],
@@ -814,65 +814,65 @@ const FRONT_COURSE_IMAGE = {
   sizes: '(max-width: 3480px) 100vw, 3480px',
   srcSet: [
     {
-      src: frontCourseImage2048,
+      src: frontCourseImage2048.src,
       width: 2048,
     },
     {
-      src: frontCourseImage1920,
+      src: frontCourseImage1920.src,
       width: 1920,
     },
     {
-      src: frontCourseImage1200,
+      src: frontCourseImage1200.src,
       width: 1200,
     },
     {
-      src: frontCourseImage1080,
+      src: frontCourseImage1080.src,
       width: 1080,
     },
     {
-      src: frontCourseImage828,
+      src: frontCourseImage828.src,
       width: 828,
     },
     {
-      src: frontCourseImage750,
+      src: frontCourseImage750.src,
       width: 750,
     },
     {
-      src: frontCourseImage640,
+      src: frontCourseImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: frontCourseMainImageWebp,
+      src: frontCourseMainImageWebp.src,
       width: 2048,
     },
     {
-      src: frontCourseImageWebp2048,
+      src: frontCourseImageWebp2048.src,
       width: 2048,
     },
     {
-      src: frontCourseImageWebp1920,
+      src: frontCourseImageWebp1920.src,
       width: 1920,
     },
     {
-      src: frontCourseImageWebp1200,
+      src: frontCourseImageWebp1200.src,
       width: 1200,
     },
     {
-      src: frontCourseImageWebp1080,
+      src: frontCourseImageWebp1080.src,
       width: 1080,
     },
     {
-      src: frontCourseImageWebp828,
+      src: frontCourseImageWebp828.src,
       width: 828,
     },
     {
-      src: frontCourseImageWebp750,
+      src: frontCourseImageWebp750.src,
       width: 750,
     },
     {
-      src: frontCourseImageWebp640,
+      src: frontCourseImageWebp640.src,
       width: 640,
     },
   ],
@@ -896,41 +896,41 @@ const BACK_COURSE_IMAGE = {
   sizes: '(max-width: 1200px) 100vw, 1200px',
   srcSet: [
     {
-      src: backCourseImage1080,
+      src: backCourseImage1080.src,
       width: 1080,
     },
     {
-      src: backCourseImage828,
+      src: backCourseImage828.src,
       width: 828,
     },
     {
-      src: backCourseImage750,
+      src: backCourseImage750.src,
       width: 750,
     },
     {
-      src: backCourseImage640,
+      src: backCourseImage640.src,
       width: 640,
     },
   ],
   srcSetWebp: [
     {
-      src: backCourseMainImageWebp,
+      src: backCourseMainImageWebp.src,
       width: 1200,
     },
     {
-      src: backCourseImageWebp1080,
+      src: backCourseImageWebp1080.src,
       width: 1080,
     },
     {
-      src: backCourseImageWebp828,
+      src: backCourseImageWebp828.src,
       width: 828,
     },
     {
-      src: backCourseImageWebp750,
+      src: backCourseImageWebp750.src,
       width: 750,
     },
     {
-      src: backCourseImageWebp640,
+      src: backCourseImageWebp640.src,
       width: 640,
     },
   ],

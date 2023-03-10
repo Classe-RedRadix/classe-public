@@ -48,25 +48,7 @@ const Footer = ({
         </Cell>
         <Cell isNegative={isBlack}>
           <form className="footer-form" onSubmit={onContactFormSubmit}>
-            <div className="footer-formBlock">
-              <span className="notes">{formatMessage('footer:iam')}</span>
-              <Radio
-                onChange={contactFormParams.onUserTypeChange}
-                label="footer:company"
-                name="user-type"
-                id="user-type-company"
-                value="company"
-                isChecked={contactFormParams.userType === 'company'}
-              />
-              <Radio
-                onChange={contactFormParams.onUserTypeChange}
-                label="footer:student"
-                id="user-type-student"
-                name="user-type"
-                value="student"
-                isChecked={contactFormParams.userType === 'student'}
-              />
-            </div>
+            <p>{formatMessage('footer:newsletter-message-copy')}</p>
             <div className="footer-formBlock">
               <Input
                 handleChange={contactFormParams.onEmailChange}
@@ -82,9 +64,12 @@ const Footer = ({
             <div className="footer-formBlock">
               <Checkbox
                 hasMessage
+                label={formatMessage('footer:accept-conditions')}
                 anchorText={`${formatMessage('general:conditions-anchgor')}`}
+                anchorLabel={`${formatMessage(
+                  'footer:newsletter-terms-conditions',
+                )}`}
                 handleChange={contactFormParams.toggleTermsAndConditions}
-                label={formatMessage('general:conditions-check')}
                 name="conditions"
                 isChecked={contactFormParams.termsAndConditions}
               />
