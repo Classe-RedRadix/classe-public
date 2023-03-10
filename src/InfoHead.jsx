@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import PropTypes from 'prop-types'
 import { useTranslations } from './hooks'
 
@@ -65,7 +66,7 @@ const InfoHead = ({ title, description, url, children, noindex }) => {
 
       {children}
 
-      <script
+      <Script
         defer
         dangerouslySetInnerHTML={{
           __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");

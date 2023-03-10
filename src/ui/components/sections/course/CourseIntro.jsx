@@ -84,7 +84,7 @@ const Course = React.forwardRef(
                   type="image/webp"
                 />
                 <img
-                  src={image.mainImage}
+                  src={image.mainImage.src}
                   alt={formatMessage(image.alt)}
                   width={image.width}
                   height={image.height}

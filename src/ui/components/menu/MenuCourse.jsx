@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect, useRef, useMemo } from 'react'
 
 import CourseIntro from '../../components/sections/course/CourseIntro'
@@ -93,15 +94,14 @@ const MenuCourse = ({ course, openContact }) => {
         />
         <CourseTitle title={formatMessage('course:index-title')} />
         {indexItems.map((indexItem, index) => (
-          <>
+          <React.Fragment key={index}>
             <CourseSection
-              key={index}
               number={indexItem.number}
               text={indexItem.description}
               title={indexItem.name}
             />
             <CourseSectionEmpty key={`0${index + 1}`} />
-          </>
+          </React.Fragment>
         ))}
         <CoursePdf
           title={formatMessage('course:pdf-title')}
