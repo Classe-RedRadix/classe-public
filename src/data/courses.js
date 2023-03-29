@@ -79,10 +79,10 @@ const DESARROLLO = {
 }
 
 const UI_DEV = {
-  id: 'maqueta',
+  id: 'maquetacion',
   isFeatured: false,
   isPublic: false,
-  href: '/cursos/maqueta',
+  href: '/cursos/maquetacion',
   information: {
     title: 'course:ui-dev-title',
     titleModal: 'course:ui-dev-title-modal',
