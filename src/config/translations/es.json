@@ -286,9 +286,9 @@
   "footer:cookies": "Cookies",
   "footer:cookies-route": "/cookies/",
   "footer:brand": "POWERED BY REDRADIX * CLASSE ACADEMY(c) ",
-  "footer:accept-conditions":"Acepto los ",
-  "footer:newsletter-terms-conditions":"términos y condiciones",
-  "footer:newsletter-message-copy":"Entérate de los nuevos cursos que están por llegar.",
+  "footer:accept-conditions": "Acepto los ",
+  "footer:newsletter-terms-conditions": "términos y condiciones",
+  "footer:newsletter-message-copy": "Entérate de los nuevos cursos que están por llegar.",
 
   "error:page-not": "Page not",
   "error:found": "found",

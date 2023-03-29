@@ -73,7 +73,15 @@ const Companies = ({ logos, isBlack, isFluor, openContact }) => {
 }
 
 Companies.propTypes = {
-  logos: PropTypes.arrayOf(PropTypes.node).isRequired,
+  logos: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string,
+      height: PropTypes.number,
+      width: PropTypes.number,
+      blurWidth: PropTypes.number,
+      blurHeight: PropTypes.number,
+    }),
+  ).isRequired,
   isBlack: PropTypes.bool.isRequired,
   isFluor: PropTypes.bool.isRequired,
   openContact: PropTypes.func,
