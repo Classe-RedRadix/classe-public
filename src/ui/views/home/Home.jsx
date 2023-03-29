@@ -172,7 +172,15 @@ Home.propTypes = {
   isFluor: PropTypes.bool,
   isLock: PropTypes.bool,
   courses: PropTypes.arrayOf(CoursePropType),
-  logos: PropTypes.arrayOf(PropTypes.node),
+  logos: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string,
+      height: PropTypes.number,
+      width: PropTypes.number,
+      blurWidth: PropTypes.number,
+      blurHeight: PropTypes.number,
+    }),
+  ),
   faqsList: FaqsListPropType,
   dates: Calendar.propTypes.dates,
   onContactFormSubmit: PropTypes.func,

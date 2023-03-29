@@ -105,13 +105,13 @@ const getInfoHeadData = (routerAsPath, formatMessage, isCourseOpen, course) => {
   if (routerAsPath === '/cookies') {
     breadcrumbItems.push({
       name: formatMessage('schema-breadcrumb-list:cookies-name'),
-      url: formatMessage('url:cookies'),
+      url: formatMessage('url:cookies-policy'),
     })
     const { breadcrumbListSchema } = useBreadcrumbListSchema(breadcrumbItems)
 
     return {
       infoHeadData: {
-        ...formatInfoHeadData('cookies', formatMessage),
+        ...formatInfoHeadData('cookies-policy', formatMessage),
         noIndex: true,
       },
       infoHeadSchemaContent: [breadcrumbListSchema],

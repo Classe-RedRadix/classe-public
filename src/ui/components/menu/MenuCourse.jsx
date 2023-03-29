@@ -78,7 +78,7 @@ const MenuCourse = ({ course, openContact }) => {
   return (
     <>
       <p className="courseTitle-header" ref={courseTitleHeader}>
-        {formatMessage(information.title)}
+        {formatMessage(information.titleLongDesc)}
       </p>
       <div className="courseSections" ref={container}>
         <CourseIntro
