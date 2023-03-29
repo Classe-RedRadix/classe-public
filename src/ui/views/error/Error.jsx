@@ -62,8 +62,8 @@ const Error = ({ isBlack, isFluor, isLock, courses, contactFormParams }) => {
   }
 
   const arrowsArray = new Array(30).fill(null)
-  const arrows = arrowsArray.map(() => (
-    <div className="error-arrow">
+  const arrows = arrowsArray.map((element, index) => (
+    <div key={index} className="error-arrow">
       <ArrowError />
     </div>
   ))

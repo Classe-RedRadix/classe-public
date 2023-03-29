@@ -68,21 +68,6 @@ const Home = () => {
   }))
 
   const logos = [
-    // Santander,
-    // Movistar,
-    // Solera,
-    // HugoBoss,
-    // Gmv,
-    // Idealista,
-    // LifullConnect,
-    // Iqvia,
-    // Alantra,
-    // Vivanta,
-    // Anaya,
-    // Indra,
-    // Masmovil,
-    // Abertis,
-    // Esa,
     BME,
     UnidadEditorial,
     ING,
