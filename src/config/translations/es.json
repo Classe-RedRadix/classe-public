@@ -208,7 +208,7 @@
   "custom:button": "Ver cursos",
 
   "featured:header": "Curso destacado",
-  "featured:title": "<lineTabAriaHidden>Progra-</lineTabAriaHidden><lineTabAriaHidden>mación</lineTabAriaHidden><screenReadOnly>Programación</screenReadOnly> <line>con</line> <line>JavaScript</line>",
+  "featured:title": "<lineTabAriaHidden>Desarrollo</lineTabAriaHidden><screenReadOnly>Desarrollo</screenReadOnly> <line>con</line> <line>JavaScript</line>",
   "featured:button": "¿Quieres saber más? Echa un ojo al curso",
 
   "facts:header": "Facts",
