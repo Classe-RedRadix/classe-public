@@ -20,12 +20,8 @@ const CourseObjectives = ({ learn, text, objectives, objectivesText }) => {
           <div className="scrambleTextWrapper">
             <h3 className="h3 scrambleText">
               {formatMessage(learn, {
-                line: text => <span className="line">{text}</span>,
-                lineAriaHidden: text => (
-                  <span className="line" aria-hidden="true">
-                    {text}
-                  </span>
-                ),
+                line: text => <span>{text}</span>,
+                lineAriaHidden: text => <span aria-hidden="true">{text}</span>,
                 screenReadOnly: text => <span className="sr-only">{text}</span>,
               })}
             </h3>
@@ -40,12 +36,8 @@ const CourseObjectives = ({ learn, text, objectives, objectivesText }) => {
           <div className="scrambleTextWrapper">
             <h3 className="h3 scrambleText">
               {formatMessage(objectives, {
-                line: text => <span className="line">{text}</span>,
-                lineAriaHidden: text => (
-                  <span className="line" aria-hidden="true">
-                    {text}
-                  </span>
-                ),
+                line: text => <span>{text}</span>,
+                lineAriaHidden: text => <span aria-hidden="true">{text}</span>,
                 screenReadOnly: text => <span className="sr-only">{text}</span>,
               })}
             </h3>
