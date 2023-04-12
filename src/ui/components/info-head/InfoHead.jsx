@@ -200,7 +200,7 @@ const InfoHead = ({ isCourseOpen, course }) => {
         content={formatMessage('url:og-1200x1200')}
       />
 
-      <link rel="manifest" href="manifest.json" />
+      <link rel="manifest" href={formatMessage('url:manifest')} />
 
       <meta name="theme-color" content="#000000" />
 

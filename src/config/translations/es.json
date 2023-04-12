@@ -11,6 +11,7 @@
   "url:og-400x400": "https://www.classe.dev/images/og/og-400x400.png",
   "url:og-256x256": "https://www.classe.dev/images/og/og-256x256.png",
   "url:favicon-144": "https://www.classe.dev/favicon-144.png",
+  "url:manifest": "https://www.classe.dev/manifest.json",
 
   "info-head-home:title": "Classe | Formación para desarrolladores por desarrolladores",
   "info-head-home:description": "Cursos de programación online pensados para profesionales -tanto de forma particular como para empresas- e impartidos por el equipo de Redradix.",
