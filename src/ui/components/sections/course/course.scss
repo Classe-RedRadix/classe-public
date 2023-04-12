@@ -198,6 +198,9 @@
   }
 
   &-glypBottom {
+    width: 100%;
+    max-width: 5rem;
+
     @include mq(md) {
       position: absolute;
       bottom: 1.5rem;
