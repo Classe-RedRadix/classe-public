@@ -180,7 +180,7 @@ const InfoHead = ({ isCourseOpen, course }) => {
 
       <link rel="canonical" href={url} />
 
-      <link rel="icon" href="favicon.svg" />
+      <link rel="icon" href={formatMessage('url:favicon-svg')} />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
