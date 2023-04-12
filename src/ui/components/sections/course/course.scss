@@ -112,7 +112,7 @@
 
   &-nameText {
     font-weight: inherit;
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     @include mq(md) {
       font-size: 6rem;
     }
@@ -164,6 +164,14 @@
       //and give a margin-top to the number.
       @include mq(md) {
         justify-content: space-between;
+      }
+    }
+
+    h3:empty {
+      display: none;
+
+      @include mq(md) {
+        display: block;
       }
     }
   }
@@ -283,6 +291,14 @@
         .line {
           display: inline-flex;
         }
+      }
+    }
+
+    .courseSection-number {
+      height: auto;
+
+      @include mq(md) {
+        height: 60%;
       }
     }
   }
