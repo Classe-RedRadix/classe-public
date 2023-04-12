@@ -179,7 +179,6 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 1.5rem;
     }
     .h3 {
       @include mq(md) {
@@ -228,9 +227,40 @@
   }
 
   &--objectives {
+    height: auto;
+
     @include mq(md) {
       width: 29.75rem;
       min-width: 29.75rem;
+      height: 100%;
+    }
+
+    .courseSection-title {
+      min-height: 40%;
+      height: auto;
+
+      @include mq(md) {
+        min-height: auto;
+        height: 40%;
+      }
+
+      .wrap-p {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .courseSection-number {
+      min-height: 60%;
+      height: auto;
+
+      @include mq(md) {
+        min-height: auto;
+        height: 60%;
+      }
+
+      .wrap-p {
+        margin-top: 0;
+      }
     }
   }
 
