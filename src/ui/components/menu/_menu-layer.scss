@@ -24,6 +24,15 @@
       max-height: calc(100vh - 18.125rem);
     }
   }
+
+  &.is-course {
+    padding-bottom: 1rem;
+
+    @include mq(md) {
+      padding-bottom: 0;
+    }
+  }
+
   &.is-open {
     opacity: 1;
     pointer-events: all;
