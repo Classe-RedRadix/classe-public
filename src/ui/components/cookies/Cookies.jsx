@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import cx from 'classnames'
 
-import TagManager from 'react-gtm-module'
+import { setCookie, hasCookie } from 'cookies-next'
+
+import cx from 'classnames'
 
 import useTranslations from '../../../hooks/useTranslations'
 
@@ -10,39 +11,29 @@ import Button from '../button/Button'
 const CookiesLayer = () => {
   const formatMessage = useTranslations()
 
-  const [isVisibleCookies, setIsVisibleCookies] = useState(false)
-  const [isAcceptedCookies, setIsAcceptedCookies] = useState(false)
+  const [consent, setConsent] = useState(true)
 
-  const classes = cx('cookiesLayer', { 'is-visible': isVisibleCookies })
+  useEffect(() => {
+    setConsent(hasCookie('localConsent'))
+  }, [])
 
   const handleRefuse = () => {
-    window.localStorage.setItem('cookies-accepted', false)
-    setIsVisibleCookies(false)
+    setConsent(true)
+    setCookie('localConsent', 'false', { maxAge: 60 * 60 * 24 * 365 })
   }
 
   const handleAccept = () => {
-    window.localStorage.setItem('cookies-accepted', true)
-    setIsVisibleCookies(false)
-    setIsAcceptedCookies(true)
+    setConsent(true)
+    setCookie('localConsent', 'true', { maxAge: 60 * 60 * 24 * 365 })
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
   }
-
-  useEffect(() => {
-    if (window.localStorage.getItem('cookies-accepted') === null) {
-      setIsVisibleCookies(true)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (isAcceptedCookies) {
-      TagManager.initialize({
-        gtmId: 'GTM-NJ9F4NB',
-      })
-    }
-  }, [isAcceptedCookies])
 
   return (
     <div
-      className={classes}
+      className={cx('cookiesLayer', { 'is-visible': !consent })}
       role="dialog"
       aria-label={formatMessage('cookies-layer:aria-label')}
     >
