@@ -101,7 +101,7 @@ const MenuLayer = ({
                   />
 
                   <img
-                    src={coursesImage.mainImage}
+                    src={coursesImage.mainImage.src}
                     alt={t(coursesImage.alt)}
                     width={coursesImage.width}
                     height={coursesImage.height}

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { gsap } from 'gsap/dist/gsap'
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrambleTextPlugin } from 'gsap/dist/ScrambleTextPlugin'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import usePrefersReducedMotion from './usePrefersReducedMotion'
 

@@ -48,7 +48,7 @@ const Courses = ({ courses, isBlack, isFluor, openCourse, openContact }) => {
               />
 
               <img
-                src={professionalTrainingImage.mainImage}
+                src={professionalTrainingImage.mainImage.src}
                 alt={t(professionalTrainingImage.alt)}
                 width={professionalTrainingImage.width}
                 height={professionalTrainingImage.height}

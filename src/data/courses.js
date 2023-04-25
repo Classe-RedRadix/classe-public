@@ -8,10 +8,11 @@ const uiDevelopmentCourseImage = IMAGES.UI_DEVELOPMENT_COURSE_IMAGE
 const DESARROLLO = {
   id: 'desarrollo',
   isFeatured: true,
-  isPublic: true,
+  isPublic: false,
   href: '/cursos/desarrollo',
   information: {
     title: 'course:js-title',
+    titleLongDesc: 'course:js-title',
     titleModal: 'course:js-title-modal',
     start: '16.01.23',
     finish: '02.02.23',
@@ -79,12 +80,13 @@ const DESARROLLO = {
 }
 
 const UI_DEV = {
-  id: 'maqueta',
+  id: 'maquetacion',
   isFeatured: false,
-  isPublic: true,
-  href: '/cursos/maqueta',
+  isPublic: false,
+  href: '/cursos/maquetacion',
   information: {
     title: 'course:ui-dev-title',
+    titleLongDesc: 'course:ui-dev-title-long-desc',
     titleModal: 'course:ui-dev-title-modal',
     start: '13.02.23',
     finish: '06.03.23',
@@ -143,6 +145,7 @@ const FRONT_END = {
   href: '/cursos/front-end',
   information: {
     title: 'course:front-react-title',
+    titleLongDesc: 'course:front-react-title',
     titleModal: 'course:front-react-title-modal',
     start: '01.01.23',
     finish: '31.12.23',
@@ -200,6 +203,7 @@ const BACK_END = {
   href: '/cursos/back-end',
   information: {
     title: 'course:back-node-title',
+    titleLongDesc: 'course:back-node-title',
     titleModal: 'course:back-node-title-modal',
     start: '01.01.23',
     finish: '31.12.23',

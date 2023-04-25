@@ -86,7 +86,11 @@ const withMenu = (pageName, config) => {
       : openContact
 
   return (
-    <MainWrapper isBlack={true}>
+    <MainWrapper
+      isBlack={true}
+      course={pageName === COURSE_PAGE ? config.course : course}
+      isCourseOpen={isCourseOpen}
+    >
       {config?.hiddenTitle}
       <Menu
         actionText={actionText}

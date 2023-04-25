@@ -52,6 +52,7 @@ const Home = () => {
     saveToFirebase: saveContactFormToFirebase,
     errors,
     clearForm,
+    saveToMailChimp,
   } = useContactForm(interestedIn)
 
   useViewportHeight()
@@ -67,21 +68,6 @@ const Home = () => {
   }))
 
   const logos = [
-    // Santander,
-    // Movistar,
-    // Solera,
-    // HugoBoss,
-    // Gmv,
-    // Idealista,
-    // LifullConnect,
-    // Iqvia,
-    // Alantra,
-    // Vivanta,
-    // Anaya,
-    // Indra,
-    // Masmovil,
-    // Abertis,
-    // Esa,
     BME,
     UnidadEditorial,
     ING,
@@ -190,7 +176,7 @@ const Home = () => {
     event.preventDefault()
 
     try {
-      saveContactFormToFirebase({ onSuccess: onContactFormSuccess })
+      saveToMailChimp()
     } catch (error) {}
   }
 

@@ -84,7 +84,7 @@ const Course = React.forwardRef(
                   type="image/webp"
                 />
                 <img
-                  src={image.mainImage}
+                  src={image.mainImage.src}
                   alt={formatMessage(image.alt)}
                   width={image.width}
                   height={image.height}
@@ -167,7 +167,7 @@ const Course = React.forwardRef(
                   ) : null}
                   {isDesktop ? (
                     <div className="arrow-container">
-                      <span className="p uppercase">Scroll or drag</span>
+                      <span className="p uppercase">Scroll</span>
                       <span className="arrow-icon"></span>
                     </div>
                   ) : null}

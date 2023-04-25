@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import PropTypes from 'prop-types'
 import SectionWrapper from '../wrappers/SectionWrapper'
 import Row from '../row/Row'
@@ -39,14 +41,14 @@ const Manifest = ({ isBlack, isFluor }) => {
                 type="image/webp"
               />
 
-              <img
-                src={classeManifestImage.mainImage}
+              <Image
+                src={classeManifestImage.mainImage.src}
                 alt={t(classeManifestImage.alt)}
                 width={classeManifestImage.width}
                 height={classeManifestImage.height}
                 sizes={classeManifestImage.sizes}
                 srcSet={useGenerateImageCandidates(classeManifestImage.srcSet)}
-                loading="lazy"
+                priority={true}
                 className="image"
               />
             </picture>

@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect, useRef, useMemo } from 'react'
 
 import CourseIntro from '../../components/sections/course/CourseIntro'
@@ -15,7 +16,7 @@ import { MEDIA_QUERIES } from '../../../constants'
 
 import useWindowSize from '../../../hooks/useWindowSize'
 
-const MenuCourse = ({ course, openContact, isCourseOpen }) => {
+const MenuCourse = ({ course, openContact }) => {
   const formatMessage = useTranslations()
   useScrambleText()
 
@@ -77,7 +78,7 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
   return (
     <>
       <p className="courseTitle-header" ref={courseTitleHeader}>
-        {formatMessage(information.title)}
+        {formatMessage(information.titleLongDesc)}
       </p>
       <div className="courseSections" ref={container}>
         <CourseIntro
@@ -93,15 +94,14 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
         />
         <CourseTitle title={formatMessage('course:index-title')} />
         {indexItems.map((indexItem, index) => (
-          <>
+          <React.Fragment key={index}>
             <CourseSection
-              key={index}
               number={indexItem.number}
               text={indexItem.description}
               title={indexItem.name}
             />
             <CourseSectionEmpty key={`0${index + 1}`} />
-          </>
+          </React.Fragment>
         ))}
         <CoursePdf
           title={formatMessage('course:pdf-title')}
@@ -122,6 +122,8 @@ const MenuCourse = ({ course, openContact, isCourseOpen }) => {
           hours={information.hours}
           places={information.places}
           practical={information.practical}
+          isPublic={course.isPublic}
+          openContact={openContact}
         />
         <CourseTitle title={formatMessage('footer:contact')} />
         <CourseContact openContact={openContact} />
