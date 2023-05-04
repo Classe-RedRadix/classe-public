@@ -123,7 +123,7 @@ const Footer = ({
             <li>
               <a
                 className="h4"
-                href="https://github.com/Classe-Redradix/classe-public"
+                href="https://github.com/Classe-RedRadix/classe-public"
                 target="_blank"
               >
                 Repositorio Classe
