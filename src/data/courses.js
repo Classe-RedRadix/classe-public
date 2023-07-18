@@ -102,7 +102,7 @@ const UI_DEV = {
     places: 15,
     practical: 80,
   },
-  dosier: '/cursos/maquetacion-con-HTML-CSS.pdf',
+  dosier: '/cursos/maquetacion-web.pdf',
   indexItems: [
     {
       number: '01',
