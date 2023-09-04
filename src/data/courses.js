@@ -7,8 +7,8 @@ const uiDevelopmentCourseImage = IMAGES.UI_DEVELOPMENT_COURSE_IMAGE
 
 const DESARROLLO = {
   id: 'desarrollo',
-  isFeatured: true,
-  isPublic: true,
+  isFeatured: false,
+  isPublic: false,
   href: '/cursos/desarrollo',
   information: {
     title: 'course:js-title',
