@@ -8,14 +8,14 @@ const uiDevelopmentCourseImage = IMAGES.UI_DEVELOPMENT_COURSE_IMAGE
 const DESARROLLO = {
   id: 'desarrollo',
   isFeatured: true,
-  isPublic: false,
+  isPublic: true,
   href: '/cursos/desarrollo',
   information: {
     title: 'course:js-title',
     titleLongDesc: 'course:js-title',
     titleModal: 'course:js-title-modal',
-    start: '16.05.23',
-    finish: '05.06.23',
+    start: '20.05.24',
+    finish: '07.06.24',
     schemaStartTime: '16:30:00',
     schemaEndTime: '19:00:00',
     schedule: '16:30 - 19:00',
