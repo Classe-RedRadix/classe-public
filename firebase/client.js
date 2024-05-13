@@ -48,13 +48,14 @@ const saveContactRequest = async details => {
   try {
     // TODO Hot-implementation due to time, review it
     const emailTrigger = {
-      to: ['info@classe.dev'],
+      to: ['info@classe.dev', 'admin@classe.dev'],
       message: {
         subject: 'Nueva solicitud de información Cursos Classe',
         html: `<ul>
             <li><b>Nombre</b>: ${details.name}</li>
             <li><b>E-mail</b>: ${details.email}</li>
             <li><b>Intereses</b>: ${details.interestedIn.join(', ')}</li>
+            <li><b>Más info</b>: ${JSON.stringify(details)}</li>
           </ul>`,
       },
     }
