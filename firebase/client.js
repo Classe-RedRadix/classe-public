@@ -48,7 +48,7 @@ const saveContactRequest = async details => {
   try {
     // TODO Hot-implementation due to time, review it
     const emailTrigger = {
-      to: ['info@classe.dev', 'admin@classe.dev'],
+      to: ['admin@classe.dev'],
       message: {
         subject: 'Nueva solicitud de información Cursos Classe',
         html: `<ul>
@@ -65,14 +65,14 @@ const saveContactRequest = async details => {
     })
 
     if (docRef.id) {
-      return Promise.resolve({ success: true })
+      return Promise.resolve({ success: true, config })
     }
 
     const error = new Error('Something unexpected happened')
 
-    return Promise.reject({ success: false, error })
+    return Promise.reject({ success: false, error, config })
   } catch (error) {
-    return Promise.reject({ success: false, error })
+    return Promise.reject({ success: false, error, config })
   }
 }
 
