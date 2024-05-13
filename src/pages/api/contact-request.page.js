@@ -5,7 +5,7 @@ export default async (req, res) => {
     const result = await saveContactRequest(req.body)
 
     if (result.success) {
-      res.status(200).json(result)
+      res.status(204).send()
       return
     }
 

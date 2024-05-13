@@ -55,7 +55,6 @@ const saveContactRequest = async details => {
             <li><b>Nombre</b>: ${details.name}</li>
             <li><b>E-mail</b>: ${details.email}</li>
             <li><b>Intereses</b>: ${details.interestedIn.join(', ')}</li>
-            <li><b>Más info</b>: ${JSON.stringify(details)}</li>
           </ul>`,
       },
     }
@@ -65,14 +64,14 @@ const saveContactRequest = async details => {
     })
 
     if (docRef.id) {
-      return Promise.resolve({ success: true, config })
+      return Promise.resolve({ success: true })
     }
 
     const error = new Error('Something unexpected happened')
 
-    return Promise.reject({ success: false, error, config })
+    return Promise.reject({ success: false, error })
   } catch (error) {
-    return Promise.reject({ success: false, error, config })
+    return Promise.reject({ success: false, error })
   }
 }
 
