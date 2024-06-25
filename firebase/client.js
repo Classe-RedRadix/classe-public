@@ -55,6 +55,7 @@ const saveContactRequest = async details => {
             <li><b>Nombre</b>: ${details.name}</li>
             <li><b>E-mail</b>: ${details.email}</li>
             <li><b>Intereses</b>: ${details.interestedIn.join(', ')}</li>
+            <li><b>Tipo de usuario</b>: ${details.userType}</li>
           </ul>`,
       },
     }
